@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:OptimizerAvalonia.ViewModels"
+             xmlns:models="using:HeatProductionOptimization"
+             xmlns:views="using:OptimizerAvalonia.Views"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="OptimizerAvalonia.Views.optimizeSettingsView">
+  
+
+        
+        <Border CornerRadius="10" Margin="10,10,10,10">
+            <Border.Background>
+                <LinearGradientBrush  StartPoint="0,0" EndPoint="1,2">
+                    <GradientStop Color="#5cb3ff" Offset="0,0"/>
+                    <GradientStop Color="#d1e5e6" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TextBlock Text="Optimize for:" Foreground="#008b8b" FontSize="24" Margin="10,10,5,10"/>
+                <ComboBox SelectedIndex="0" Margin="0,10,10,10" Background="#008b8b">
+                    <ComboBoxItem>Cost</ComboBoxItem>
+                    <ComboBoxItem>Emissions</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+        </Border>
+        
+
+
+
+</UserControl>

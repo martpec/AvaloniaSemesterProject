@@ -1,0 +1,46 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:OptimizerAvalonia.ViewModels"
+             xmlns:models="using:HeatProductionOptimization"
+             xmlns:views="using:OptimizerAvalonia.Views"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="OptimizerAvalonia.Views.boilersView"
+             x:DataType="vm:boilersViewModel">
+
+    
+
+    <Border CornerRadius="10" Margin="10,10,10,10" >
+            <Border.Background>
+                <LinearGradientBrush  StartPoint="0,0" EndPoint="1,2">
+                    <GradientStop Color="#5cb3ff" Offset="0,0"/>
+                    <GradientStop Color="#d1e5e6" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+           
+             <ListBox ItemsSource="{Binding ActiveBoilers}">
+    <ListBox.ItemTemplate>
+        <DataTemplate>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
+                    <ToggleSwitch Content="{Binding Name}" Foreground="#008b8b"
+                                  OnContent="On"
+                                  OffContent="Off"
+                                  Margin="10"/>
+                </StackPanel>
+                <StackPanel Margin="20">
+                    <TextBlock Text="{Binding #Slider0.Value}" HorizontalAlignment="Center" Foreground="#008b8b"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding #Slider0.Minimum}" Foreground="#008b8b"/>
+                        <Slider x:Name="Slider0" Width="200" Minimum="1.0" Maximum="{Binding MaxHeat}" TickFrequency="0.1" TickPlacement="BottomRight" IsSnapToTickEnabled="True"/>
+                        <TextBlock Text="{Binding #Slider0.Maximum}" Foreground="#008b8b"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </ListBox.ItemTemplate>
+</ListBox>
+              
+        </Border>
+</UserControl>

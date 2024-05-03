@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="OptimizerAvalonia/Views/MainWindow.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/boilersView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/choosePeriodView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/graphView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/optimizeSettingsView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

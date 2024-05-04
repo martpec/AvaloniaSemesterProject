@@ -17,27 +17,77 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <Border Background="White" BorderBrush="Black" BorderThickness="1" Padding="10">
-        <StackPanel Orientation="Horizontal"  VerticalAlignment="Center">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
+   
+    <SplitView IsPaneOpen="{Binding IsPaneOpen}"
+           DisplayMode="CompactInline"
+           OpenPaneLength="300"
+           CompactPaneLength="48">
+    <SplitView.Pane>
+        <StackPanel Spacing="5"
+                    Margin="5">
+            <Button Command="{Binding TriggerPane}">
+                -
+            </Button>
 
-                <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Visible">
-                    <StackPanel>
-                        <views:choosePeriodView/>
-                        <views:boilersView/>
-                        <views:optimizeSettingsView/>
-                    </StackPanel>
-                </ScrollViewer>
-
-                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <views:graphView/>
-                </StackPanel>
-            </Grid>
+            <views:choosePeriodView/>
+            <views:optimizeSettingsView/>
         </StackPanel>
-    </Border>
+    </SplitView.Pane>
+    
+<Grid ColumnDefinitions="60*, 40*" Background="">
+    <!-- Grid 2 -->
+    <Grid Grid.Column="0" Background="Red" Width="">
+        <views:graphView/>
+    </Grid>
+
+    <!-- Grid 3 -->
+    <Grid Grid.Column="1" Width="">
+      <Grid.RowDefinitions>
+          <RowDefinition Height="50*"/>
+          <RowDefinition Height="50*"/>
+      </Grid.RowDefinitions>
+
+      <!-- Grid Row 3.1 -->
+      <Grid Grid.Row="0" Background="" Height="">
+          <Grid.RowDefinitions>
+          <RowDefinition Height="50*"/>
+          <RowDefinition Height="50*"/>
+      </Grid.RowDefinitions>
+
+          <!--Grid Row 3.1.1 -->
+          <Grid Grid.Row="0" Background="" Height="">
+          <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="75*"/>
+              <ColumnDefinition Width="25*"/>
+          </Grid.ColumnDefinitions>
+
+              <!-- 3.1.1.1 -->
+              <Grid Grid.Column="0" Background="Purple">
+                <TextBlock Text="€ graph"/>
+              </Grid>
+
+               <!-- 3.1.1.2 -->
+              <Grid Grid.Column="1" Background="Green">
+                <TextBlock Text="total € numbers"/>
+              </Grid>
+         </Grid>
+
+          <!--Grid Row 3.1.2 -->
+          <Grid Grid.Row="1" Background="Gray">
+            <TextBlock Text="Comissions graph"/>
+          </Grid>
+
+      </Grid>
+
+      <!-- Grid Row 3.2 -->
+      <Grid Grid.Row="1" Background="Black">
+        <!-- ======================================================-->
+        <views:boilersView/>
+        <!-- ====================================================== -->
+      </Grid>
+
+    </Grid>
+  </Grid>
+  </SplitView>
 
 </Window>

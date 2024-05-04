@@ -18,9 +18,9 @@
                     <GradientStop Color="#d1e5e6" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-           
-             <ListBox ItemsSource="{Binding BoilersList}">
-    <ListBox.ItemTemplate>
+           <ScrollViewer>
+             <ItemsControl ItemsSource="{Binding BoilersList}">
+    <ItemsControl.ItemTemplate>
         <DataTemplate>
             <StackPanel Orientation="Horizontal">
                 <StackPanel Orientation="Horizontal">
@@ -40,8 +40,9 @@
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
-    </ListBox.ItemTemplate>
-</ListBox>
+    </ItemsControl.ItemTemplate>
+</ItemsControl>
+</ScrollViewer>
               
         </Border>
 </UserControl>

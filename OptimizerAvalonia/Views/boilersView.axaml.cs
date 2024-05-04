@@ -12,4 +12,6 @@ public partial class boilersView : UserControl
         InitializeComponent();
         DataContext = new boilersViewModel();
     }
+    
+    
 }

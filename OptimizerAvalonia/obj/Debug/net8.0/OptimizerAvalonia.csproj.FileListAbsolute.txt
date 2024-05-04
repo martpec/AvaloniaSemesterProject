@@ -129,3 +129,4 @@ C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs
 C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia\obj\Debug\net8.0\Optimize.D63847C6.Up2Date
 C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia\obj\Debug\net8.0\OptimizerAvalonia.genruntimeconfig.cache
 C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia\obj\Debug\net8.0\ref\OptimizerAvalonia.dll
+C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia\obj\Debug\net8.0\OptimizerAvalonia.sourcelink.json

@@ -10,8 +10,8 @@ namespace OptimizerAvalonia.ViewModels;
 
 public class boilersViewModel : ViewModelBase
 {
-    private ObservableCollection<Boiler> _activeBoilers = new();
-    public ObservableCollection<Boiler> ActiveBoilers
+    private ObservableCollection<IBoiler> _activeBoilers = new();
+    public ObservableCollection<IBoiler> ActiveBoilers
     {   
         get { return _activeBoilers; }
         set
@@ -19,11 +19,24 @@ public class boilersViewModel : ViewModelBase
             _activeBoilers = value;
         }
     }
-    private List<IBoiler> Boilers { get; set; }
+
+    private ObservableCollection<IBoiler> _deactivatedBoilers = new();
+    public ObservableCollection<IBoiler> DeactivatedBoilers
+    {   
+        get { return _deactivatedBoilers; }
+        set
+        {
+            _deactivatedBoilers = value;
+        }
+    }
+
+
+    
+    
 
     public boilersViewModel()
     {
-        Boilers = new List<IBoiler>();
+        ActiveBoilers = new();
 
         var assetManager = new AssetManager();
         IBoiler gasBoiler = assetManager.LoadBoilerData<GasBoiler>("GasBoiler.csv");
@@ -31,20 +44,11 @@ public class boilersViewModel : ViewModelBase
         IBoiler gasMotor = assetManager.LoadBoilerData<GasMotor>("GasMotor.csv");
         IBoiler electricBoiler = assetManager.LoadBoilerData<ElectricBoiler>("ElectricBoiler.csv");
 
-        Boilers.Add(gasBoiler);
-        Boilers.Add(oilBoiler);
-        Boilers.Add(gasMotor);
-        Boilers.Add(electricBoiler);
-        
-        foreach (var boiler in Boilers)
-        {
-            ActiveBoilers.Add(new Boiler(boiler));
-        }
+        ActiveBoilers.Add(gasBoiler);
+        ActiveBoilers.Add(oilBoiler);
+        ActiveBoilers.Add(gasMotor);
+        ActiveBoilers.Add(electricBoiler);
     }
 }
-public class Boiler(IBoiler boiler)
-{
-    public string? Name { get; set; } = boiler.Name;
-    public double MaxHeat { get; set; } = boiler.MaxHeat;
-}
+
 

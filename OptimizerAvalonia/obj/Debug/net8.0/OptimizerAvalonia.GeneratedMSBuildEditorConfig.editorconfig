@@ -13,24 +13,24 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OptimizerAvalonia
-build_property.ProjectDir = C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia\
+build_property.ProjectDir = C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/App.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/boilersView.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/boilersView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/choosePeriodView.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/choosePeriodView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/graphView.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/graphView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/MainWindow.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/optimizeSettingsView.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/optimizeSettingsView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

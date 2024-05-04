@@ -1,8 +1,18 @@
 ﻿namespace OptimizerAvalonia.ViewModels;
+using ReactiveUI;
 
 public class MainWindowViewModel : ViewModelBase
 {
-#pragma warning disable CA1822 // Mark members as static
-    public string Greeting => "Welcome to Avalonia!";
-#pragma warning restore CA1822 // Mark members as static
+    //========================================= Pane open/close
+    private bool _isPaneOpen = true;
+    public bool IsPaneOpen
+    {
+        get { return _isPaneOpen; }
+        set => this.RaiseAndSetIfChanged(ref _isPaneOpen, value);
+    }
+    public void TriggerPane()
+    {
+        IsPaneOpen = !IsPaneOpen;
+    }
+    //=========================================
 }

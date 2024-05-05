@@ -60,6 +60,7 @@ public class Boiler(IBoiler boiler) : INotifyPropertyChanged
 
     public string? Name { get; set; } = boiler.Name;
     public double MaxHeat { get; set; } = boiler.MaxHeat;
+    public double HeatProduction {get; set;} 
 
     public event PropertyChangedEventHandler? PropertyChanged;
 

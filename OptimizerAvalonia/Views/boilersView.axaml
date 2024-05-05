@@ -34,7 +34,7 @@
                     <TextBlock Text="{Binding #Slider0.Value, StringFormat={}{0:F1}}" HorizontalAlignment="Center" Foreground="#008b8b"/>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding #Slider0.Minimum}" Foreground="#008b8b"/>
-                        <Slider x:Name="Slider0" Width="200" Minimum="1.0" Maximum="{Binding MaxHeat}" TickFrequency="0.1" TickPlacement="BottomRight" IsSnapToTickEnabled="True"/>
+                        <Slider x:Name="Slider0" Width="200" Value="{Binding HeatProduction, Mode=TwoWay}" Minimum="1.0" Maximum="{Binding MaxHeat}" TickFrequency="0.1" TickPlacement="BottomRight" IsSnapToTickEnabled="True"/>
                         <TextBlock Text="{Binding #Slider0.Maximum}" Foreground="#008b8b"/>
                     </StackPanel>
                 </StackPanel>

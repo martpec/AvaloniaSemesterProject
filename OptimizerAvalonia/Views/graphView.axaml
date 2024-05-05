@@ -6,8 +6,21 @@
              xmlns:models="using:HeatProductionOptimization"
              xmlns:views="using:OptimizerAvalonia.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="OptimizerAvalonia.Views.graphView">
+             x:Class="OptimizerAvalonia.Views.graphView"
+             x:DataType="vm:graphViewModel"
+                xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia">
+<Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="50"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" Orientation="Horizontal" Background="Gray" >
+        <Button Margin="6" Command="{Binding AddItemCommand}">Add</Button>
+        </StackPanel>
+<lvc:CartesianChart
+        Series="{Binding Series}"
+        Grid.Row="1">
 
-
-    <TextBlock Text="Graph..." Foreground="Black"/>
+    </lvc:CartesianChart>
+    </Grid>
 </UserControl>

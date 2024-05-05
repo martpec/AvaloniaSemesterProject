@@ -10,7 +10,7 @@ public partial class boilersView : UserControl
     public boilersView()
     {
         InitializeComponent();
-        DataContext = new boilersViewModel(); //here is the problem
+        DataContext = new boilersViewModel(); 
     }
     
     

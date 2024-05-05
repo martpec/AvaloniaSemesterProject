@@ -262,3 +262,8 @@ C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\obj\Debug\net8.
 C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\obj\Debug\net8.0\Optimize.D63847C6.Up2Date
 C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\obj\Debug\net8.0\OptimizerAvalonia.genruntimeconfig.cache
 C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\obj\Debug\net8.0\ref\OptimizerAvalonia.dll
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\CommunityToolkit.Mvvm.dll
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\LiveChartsCore.dll
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\LiveChartsCore.SkiaSharpView.dll
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\LiveChartsCore.SkiaSharpView.Avalonia.dll
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\SkiaSharp.HarfBuzz.dll

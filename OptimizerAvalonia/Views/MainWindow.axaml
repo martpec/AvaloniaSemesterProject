@@ -36,7 +36,7 @@
     
 <Grid ColumnDefinitions="60*, 40*" Background="">
     <!-- Grid 2 -->
-    <Grid Grid.Column="0" Background="Red" Width="">
+    <Grid Grid.Column="0" Background="White" Width="">
         <views:graphView/>
     </Grid>
 

@@ -11,7 +11,7 @@ public class boilersViewModel : ViewModelBase
 {
     private ObservableCollection<Boiler> _boilersList = new();
     public ObservableCollection<Boiler> BoilersList
-    {   
+    {
         get { return _boilersList; }
         set
         {

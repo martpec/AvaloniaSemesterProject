@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {}
+    "c:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {
+    "c:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
+        "projectUniqueName": "c:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
         "projectName": "OptimizerAvalonia",
-        "projectPath": "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
+        "projectPath": "c:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
         "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\obj\\",
+        "outputPath": "c:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

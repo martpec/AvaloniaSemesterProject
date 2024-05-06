@@ -82,7 +82,7 @@
       <!-- Grid Row 3.2 -->
       <Grid Grid.Row="1" Background="Black">
         <!-- ======================================================-->
-        <views:boilersView/>
+        <UserControl Content="{Binding Boiler}" />
         <!-- ====================================================== -->
       </Grid>
 

@@ -1,7 +1,7 @@
 ﻿namespace OptimizerAvalonia.ViewModels;
 using System.Reactive;
 using ReactiveUI;
-public class MainWindowViewModel : ViewModelBase
+public class MainWindowViewModel : BaseViewModel
 {
     //========================================= Pane open/close
     private bool _isPaneOpen = true;

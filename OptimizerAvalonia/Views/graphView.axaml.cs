@@ -10,6 +10,6 @@ public partial class graphView : UserControl
     public graphView()
     {
         InitializeComponent();
-        DataContext = new graphViewModel();
+        DataContext = new MainGraphViewModel();
     }
 }

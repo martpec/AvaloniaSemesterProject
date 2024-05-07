@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace OptimizerAvalonia.ViewModels;
 
-public class boilersViewModel : BaseViewModel
+public class BoilersViewModel : BaseViewModel
 {
 
 }

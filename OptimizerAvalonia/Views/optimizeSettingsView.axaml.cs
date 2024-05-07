@@ -10,6 +10,6 @@ public partial class optimizeSettingsView : UserControl
     public optimizeSettingsView()
     {
         InitializeComponent();
-        DataContext = new optimizeSettingsViewModel();
+        DataContext = new OptimizeSettingsViewModel();
     }
 }

@@ -1,7 +1,6 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:OptimizerAvalonia.ViewModels"
-        xmlns:models="using:HeatProductionOptimization"
         xmlns:views="using:OptimizerAvalonia.Views"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -12,8 +11,6 @@
         Title="OptimizerAvalonia">
 
     <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
@@ -26,7 +23,7 @@
         <StackPanel Spacing="5"
                     Margin="5">
             <Button Command="{Binding TriggerPane}">
-                -
+                
             </Button>
 
             <views:choosePeriodView/>
@@ -63,18 +60,18 @@
 
               <!-- 3.1.1.1 -->
               <Grid Grid.Column="0" Background="Purple">
-                <TextBlock Text="€ graph"/>
+                <views:MoneyGraphView/>
               </Grid>
 
                <!-- 3.1.1.2 -->
               <Grid Grid.Column="1" Background="Green">
-                <TextBlock Text="total € numbers"/>
+                <views:MoneyDisplayView/>
               </Grid>
          </Grid>
 
           <!--Grid Row 3.1.2 -->
           <Grid Grid.Row="1" Background="Gray">
-            <TextBlock Text="Comissions graph"/>
+            <views:EmissionsGraphView/>
           </Grid>
 
       </Grid>

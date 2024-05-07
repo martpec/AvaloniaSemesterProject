@@ -3,7 +3,10 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="OptimizerAvalonia/Views/EmissionsGraphView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/MainWindow.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/MoneyDisplayView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/MoneyGraphView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/boilersView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/choosePeriodView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/graphView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />

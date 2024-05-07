@@ -5,13 +5,11 @@ using OptimizerAvalonia.ViewModels;
 
 namespace OptimizerAvalonia.Views;
 
-public partial class BoilersView : UserControl
+public partial class MoneyGraphView : UserControl
 {
-    public BoilersView()
+    public MoneyGraphView()
     {
         InitializeComponent();
-        DataContext = new BoilersViewModel(); 
+        DataContext = new MoneyGraphViewModel();
     }
-    
-    
 }

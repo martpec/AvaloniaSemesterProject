@@ -3,7 +3,7 @@ using ReactiveUI;
 
 namespace OptimizerAvalonia.ViewModels;
 
-public class optimizeSettingsViewModel: ViewModelBase
+public class ChoosePeriodViewModel: ViewModelBase
 {
 
 }

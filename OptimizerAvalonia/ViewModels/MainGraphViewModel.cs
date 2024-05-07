@@ -15,11 +15,11 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace OptimizerAvalonia.ViewModels;
 
-public class graphViewModel: ViewModelBase
+public class MainGraphViewModel: ViewModelBase
 {
     private readonly ObservableCollection<ObservablePoint> _observablePoints;
     public ObservableCollection<ISeries> Series { get; set; }
-    public graphViewModel()
+    public MainGraphViewModel()
     {
         _observablePoints = new ObservableCollection<ObservablePoint>
         {

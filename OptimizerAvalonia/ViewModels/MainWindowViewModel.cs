@@ -6,7 +6,7 @@ public class MainWindowViewModel : BaseViewModel
     //========================================= Pane open/close
     private bool _isPaneOpen = true;
     public MainWindowViewModel() {
-        boiler = new boilersViewModel();
+        boiler = new BoilersViewModel();
     }
     public bool IsPaneOpen
     {
@@ -17,8 +17,8 @@ public class MainWindowViewModel : BaseViewModel
     {
         IsPaneOpen = !IsPaneOpen;
     }
-    private boilersViewModel boiler;
-    public boilersViewModel Boiler {
+    private BoilersViewModel boiler;
+    public BoilersViewModel Boiler {
         get => boiler;
         set => this.RaiseAndSetIfChanged(ref boiler, value);
     }

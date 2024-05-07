@@ -26,10 +26,19 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/choosePeriodView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/EmissionsGraphView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/graphView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/MoneyDisplayView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/MoneyGraphView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/optimizeSettingsView.axaml]

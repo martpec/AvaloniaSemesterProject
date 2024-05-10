@@ -50,7 +50,7 @@
                             <PathIcon Data="{Binding ListItemIcon}" Width="14" />
                             <TextBlock Text="{Binding Label}" />
                         </StackPanel>
-                    </DataTemplate>
+                    </DataTemplate> 
                 </ListBox.ItemTemplate>
             </ListBox>
             

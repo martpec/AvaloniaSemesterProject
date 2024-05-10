@@ -1,0 +1,42 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:templates="clr-namespace:OptimizerAvalonia.Templates"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="OptimizerAvalonia.Views.SettingsView">
+    
+    <ScrollViewer>
+        <StackPanel Margin="20">
+            <TextBlock Margin="0 20" FontSize="20" FontWeight="Bold">Optimization Settings</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource CalendarRegular}" />
+                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Optimization period</TextBlock>
+            </StackPanel>
+           
+            <templates:ContentTemplate>
+                <!-- Space for content of optimization period (summer/winter)-->
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,10,0" Text="Summer"/>
+                    <ToggleSwitch OnContent="{x:Null}" OffContent="{x:Null}" IsChecked="False" />
+                    <TextBlock VerticalAlignment="Center" Text="Winter"/>
+                </StackPanel>
+            </templates:ContentTemplate>
+            
+            <StackPanel Orientation="Horizontal">
+                <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource PreferenceFilter}" />
+                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Optimization preference</TextBlock>
+            </StackPanel>
+            <templates:ContentTemplate>
+                <!-- Space for content of optimization preference (cost/emissions)-->
+            </templates:ContentTemplate>
+            <StackPanel Orientation="Horizontal">
+                <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource AvailableBoilers}" />
+                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Available Boilers</TextBlock>
+            </StackPanel>
+            <templates:ContentTemplate>
+                <!-- Available Boilers -->
+            </templates:ContentTemplate>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

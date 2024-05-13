@@ -22,5 +22,23 @@
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.Avalonia" Version="2.0.0-rc2" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Compile Update="Views\SettingsViewsFolder\boilersView.axaml.cs">
+      <DependentUpon>boilersView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SettingsViewsFolder\choosePeriodView.axaml.cs">
+      <DependentUpon>choosePeriodView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SettingsViewsFolder\optimizeSettingsView.axaml.cs">
+      <DependentUpon>optimizeSettingsView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

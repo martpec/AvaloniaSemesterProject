@@ -3,7 +3,11 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="OptimizerAvalonia/App.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Assets/Icons.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/HomePageView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/MainWindow.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/OptimizerView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/boilersView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/choosePeriodView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/graphView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />

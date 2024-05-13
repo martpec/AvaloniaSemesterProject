@@ -395,8 +395,12 @@ C:\Users\fifof\OneDrive\Počítač\AvaloniaUI\SemesterProject2\OptimizerAvalonia
 C:\Users\fifof\OneDrive\Počítač\AvaloniaUI\SemesterProject2\OptimizerAvalonia\obj\Debug\net8.0\OptimizerAvalonia.genruntimeconfig.cache
 C:\Users\fifof\OneDrive\Počítač\AvaloniaUI\SemesterProject2\OptimizerAvalonia\obj\Debug\net8.0\ref\OptimizerAvalonia.dll
 C:\Users\fifof\OneDrive\Počítač\AvaloniaUI\SemesterProject2\OptimizerAvalonia\bin\Debug\net8.0\CommunityToolkit.Mvvm.dll
+<<<<<<< HEAD
 C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\CommunityToolkit.Mvvm.dll
 C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\LiveChartsCore.dll
 C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\LiveChartsCore.SkiaSharpView.dll
 C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\LiveChartsCore.SkiaSharpView.Avalonia.dll
 C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\SkiaSharp.HarfBuzz.dll
+=======
+C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\CommunityToolkit.Mvvm.dll
+>>>>>>> 9708b5e (SettingsViewSetup)

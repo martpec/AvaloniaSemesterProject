@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "v6J7n6W85BK+sDhkyR1WrCcRixzFdVUen12DyzfObd18bjo3art6E0LVlSsBZVkI19Is+wKDG7xO6iQHnD5gaQ==",
+  "dgSpecHash": "hbfgRxgEgGK1Lu8ocS/7qYg5b0CNFr6jq7+Rb3w+1XQAdRQI8rIe1T4OcOn0FU4L4eOEfNzjAbFqByucOB9GOA==",
   "success": true,
   "projectFilePath": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,9 @@
     "C:\\Users\\fifof\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\7.3.0\\harfbuzzsharp.nativeassets.macos.7.3.0.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\harfbuzzsharp.nativeassets.webassembly\\7.3.0\\harfbuzzsharp.nativeassets.webassembly.7.3.0.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\7.3.0\\harfbuzzsharp.nativeassets.win32.7.3.0.nupkg.sha512",
+    "C:\\Users\\fifof\\.nuget\\packages\\livechartscore\\2.0.0-rc2\\livechartscore.2.0.0-rc2.nupkg.sha512",
+    "C:\\Users\\fifof\\.nuget\\packages\\livechartscore.skiasharpview\\2.0.0-rc2\\livechartscore.skiasharpview.2.0.0-rc2.nupkg.sha512",
+    "C:\\Users\\fifof\\.nuget\\packages\\livechartscore.skiasharpview.avalonia\\2.0.0-rc2\\livechartscore.skiasharpview.avalonia.2.0.0-rc2.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\microcom.runtime\\0.11.0\\microcom.runtime.0.11.0.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.0.0\\microsoft.codeanalysis.analyzers.3.0.0.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\microsoft.codeanalysis.common\\3.8.0\\microsoft.codeanalysis.common.3.8.0.nupkg.sha512",
@@ -39,6 +42,7 @@
     "C:\\Users\\fifof\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\reactiveui\\18.3.1\\reactiveui.18.3.1.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\skiasharp\\2.88.7\\skiasharp.2.88.7.nupkg.sha512",
+    "C:\\Users\\fifof\\.nuget\\packages\\skiasharp.harfbuzz\\2.88.6\\skiasharp.harfbuzz.2.88.6.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\skiasharp.nativeassets.linux\\2.88.7\\skiasharp.nativeassets.linux.2.88.7.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.7\\skiasharp.nativeassets.macos.2.88.7.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\skiasharp.nativeassets.webassembly\\2.88.7\\skiasharp.nativeassets.webassembly.2.88.7.nupkg.sha512",

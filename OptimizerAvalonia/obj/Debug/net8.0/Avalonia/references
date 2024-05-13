@@ -25,6 +25,9 @@ C:\Users\fifof\.nuget\packages\avalonia.x11\11.0.10\lib\net6.0\Avalonia.X11.dll
 C:\Users\fifof\.nuget\packages\communitytoolkit.mvvm\8.2.2\lib\net6.0\CommunityToolkit.Mvvm.dll
 C:\Users\fifof\.nuget\packages\dynamicdata\7.9.5\lib\net6.0\DynamicData.dll
 C:\Users\fifof\.nuget\packages\harfbuzzsharp\7.3.0\lib\net6.0\HarfBuzzSharp.dll
+C:\Users\fifof\.nuget\packages\livechartscore\2.0.0-rc2\lib\net6.0\LiveChartsCore.dll
+C:\Users\fifof\.nuget\packages\livechartscore.skiasharpview.avalonia\2.0.0-rc2\lib\net6.0\LiveChartsCore.SkiaSharpView.Avalonia.dll
+C:\Users\fifof\.nuget\packages\livechartscore.skiasharpview\2.0.0-rc2\lib\net6.0\LiveChartsCore.SkiaSharpView.dll
 C:\Users\fifof\.nuget\packages\microcom.runtime\0.11.0\lib\net5.0\MicroCom.Runtime.dll
 C:\Users\fifof\.nuget\packages\microsoft.codeanalysis.csharp\3.8.0\lib\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\fifof\.nuget\packages\microsoft.codeanalysis.csharp.scripting\3.8.0\lib\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Scripting.dll
@@ -39,6 +42,7 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.4\ref\net8.0\mscorli
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.4\ref\net8.0\netstandard.dll
 C:\Users\fifof\.nuget\packages\reactiveui\18.3.1\lib\net6.0\ReactiveUI.dll
 C:\Users\fifof\.nuget\packages\skiasharp\2.88.7\lib\net6.0\SkiaSharp.dll
+C:\Users\fifof\.nuget\packages\skiasharp.harfbuzz\2.88.6\lib\net6.0\SkiaSharp.HarfBuzz.dll
 C:\Users\fifof\.nuget\packages\splat\14.4.1\lib\net6.0\Splat.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.4\ref\net8.0\System.AppContext.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.4\ref\net8.0\System.Buffers.dll

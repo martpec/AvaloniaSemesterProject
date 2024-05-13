@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="using:OptimizerAvalonia.Views"
              xmlns:templates="clr-namespace:OptimizerAvalonia.Templates"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="OptimizerAvalonia.Views.SettingsView">
@@ -16,11 +17,7 @@
            
             <templates:ContentTemplate>
                 <!-- Space for content of optimization period (summer/winter)-->
-                <StackPanel Orientation="Horizontal" Margin="5">
-                    <TextBlock VerticalAlignment="Center" Margin="0,0,10,0" Text="Summer"/>
-                    <ToggleSwitch OnContent="{x:Null}" OffContent="{x:Null}" IsChecked="False" />
-                    <TextBlock VerticalAlignment="Center" Text="Winter"/>
-                </StackPanel>
+                <views:choosePeriodView/>
             </templates:ContentTemplate>
             
             <StackPanel Orientation="Horizontal">
@@ -29,6 +26,7 @@
             </StackPanel>
             <templates:ContentTemplate>
                 <!-- Space for content of optimization preference (cost/emissions)-->
+                <views:optimizeSettingsView/>
             </templates:ContentTemplate>
             <StackPanel Orientation="Horizontal">
                 <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource AvailableBoilers}" />
@@ -36,6 +34,7 @@
             </StackPanel>
             <templates:ContentTemplate>
                 <!-- Available Boilers -->
+                <views:boilersView/>
             </templates:ContentTemplate>
         </StackPanel>
     </ScrollViewer>

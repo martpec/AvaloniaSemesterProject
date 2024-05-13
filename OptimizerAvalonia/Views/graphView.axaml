@@ -21,6 +21,7 @@
         </StackPanel>
 <lvc:CartesianChart
         Series="{Binding Series}"
+        XAxes="{Binding XAxes}"
         Grid.Row="1">
 
     </lvc:CartesianChart>

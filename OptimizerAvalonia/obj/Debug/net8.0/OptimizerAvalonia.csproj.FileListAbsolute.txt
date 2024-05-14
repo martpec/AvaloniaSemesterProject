@@ -404,3 +404,27 @@ C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.
 =======
 C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\CommunityToolkit.Mvvm.dll
 >>>>>>> 9708b5e (SettingsViewSetup)
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\AppData\ElectricBoiler.csv
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\AppData\GasBoiler.csv
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\AppData\GasMotor.csv
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\AppData\OilBoiler.csv
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\AppData\SummerData.csv
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\AppData\WinterData.csv
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\AssetManager.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Interfaces\IBoiler.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Interfaces\IElectricBoiler.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Interfaces\IEmissionProducer.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Interfaces\IGasBoiler.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Interfaces\IGasMotor.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Interfaces\IOilBoiler.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Interfaces\IOptimizedData.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Interfaces\ISourceData.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Models\ElectricBoiler.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Models\GasBoiler.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Models\GasMotor.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Models\OilBoiler.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Models\OptmizedData.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Models\SourceData.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\Optimizer.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\ResultDataManager.cs
+C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Models\SourceDataManager.cs

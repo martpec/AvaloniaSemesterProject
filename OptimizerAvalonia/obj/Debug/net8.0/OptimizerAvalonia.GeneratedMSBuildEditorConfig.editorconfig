@@ -4,6 +4,8 @@ build_property.AvaloniaNameGeneratorBehavior = InitializeComponent
 build_property.AvaloniaNameGeneratorDefaultFieldModifier = internal
 build_property.AvaloniaNameGeneratorFilterByPath = *
 build_property.AvaloniaNameGeneratorFilterByNamespace = *
+build_property.AvaloniaNameGeneratorViewFileNamingStrategy = NamespaceAndClassName
+build_property.AvaloniaNameGeneratorAttachDevTools = true
 build_property.TargetFramework = net8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -21,6 +23,9 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/fifof/OneDrive/Počítač/AvaloniaUI/SemesterProject2/OptimizerAvalonia/Assets/Icons.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/fifof/OneDrive/Počítač/AvaloniaUI/SemesterProject2/OptimizerAvalonia/SplashScreen/DemoComplexSplashScreen.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/fifof/OneDrive/Počítač/AvaloniaUI/SemesterProject2/OptimizerAvalonia/Templates/ContentTemplate.axaml]

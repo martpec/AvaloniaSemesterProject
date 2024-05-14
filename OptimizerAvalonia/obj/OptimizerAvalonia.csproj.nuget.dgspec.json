@@ -46,31 +46,31 @@
           "dependencies": {
             "Avalonia": {
               "target": "Package",
-              "version": "[11.0.10, )"
+              "version": "[11.1.0-beta2, )"
             },
             "Avalonia.Desktop": {
               "target": "Package",
-              "version": "[11.0.10, )"
+              "version": "[11.1.0-beta2, )"
             },
             "Avalonia.Diagnostics": {
               "target": "Package",
-              "version": "[11.0.10, )"
+              "version": "[11.1.0-beta2, )"
             },
             "Avalonia.Fonts.Inter": {
               "target": "Package",
-              "version": "[11.0.10, )"
+              "version": "[11.1.0-beta2, )"
             },
             "Avalonia.ReactiveUI": {
               "target": "Package",
-              "version": "[11.0.10, )"
-            },
-            "Avalonia.Themes.Fluent": {
-              "target": "Package",
-              "version": "[11.0.10, )"
+              "version": "[11.1.0-beta2, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.2, )"
+            },
+            "FluentAvaloniaUI": {
+              "target": "Package",
+              "version": "[2.1.0-preview4, )"
             },
             "LiveChartsCore.SkiaSharpView.Avalonia": {
               "target": "Package",

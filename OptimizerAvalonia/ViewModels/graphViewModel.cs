@@ -45,9 +45,9 @@ public class graphViewModel: ViewModelBase
             }
         };
     }
-    private int x = 13;
+    /*private int x = 13;
     public void AddItemCommand()
     {
-        //_observablePoints.Add(new(++x,1));
-    }   
+        _observablePoints.Add(new(++x,1));
+    } */  
 }

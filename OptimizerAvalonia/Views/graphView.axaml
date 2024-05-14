@@ -11,19 +11,20 @@
               xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia">
 
 
-    <Grid>
+    <!--<Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="50"/>
       <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <StackPanel Grid.Row="0" Orientation="Horizontal" Background="Gray" >
         <Button Margin="6" Command="{Binding AddItemCommand}">Add</Button>
-        </StackPanel>
-<lvc:CartesianChart
+        </StackPanel>-->
+    <lvc:CartesianChart
         Series="{Binding Series}"
         XAxes="{Binding XAxes}"
+        ZoomMode="X"
         Grid.Row="1">
 
     </lvc:CartesianChart>
-    </Grid>
+    <!--</Grid>-->
 </UserControl>

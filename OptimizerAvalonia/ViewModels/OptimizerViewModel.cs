@@ -12,7 +12,10 @@ public class OptimizerViewModel : ViewModelBase
     public ObservableCollection<ISeries> Series1 { get; set; }
     public Axis[] XAxes1 { get; set; } =
     {
-        new DateTimeAxis(TimeSpan.FromHours(1), date => date.ToString("H:mm d/M yyyy")) //output format
+        new DateTimeAxis(TimeSpan.FromHours(1), date => date.ToString("H:mm d/M")) //output format
+        {
+            LabelsRotation = 0 // Rotate the labels by 45 degrees
+        }
     };
     private readonly ObservableCollection<DateTimePoint> _observablePoints2;
     public ObservableCollection<ISeries> Series2 { get; set; }

@@ -67,6 +67,7 @@
                        <TransitioningContentControl Content="{Binding CurrentPage}" />
                    </Border>
                </SplitView.Content>
+            
          </SplitView>
    </Grid>
     

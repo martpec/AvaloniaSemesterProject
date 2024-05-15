@@ -8,7 +8,7 @@
     
     <Grid ColumnDefinitions="60*, 40*" Background="Red">
        <!-- Grid 2 -->
-       <Grid Grid.Column="0" Background="LightGray" Width="">
+       <Grid Grid.Column="0" Background="#1e1e1e" Width="">
            <views:graphView/>
        </Grid>
    
@@ -45,7 +45,7 @@
             </Grid>
    
              <!--Grid Row 3.1.2 -->
-             <Grid Grid.Row="1" Background="Gray">
+             <Grid Grid.Row="1" Background="#1e1e1e">
                <TextBlock Text="Emissions graph"/>
              </Grid>
    

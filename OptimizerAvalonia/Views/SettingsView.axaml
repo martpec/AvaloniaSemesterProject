@@ -4,8 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:views="using:OptimizerAvalonia.Views"
              xmlns:templates="clr-namespace:OptimizerAvalonia.Templates"
+             xmlns:vm="clr-namespace:OptimizerAvalonia.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="OptimizerAvalonia.Views.SettingsView">
+             x:Class="OptimizerAvalonia.Views.SettingsView"
+             x:DataType="vm:SettingsViewModel">
     
     <ScrollViewer>
         <StackPanel Margin="20">
@@ -13,16 +15,31 @@
             <StackPanel Orientation="Horizontal">
                 <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource CalendarRegular}" />
                 <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Optimization period</TextBlock>
+                <Border>
+                    <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}"/>
+                    <ToolTip.Tip>Info about optimization period</ToolTip.Tip>
+                </Border>
             </StackPanel>
            
             <templates:ContentTemplate>
                 <!-- Space for content of optimization period (summer/winter)-->
-                <views:choosePeriodView/>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,10,0" Text="Summer"/>
+                    <ToggleSwitch OnContent="{x:Null}" OffContent="{x:Null}" 
+                                  IsChecked="{Binding IsWinter}" />
+                    
+                    <TextBlock VerticalAlignment="Center" Text="Winter"/>
+                </StackPanel>
+                <!-- <views:chosePeriodView/> -->
             </templates:ContentTemplate>
             
             <StackPanel Orientation="Horizontal">
                 <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource PreferenceFilter}" />
                 <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Optimization preference</TextBlock>
+                <Border>
+                    <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}"/>
+                    <ToolTip.Tip>Info about optimization preferences</ToolTip.Tip>
+                </Border>
             </StackPanel>
             <templates:ContentTemplate>
                 <!-- Space for content of optimization preference (cost/emissions)-->
@@ -31,6 +48,10 @@
             <StackPanel Orientation="Horizontal">
                 <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource AvailableBoilers}" />
                 <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Available Boilers</TextBlock>
+                <Border>
+                    <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}"/>
+                    <ToolTip.Tip>Info about available boilers</ToolTip.Tip>
+                </Border>
             </StackPanel>
             <templates:ContentTemplate>
                 <!-- Available Boilers -->

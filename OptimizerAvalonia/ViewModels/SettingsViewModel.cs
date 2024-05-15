@@ -1,6 +1,13 @@
-﻿namespace OptimizerAvalonia.ViewModels;
+﻿using System;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
-public class SettingsViewModel: ViewModelBase
+namespace OptimizerAvalonia.ViewModels;
+
+public partial class SettingsViewModel: ViewModelBase
 {
+    
+    [ObservableProperty]
+    private bool _isWinter = false;
     
 }

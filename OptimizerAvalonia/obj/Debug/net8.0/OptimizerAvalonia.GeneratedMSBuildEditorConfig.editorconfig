@@ -49,8 +49,5 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/fifof/OneDrive/Počítač/AvaloniaUI/SemesterProject2/OptimizerAvalonia/Views/SettingsViewsFolder/boilersView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/fifof/OneDrive/Počítač/AvaloniaUI/SemesterProject2/OptimizerAvalonia/Views/SettingsViewsFolder/choosePeriodView.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
 [C:/Users/fifof/OneDrive/Počítač/AvaloniaUI/SemesterProject2/OptimizerAvalonia/Views/SettingsViewsFolder/optimizeSettingsView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

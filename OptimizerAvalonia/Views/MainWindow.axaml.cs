@@ -8,6 +8,7 @@ using Avalonia.Interactivity;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
+using FluentAvalonia.UI.Controls;
 using FluentAvalonia.UI.Windowing;
 using OptimizerAvalonia.SplashScreen;
 
@@ -15,13 +16,15 @@ namespace OptimizerAvalonia.Views;
 
 public partial class MainWindow : AppWindow
 {
+    private readonly Frame? _frame;
+
     public MainWindow()
     {   
         InitializeComponent();
         TitleBar.ExtendsContentIntoTitleBar = true;
         TitleBar.TitleBarHitTestType = TitleBarHitTestType.Complex;
         
-        SplashScreen = new ComplexSplashScreen();
+        //SplashScreen = new ComplexSplashScreen();
         
     }
 }

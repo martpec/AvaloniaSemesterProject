@@ -32,10 +32,6 @@
       <DependentUpon>boilersView.axaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\SettingsViewsFolder\choosePeriodView.axaml.cs">
-      <DependentUpon>choosePeriodView.axaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Views\SettingsViewsFolder\optimizeSettingsView.axaml.cs">
       <DependentUpon>optimizeSettingsView.axaml</DependentUpon>
       <SubType>Code</SubType>

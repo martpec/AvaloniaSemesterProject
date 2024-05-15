@@ -11,24 +11,22 @@ public partial class SettingsViewModel: ViewModelBase
     private readonly string _winterPath = "WinterData.csv";
     
     [ObservableProperty]
-    private bool _isSummer;
+    private bool _isWinter;
 
     [RelayCommand]
     private void TriggerButton()
     {
-        if (IsSummer)
+        if (IsWinter)
         {
-            SourceDataPath = _summerPath;
-            IsSummer = false;
+            SourceDataPath = _winterPath;
         }
         else
         {
-            SourceDataPath = _winterPath;
-            IsSummer = true;
+            SourceDataPath = _summerPath; 
         }
     }
 /*--------------Emissions/Cost----------------*/
-        private bool isEmissions;
+    private bool isEmissions;
 
     public bool IsEmissions
     {

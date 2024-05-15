@@ -25,7 +25,8 @@
                 <!-- Space for content of optimization period (summer/winter)-->
                 <StackPanel Orientation="Horizontal" Margin="5">
         <TextBlock VerticalAlignment="Center" Margin="0,0,10,0" Text="Summer"/>
-        <ToggleSwitch OnContent="{x:Null}" OffContent="{x:Null}" 
+        <ToggleSwitch OnContent="{x:Null}" OffContent="{x:Null}"
+                      IsChecked="{Binding IsWinter}" 
                       Command="{Binding TriggerButtonCommand}" />
         <TextBlock VerticalAlignment="Center" Text="Winter"/>
     </StackPanel>

@@ -19,11 +19,12 @@
                 CornerRadius="7"
                 Background="#3e3e3e"
                 Series="{Binding Series}"
+                ZoomMode="X"
                 XAxes="{Binding XAxes}">
             </lvc:CartesianChart>
         
             <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#1e1e1e" HorizontalAlignment="Center" >
-                <Button Margin="6" Command="{Binding AddItemCommand}" Width="150">Optimize</Button>
+                <Button Margin="6" Width="150">Optimize</Button>
             </StackPanel>
     </Grid>
 </UserControl>

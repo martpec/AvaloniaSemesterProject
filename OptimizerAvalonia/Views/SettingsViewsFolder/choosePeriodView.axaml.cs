@@ -10,6 +10,6 @@ public partial class choosePeriodView : UserControl
     public choosePeriodView()
     {
         InitializeComponent();
-        DataContext = new choosePeriodViewModel();
+        DataContext = new ChoosePeriodViewModel();
     }
 }

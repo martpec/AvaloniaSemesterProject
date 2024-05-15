@@ -11,9 +11,12 @@ namespace HeatProductionOptimization
         public List<SourceData> LoadSourceData(string filePath)
         {
             List<SourceData> sourceDataList = new List<SourceData>();
+            
+            string currentDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
 
-            string appDataPath = Path.Combine(Environment.CurrentDirectory, "AppData", filePath);
-
+            string appDataPath = Path.Combine(projectDirectory, "Models\\AppData", filePath);
+            
             try
             {
                 using var reader = new StreamReader(appDataPath);

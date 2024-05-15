@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {}
+    "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {
+    "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
         "projectName": "OptimizerAvalonia",
-        "projectPath": "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
-        "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\obj\\",
+        "projectPath": "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
+        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jakub\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

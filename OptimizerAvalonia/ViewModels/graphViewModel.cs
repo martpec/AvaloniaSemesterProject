@@ -20,7 +20,10 @@ public class graphViewModel: ViewModelBase
     public ObservableCollection<ISeries> Series { get; set; }
     public Axis[] XAxes { get; set; } =
     {
-        new DateTimeAxis(TimeSpan.FromHours(1), date => date.ToString("H:mm d/M yyyy")) //output format
+        new DateTimeAxis(TimeSpan.FromHours(1), date => date.ToString("H:mm d/M")) //output format
+        {
+            LabelsRotation = 45 // Rotate the labels by 45 degrees
+        }
     };
     public graphViewModel()
     {
@@ -45,9 +48,9 @@ public class graphViewModel: ViewModelBase
             }
         };
     }
-    private int x = 13;
+    /*private int x = 13;
     public void AddItemCommand()
     {
-        //_observablePoints.Add(new(++x,1));
-    }   
+        _observablePoints.Add(new(++x,1));
+    } */  
 }

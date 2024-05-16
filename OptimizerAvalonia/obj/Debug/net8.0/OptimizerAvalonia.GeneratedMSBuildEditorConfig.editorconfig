@@ -15,36 +15,36 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OptimizerAvalonia
-build_property.ProjectDir = C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia\
+build_property.ProjectDir = C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/App.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Assets/Icons.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Assets/Icons.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/SplashScreen/DemoComplexSplashScreen.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/SplashScreen/DemoComplexSplashScreen.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Templates/ContentTemplate.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Templates/ContentTemplate.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/graphView.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/graphView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/HomePageView.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/HomePageView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/MainWindow.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/OptimizerView.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/OptimizerView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/SettingsView.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/SettingsView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marti/OneDrive/Počítač/Advanced_Object_Oriented_Programming/aoop1.cs/AvaloniaSemesterProject/OptimizerAvalonia/Views/SettingsViewsFolder/boilersView.axaml]
+[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/SettingsViewsFolder/boilersView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

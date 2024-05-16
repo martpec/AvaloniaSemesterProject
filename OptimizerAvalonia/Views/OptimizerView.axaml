@@ -9,7 +9,7 @@
              xmlns:vm="clr-namespace:OptimizerAvalonia.ViewModels"
              xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia">
     
-    <Grid ColumnDefinitions="60*, 40*" Background="Red">
+    <Grid ColumnDefinitions="60*, 40*" Background="">
        <!-- Grid 2 -->
        <Grid Grid.Column="0" Background="#1e1e1e" Width="">
            <views:graphView/>
@@ -19,7 +19,7 @@
        <Grid Grid.Column="1" Width="">
          <Grid.RowDefinitions>
              <RowDefinition Height="50*"/>
-             <RowDefinition Height="20*"/>
+             <RowDefinition Height="10*"/>
          </Grid.RowDefinitions>
    
          <!-- Grid Row 3.1
@@ -34,42 +34,35 @@
              <!--Grid Row 3.1.1 
               This contains Purple and Green
              -->
-             <Grid Grid.Row="0">
-             <Grid.ColumnDefinitions>
-                 <ColumnDefinition Width="75*"/>
-                 <ColumnDefinition Width="25*"/>
-             </Grid.ColumnDefinitions>
-   
-                 <!-- 3.1.1.1 -->
-                 <Grid Grid.Column="0" Background="LightGray"><!-- Purple -->
+             <Grid Grid.Row="0" Background="#1e1e1e">   
                    <!--
                     € Graph, Purple, right top corner, 2nd from right
                    -->
                    <lvc:CartesianChart
-                      Series="{Binding Series1}"
-                      XAxes="{Binding XAxes1}"
+                      Margin="5"
+                      CornerRadius="7"
+                      Background="#3e3e3e"
+                      Series="{Binding Series2}"
+                      XAxes="{Binding XAxes2}"
+                      YAxes="{Binding YAxes}"
                       ZoomMode="X">
 
                     </lvc:CartesianChart>
-                 </Grid>
-   
-                  <!-- 3.1.1.2 -->
-                 <Grid Grid.Column="1" Background="Green">
-                  <!-- 
-                    Total € gained, Green box right top corner
-                  -->
-                   <TextBlock Text="total € numbers"/>
-                 </Grid>
+
             </Grid>
    
              <!--Grid Row 3.1.2 -->
-             <Grid Grid.Row="1" Background="LightGray"><!-- Gray -->
+             <Grid Grid.Row="1" Background="#1e1e1e"><!-- Gray -->
               <!--
                 Emmisions graph, grey right
               -->
                 <lvc:CartesianChart
-                      Series="{Binding Series2}"
-                      XAxes="{Binding XAxes2}"
+                      Margin="5"
+                      CornerRadius="7"
+                      Background="#3e3e3e"
+                      Series="{Binding Series1}"
+                      XAxes="{Binding XAxes1}"
+                      YAxes="{Binding YAxes}"
                       ZoomMode="X">
 
                     </lvc:CartesianChart>
@@ -78,7 +71,8 @@
          </Grid>
    
          <!-- Grid Row 3.2 -->
-         <Grid Grid.Row="1" Background="Black">
+         <Grid Grid.Row="1" Background="#1e1e1e">
+           <TextBlock Text="total € numbers" />
            <!-- 
             I dont know what, Black right bottom corner
            -->

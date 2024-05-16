@@ -9,22 +9,22 @@
              x:Class="OptimizerAvalonia.Views.graphView"
              x:DataType="vm:graphViewModel"
               xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia">
-
-
-    <!--<Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="50"/>
-      <RowDefinition Height="*"/>
-    </Grid.RowDefinitions>
-    <StackPanel Grid.Row="0" Orientation="Horizontal" Background="Gray" >
-        <Button Margin="6" Command="{Binding AddItemCommand}">Add</Button>
-        </StackPanel>-->
-    <lvc:CartesianChart
-        Series="{Binding Series}"
-        XAxes="{Binding XAxes}"
-        ZoomMode="X"
-        Grid.Row="1">
-
-    </lvc:CartesianChart>
-    <!--</Grid>-->
+    
+    <Grid Margin="7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+            <lvc:CartesianChart
+                CornerRadius="7"
+                Background="#3e3e3e"
+                Series="{Binding Series}"
+                ZoomMode="X"
+                XAxes="{Binding XAxes}">
+            </lvc:CartesianChart>
+        
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#1e1e1e" HorizontalAlignment="Center" >
+                <Button Margin="6" Width="150" Command="{Binding OptimizeCommand}">Optimize</Button>
+            </StackPanel>
+    </Grid>
 </UserControl>

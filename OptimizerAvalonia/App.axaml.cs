@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using FluentAvalonia.UI.Controls;
 using OptimizerAvalonia.ViewModels;
 using OptimizerAvalonia.Views;
 

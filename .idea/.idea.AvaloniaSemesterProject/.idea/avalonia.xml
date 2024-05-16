@@ -5,9 +5,14 @@
       <map>
         <entry key="OptimizerAvalonia/App.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Assets/Icons.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/SplashScreen/DemoComplexSplashScreen.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/HomePageView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/MainWindow.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/OptimizerView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/SettingsView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/SettingsViewsFolder/boilersView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/SettingsViewsFolder/choosePeriodView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/SettingsViewsFolder/optimizeSettingsView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/boilersView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/choosePeriodView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/graphView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />

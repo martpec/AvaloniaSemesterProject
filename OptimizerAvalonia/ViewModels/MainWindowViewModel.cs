@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 using Avalonia;
@@ -6,6 +7,7 @@ using Avalonia.Controls;
 using Avalonia.Media;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using DynamicData.Binding;
 
 namespace OptimizerAvalonia.ViewModels;
 using System.Reactive;
@@ -28,14 +30,25 @@ public partial class MainWindowViewModel : ViewModelBase
 
     [ObservableProperty] 
     private ListItemTemplate _selectedListItem;
+    
+    private readonly Dictionary<Type, ViewModelBase> _viewModelCache = new();
 
     partial void OnSelectedListItemChanged(ListItemTemplate? value)
     {
         if (value is null) return;
-        var instance = Activator.CreateInstance(value.ModelType);
-        if(instance is null) return;
-        CurrentPage = (ViewModelBase)instance;
 
+        // Check if we have already created an instance of this ViewModel type
+        if (!_viewModelCache.TryGetValue(value.ModelType, out var viewModel))
+        {
+            // If not, create and store it
+            var instance = Activator.CreateInstance(value.ModelType);
+            if (instance is null) return;
+            viewModel = (ViewModelBase)instance;
+            _viewModelCache[value.ModelType] = viewModel;
+        }
+
+        // Set the current page to the cached instance
+        CurrentPage = viewModel;
     }
 
     public ObservableCollection<ListItemTemplate> Items { get; } = new()

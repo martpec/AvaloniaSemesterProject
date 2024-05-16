@@ -1,0 +1,27 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="OptimizerAvalonia.SplashScreen.DemoComplexSplashScreen">
+    <Panel Margin="0 -100 0 0" Background="#1e1e1e">
+        <StackPanel Spacing="10"
+                    VerticalAlignment="Center">
+            <Image Source="/Assets/DanfossLogo.png"
+                   Width="450"
+                   Height="450" 
+                   Margin="0 0 0 -150"/>
+            
+            
+            <ProgressBar Name="ProgressBar1"
+                         MaxWidth="200"
+                         Margin="0 20"/>
+            
+            <TextBlock Text="Loading..."
+                       Name="LoadingText"
+                       HorizontalAlignment="Center" 
+                       FontSize="20"
+                       Foreground="White"/>
+        </StackPanel>
+    </Panel>
+</UserControl>

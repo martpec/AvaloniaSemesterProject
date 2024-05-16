@@ -38,9 +38,14 @@ public partial class ViewModelBase : ObservableObject
             }
         }
     }
+    
     /*----------------------------SourceData----------------------------------------*/
     [ObservableProperty]
     private static string _sourceDataPath = "SummerData.csv";
+    
+    /*---------------Bool to optimize for Emissions/Cost ----------------------*/
+    [ObservableProperty] 
+    private static bool _isEmissions;
 }
 
 public class Boiler(IBoiler boiler) : INotifyPropertyChanged

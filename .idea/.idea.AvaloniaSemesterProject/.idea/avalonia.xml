@@ -6,6 +6,7 @@
         <entry key="OptimizerAvalonia/App.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Assets/Icons.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/SplashScreen/DemoComplexSplashScreen.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Templates/ContentTemplate.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/HomePageView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/MainWindow.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/OptimizerView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />

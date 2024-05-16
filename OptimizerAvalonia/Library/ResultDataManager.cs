@@ -18,7 +18,7 @@ namespace HeatProductionOptimization
 
                 foreach (var data in optimizedData)
                 {
-                    string activatedBoilers = data.ActivatedBoilers != null ? string.Join(";", data.ActivatedBoilers.Select(b => b.Name)) : string.Empty;
+                    string activatedBoilers = data.BoilerProductions != null ? string.Join(";", data.BoilerProductions.Select(b => b.BoilerName)) : string.Empty;
                     writer.WriteLine($"{data.StartTime},{data.EndTime},{data.TotalProductionCost},{data.Emissions},{activatedBoilers}");
                 }
             }

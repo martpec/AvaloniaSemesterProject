@@ -9,7 +9,7 @@
              xmlns:vm="clr-namespace:OptimizerAvalonia.ViewModels"
              xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia">
     
-    <Grid ColumnDefinitions="60*, 40*" Background="">
+    <Grid ColumnDefinitions="60*, 40*" Background="#1e1e1e">
        <!-- Grid 2 -->
        <Grid Grid.Column="0" Background="#1e1e1e" Width="">
            <views:graphView/>

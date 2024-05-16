@@ -9,7 +9,7 @@
         <Setter Property="Template">
             <ControlTemplate>
                 <Border Background="#393939"
-                        CornerRadius="3"
+                        CornerRadius="12"
                         Padding="15">
                     <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding Template}" />
                 </Border>

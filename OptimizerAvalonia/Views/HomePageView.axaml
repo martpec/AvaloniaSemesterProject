@@ -2,13 +2,58 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:templates="clr-namespace:OptimizerAvalonia.Templates"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="OptimizerAvalonia.Views.HomePageView">
     <ScrollViewer>
         <StackPanel Margin="20">
             <TextBlock Margin="0 20" FontSize="20" FontWeight="Bold">HomePage</TextBlock>
+            <TextBlock Margin="0 20" FontSize="17" FontWeight="Bold">Case Description</TextBlock>
             
-            <TextBlock Margin="0 20" FontSize="15"></TextBlock>
+            <templates:ContentTemplate>
+                <TextBlock TextWrapping="Wrap" 
+                           FontSize="15">
+                    The utility company is responsible for ensuring heat delivery to approximately 1,600 buildings through a single district heating network. 
+                    They generate heat using a combination of traditional heat-only boilers and combined heat and power (CHP) units, which produce both heat and electricity.
+                </TextBlock>
+            </templates:ContentTemplate>
+            
+            <TextBlock Margin="0 20" FontSize="17" FontWeight="Bold">About District Heating</TextBlock>
+            <Grid Margin="15 0 0 0 ">
+                <Grid.ColumnDefinitions>
+                    <!-- Column for TextBlock -->
+                    <ColumnDefinition Width="*" />
+                    <!-- Column for Image -->
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- TextBlock -->
+                <StackPanel Grid.Column="0">
+                    <TextBlock  
+                        FontSize="17" 
+                        TextWrapping="Wrap" 
+                        TextAlignment="Left">
+                        District heating is hot water from a power plant which is distributed to the buildings in a city through highly insulated pipes. In the buildings, the hot water is used for heating and for domestic hot water. 
+                        The cooled water is then sent back to the plant, where it is reheated again. Image shows a small district heating grid with two heat producers.
+                    </TextBlock>
+                    <TextBlock 
+                        TextWrapping="Wrap" 
+                        FontSize="17"
+                        TextAlignment="Left"
+                        Margin = "0 15 0 0">
+                        The majority of the heat comes from cogeneration plants that produce both electricity and heat. 
+                        The heat can be produced in many different ways and with different types of fuel, such as waste, gas, coal, and biomass. 
+                        In addition, the industry's surplus heat, solar and geothermal heat,and large heat pumps as well as electric boilers are also used.
+                    </TextBlock>
+                </StackPanel>
+                <!-- Image -->
+                <Border Grid.Column="1" Margin="20 0" ClipToBounds="True" CornerRadius="15">
+                    <Border.Effect><DropShadowEffect Color="Black" BlurRadius="10" /></Border.Effect>
+                        <Image Source="/Assets/HeatingGrid.png" MaxWidth="550">
+                        </Image>
+                </Border>
+            </Grid>
+            
         </StackPanel>
     </ScrollViewer>
 </UserControl>

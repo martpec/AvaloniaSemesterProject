@@ -15,37 +15,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OptimizerAvalonia
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\jakub\Desktop\AvaloniaSemesterProject\OptimizerAvalonia\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
-
-[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/App.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Assets/Icons.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/SplashScreen/DemoComplexSplashScreen.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Templates/ContentTemplate.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/graphView.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/HomePageView.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/MainWindow.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/OptimizerView.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/jakub/Desktop/AvaloniaSemesterProject/OptimizerAvalonia/Views/SettingsView.axaml]
-=======
 build_property.ProjectDir = C:\Users\fifof\OneDrive\Počítač\AvaloniaUI\SemesterProject2\OptimizerAvalonia\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
@@ -75,5 +44,4 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/fifof/OneDrive/Počítač/AvaloniaUI/SemesterProject2/OptimizerAvalonia/Views/SettingsView.axaml]
->>>>>>> main
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

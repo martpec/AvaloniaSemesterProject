@@ -1888,19 +1888,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marti\\.nuget\\packages\\": {}
+    "C:\\Users\\fifof\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
+      "projectUniqueName": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
       "projectName": "OptimizerAvalonia",
-      "projectPath": "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
-      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\obj\\",
+      "projectPath": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
+      "packagesPath": "C:\\Users\\fifof\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fifof\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1920,11 +1925,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {

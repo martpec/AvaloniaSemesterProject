@@ -40,7 +40,7 @@ public partial class ViewModelBase : ObservableObject
     }
     /*----------------------------SourceData----------------------------------------*/
     [ObservableProperty]
-    private static string _sourceDataPath = "SummerData.cs";
+    private static string _sourceDataPath = "SummerData.csv";
 }
 
 public class Boiler(IBoiler boiler) : INotifyPropertyChanged

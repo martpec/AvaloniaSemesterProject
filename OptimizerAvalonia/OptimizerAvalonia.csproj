@@ -28,10 +28,6 @@
 
 
   <ItemGroup>
-    <Compile Update="Views\SettingsViewsFolder\boilersView.axaml.cs">
-      <DependentUpon>boilersView.axaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Views\SettingsViewsFolder\optimizeSettingsView.axaml.cs">
       <DependentUpon>optimizeSettingsView.axaml</DependentUpon>
       <SubType>Code</SubType>

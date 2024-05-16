@@ -10,34 +10,37 @@ namespace OptimizerAvalonia.ViewModels;
 
 public partial class ViewModelBase : ObservableObject
 {
-/*------------------Boilers-------------------------------------------*/
-// to access BoilerList use "Boiler.BoilerList"
-    public ObservableCollection<Boiler> BoilersList { get; set; } = new();
-    public List<IBoiler> IBoilersList { get; set; } = new();
+    /*------------------Boilers-------------------------------------------*/
+    // to access BoilerList use "Boiler.BoilerList"
+    public static ObservableCollection<Boiler> BoilersList { get; set; } = new();
+    public static List<IBoiler> IBoilersList { get; set; } = new();
 
     public ViewModelBase()
     {
-        IBoilersList = new List<IBoiler>();
-
-        var assetManager = new AssetManager();
-        IBoiler gasBoiler = assetManager.LoadBoilerData<GasBoiler>("GasBoiler.csv");
-        IBoiler oilBoiler = assetManager.LoadBoilerData<OilBoiler>("OilBoiler.csv");
-        IBoiler gasMotor = assetManager.LoadBoilerData<GasMotor>("GasMotor.csv");
-        IBoiler electricBoiler = assetManager.LoadBoilerData<ElectricBoiler>("ElectricBoiler.csv");
-
-        IBoilersList.Add(gasBoiler);
-        IBoilersList.Add(oilBoiler);
-        IBoilersList.Add(gasMotor);
-        IBoilersList.Add(electricBoiler);
-
-        foreach (var boiler in IBoilersList)
+        if (IBoilersList.Count == 0 && BoilersList.Count == 0)
         {
-            BoilersList.Add(new Boiler(boiler));
+            IBoilersList = new List<IBoiler>();
+
+            var assetManager = new AssetManager();
+            IBoiler gasBoiler = assetManager.LoadBoilerData<GasBoiler>("GasBoiler.csv");
+            IBoiler oilBoiler = assetManager.LoadBoilerData<OilBoiler>("OilBoiler.csv");
+            IBoiler gasMotor = assetManager.LoadBoilerData<GasMotor>("GasMotor.csv");
+            IBoiler electricBoiler = assetManager.LoadBoilerData<ElectricBoiler>("ElectricBoiler.csv");
+
+            IBoilersList.Add(gasBoiler);
+            IBoilersList.Add(oilBoiler);
+            IBoilersList.Add(gasMotor);
+            IBoilersList.Add(electricBoiler);
+
+            foreach (var boiler in IBoilersList)
+            {
+                BoilersList.Add(new Boiler(boiler));
+            }
         }
     }
     /*----------------------------SourceData----------------------------------------*/
-    [ObservableProperty] 
-    private string _sourceDataPath= "SummerData.cs";
+    [ObservableProperty]
+    private static string _sourceDataPath = "SummerData.cs";
 }
 
 public class Boiler(IBoiler boiler) : INotifyPropertyChanged
@@ -56,7 +59,7 @@ public class Boiler(IBoiler boiler) : INotifyPropertyChanged
             }
         }
     }
-    public double HeatProduction {get; set;} 
+    public double HeatProduction { get; set; }
     public string? Name { get; set; } = boiler.Name;
     public double MaxHeat { get; set; } = boiler.MaxHeat;
 

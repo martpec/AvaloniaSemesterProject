@@ -22,8 +22,17 @@ public class graphViewModel: ViewModelBase
     {
         new DateTimeAxis(TimeSpan.FromHours(1), date => date.ToString("H:mm d/M")) //output format
         {
-            LabelsRotation = 45 // Rotate the labels by 45 degrees
+            LabelsRotation = 45, // Rotate the labels by 45 degrees
+            LabelsPaint = new SolidColorPaint(SKColors.White)
         }
+    };
+
+    public Axis[] YAxes { get; set; } =
+    {
+        new Axis
+            {
+                LabelsPaint = new SolidColorPaint(SKColors.White)
+            }
     };
     public graphViewModel()
     {

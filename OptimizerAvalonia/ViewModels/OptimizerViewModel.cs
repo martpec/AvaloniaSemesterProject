@@ -5,6 +5,8 @@ using System;
 using System.Collections.ObjectModel;
 using System.Drawing;
 using Avalonia.Media;
+using LiveChartsCore.SkiaSharpView.Painting;
+using SkiaSharp;
 
 namespace OptimizerAvalonia.ViewModels;
 public class OptimizerViewModel : ViewModelBase
@@ -17,14 +19,26 @@ public class OptimizerViewModel : ViewModelBase
     {
         new DateTimeAxis(TimeSpan.FromHours(1), date => date.ToString("H:mm d/M")) //output format
         {
-            LabelsRotation = 0 // Rotate the labels by 45 degrees
+            LabelsRotation = 0, // Rotate the labels by 45 degrees
+            LabelsPaint = new SolidColorPaint(SKColors.White)
         }
     };
+    public Axis[] YAxes { get; set; } =
+    {
+        new Axis
+            {
+                LabelsPaint = new SolidColorPaint(SKColors.White)
+            }
+    };
+    
     private readonly ObservableCollection<DateTimePoint> _observablePoints2;
     public ObservableCollection<ISeries> Series2 { get; set; }
     public Axis[] XAxes2 { get; set; } =
     {
         new DateTimeAxis(TimeSpan.FromHours(1), date => date.ToString("H:mm d/M yyyy")) //output format
+        {
+            LabelsPaint = new SolidColorPaint(SKColors.White)
+        }
     };
 
     public OptimizerViewModel()

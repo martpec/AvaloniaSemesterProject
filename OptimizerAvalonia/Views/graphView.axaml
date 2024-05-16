@@ -16,11 +16,13 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
             <lvc:CartesianChart
+                
                 CornerRadius="7"
                 Background="#3e3e3e"
                 Series="{Binding Series}"
                 ZoomMode="X"
-                XAxes="{Binding XAxes}">
+                XAxes="{Binding XAxes}"
+                YAxes="{Binding YAxes}">
             </lvc:CartesianChart>
         
             <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#1e1e1e" HorizontalAlignment="Center" >

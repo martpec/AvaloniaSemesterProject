@@ -34,13 +34,17 @@
              <!--Grid Row 3.1.1 
               This contains Purple and Green
              -->
-             <Grid Grid.Row="0" Background="LightGray">   
+             <Grid Grid.Row="0" Background="#1e1e1e">   
                    <!--
                     € Graph, Purple, right top corner, 2nd from right
                    -->
                    <lvc:CartesianChart
+                      Margin="5"
+                      CornerRadius="7"
+                      Background="#3e3e3e"
                       Series="{Binding Series2}"
                       XAxes="{Binding XAxes2}"
+                      YAxes="{Binding YAxes}"
                       ZoomMode="X">
 
                     </lvc:CartesianChart>
@@ -48,13 +52,17 @@
             </Grid>
    
              <!--Grid Row 3.1.2 -->
-             <Grid Grid.Row="1" Background="LightGray"><!-- Gray -->
+             <Grid Grid.Row="1" Background="#1e1e1e"><!-- Gray -->
               <!--
                 Emmisions graph, grey right
               -->
                 <lvc:CartesianChart
+                      Margin="5"
+                      CornerRadius="7"
+                      Background="#3e3e3e"
                       Series="{Binding Series1}"
                       XAxes="{Binding XAxes1}"
+                      YAxes="{Binding YAxes}"
                       ZoomMode="X">
 
                     </lvc:CartesianChart>
@@ -63,8 +71,8 @@
          </Grid>
    
          <!-- Grid Row 3.2 -->
-         <Grid Grid.Row="1" Background="Black">
-           <TextBlock Text="total € numbers"/>
+         <Grid Grid.Row="1" Background="#1e1e1e">
+           <TextBlock Text="total € numbers" />
            <!-- 
             I dont know what, Black right bottom corner
            -->

@@ -12,9 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using HeatProductionOptimization;
 namespace OptimizerAvalonia.ViewModels;
 
-public class graphViewModel: ViewModelBase
+public partial class graphViewModel : ViewModelBase
 {
     private readonly ObservableCollection<DateTimePoint> _observablePoints;
     public ObservableCollection<ISeries> Series { get; set; }
@@ -52,5 +53,14 @@ public class graphViewModel: ViewModelBase
     public void AddItemCommand()
     {
         _observablePoints.Add(new(++x,1));
-    } */  
+    } */
+
+    [RelayCommand]
+    private void Optimize()
+    {
+        SourceDataManager SDM = new SourceDataManager();
+        // TO DO: change IBoilersList
+        Optimizer O = new Optimizer(IBoilersList,SDM.LoadSourceData(SourceDataPath));
+        O.CalculateOptimalHeatProduction();
+    }
 }

@@ -70,6 +70,6 @@ public partial class graphViewModel : ViewModelBase
         SourceDataManager SDM = new SourceDataManager();
         // TO DO: change IBoilersList
         Optimizer O = new Optimizer(IBoilersList,SDM.LoadSourceData(SourceDataPath));
-        O.CalculateOptimalHeatProduction();
+        O.CalculateOptimalHeatProduction(IsEmissions);
     }
 }

@@ -24,13 +24,4 @@ public partial class SettingsViewModel: ViewModelBase
             SourceDataPath = _summerPath; 
         }
     }
-/*--------------Emissions/Cost----------------*/
-    private bool isEmissions;
-
-    public bool IsEmissions
-    {
-        get => isEmissions;
-        set => SetProperty(ref isEmissions, value);
-    }
-    
 }

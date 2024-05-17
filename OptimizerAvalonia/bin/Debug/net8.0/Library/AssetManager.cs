@@ -13,6 +13,9 @@ namespace HeatProductionOptimization
         {
             T boiler = new T();
 
+            //string currentDirectory = Environment.CurrentDirectory;
+            //string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
+
             string appDataPath = Path.Combine(@"Library\AppData", filePath);
 
             using (var reader = new StreamReader(appDataPath))

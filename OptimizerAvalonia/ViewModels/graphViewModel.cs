@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using DynamicData;
 using HeatProductionOptimization;
 using HeatProductionOptimization.Interfaces;
 using HeatProductionOptimization.Models;
@@ -143,6 +144,8 @@ public partial class graphViewModel : ViewModelBase
 
     public void loadDataMainGraph()
     {
+        ObservablePoints2.Clear();
+        ObservablePoints3.Clear();
         foreach (OptimizedData data in OptimizedDataForGraph)
         {
             double totalHeatPerHour = 0.0;
@@ -150,7 +153,10 @@ public partial class graphViewModel : ViewModelBase
             {
                 totalHeatPerHour += boiler.HeatProduced;
             }
+            
             allBoilers.Add(new(data.StartTime, data.HeatDemand));
+            ObservablePoints2.Add(new (data.StartTime, data.TotalProductionCost));
+            ObservablePoints3.Add(new (data.StartTime, data.Emissions));
         }
     }
 

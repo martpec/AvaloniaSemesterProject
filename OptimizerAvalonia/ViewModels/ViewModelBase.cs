@@ -5,6 +5,7 @@ using System.ComponentModel;
 using HeatProductionOptimization.Interfaces;
 using HeatProductionOptimization.Models;
 using HeatProductionOptimization;
+using LiveChartsCore.Defaults;
 
 namespace OptimizerAvalonia.ViewModels;
 
@@ -50,6 +51,13 @@ public partial class ViewModelBase : ObservableObject
     /*-------------------OptimizedData To read by graph---------------------------*/
     [ObservableProperty] 
     private static List<OptimizedData> _optimizedDataForGraph = new();
+    
+    /*----------------------Money Graph------------------------*/
+    [ObservableProperty]
+    protected static ObservableCollection<DateTimePoint> _observablePoints2 = new();
+    /*--------------------Emissions Graph------------------*/
+    [ObservableProperty]
+    protected static ObservableCollection<DateTimePoint> _observablePoints3 = new();
 }
 
 public class Boiler(IBoiler boiler) : INotifyPropertyChanged

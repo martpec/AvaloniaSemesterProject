@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Models\**" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Library\**" CopyToOutputDirectory="PreserveNewest" />
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
 

@@ -10,6 +10,7 @@ namespace HeatProductionOptimization.Models
         public DateTime EndTime { get; set; }
         public double TotalProductionCost { get; set; }
         public double Emissions { get; set; } = 0; // TODO: Decide whether the emissions will be calculated
+        public double HeatDemand {get; set;}
         public List<BoilerProduction>? BoilerProductions { get; set; }
     }
 }

@@ -21,7 +21,7 @@
                 CornerRadius="7"
                 Background="#3e3e3e"
                 Series="{Binding Series}"
-                ZoomMode="X"
+                ZoomMode="Both"
                 XAxes="{Binding XAxes}"
                 YAxes="{Binding YAxes}">
             </lvc:CartesianChart>

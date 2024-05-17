@@ -24,6 +24,7 @@ namespace HeatProductionOptimization
             {
                 Console.WriteLine($"Calculating optimal heat production for demand from {demand.StartTime} to {demand.EndTime}.");
 
+                double totalHeatDemand = demand.HeatDemand;
                 double totalProductionCost = 0;
                 double totalEmissions = 0;
                 var boilerProductions = new List<BoilerProduction>();
@@ -96,6 +97,7 @@ namespace HeatProductionOptimization
                     EndTime = demand.EndTime,
                     TotalProductionCost = Math.Round(totalProductionCost, 2),
                     Emissions = Math.Round(totalEmissions, 2),
+                    HeatDemand = totalHeatDemand,
                     BoilerProductions = boilerProductions
                 });
             }

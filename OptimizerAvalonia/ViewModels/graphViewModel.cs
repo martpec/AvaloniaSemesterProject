@@ -13,6 +13,7 @@ using System.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using HeatProductionOptimization;
 using HeatProductionOptimization.Interfaces;
+using HeatProductionOptimization.Models;
 
 namespace OptimizerAvalonia.ViewModels;
 
@@ -42,52 +43,39 @@ public partial class graphViewModel : ViewModelBase
             }
     };
 
-    public SolidColorPaint LegendColor { get; set; } = 
-        new SolidColorPaint 
-        { 
-            Color = new SKColor(255,255,255), 
+    public SolidColorPaint LegendColor { get; set; } =
+        new SolidColorPaint
+        {
+            Color = new SKColor(255, 255, 255),
             //SKTypeface = SKTypeface.FromFamilyName("Courier New") 
-        }; 
+        };
     public graphViewModel()
     {
+
+
         allBoilers = new ObservableCollection<DateTimePoint>
         {   // year, month, day, hour, minute, second
-            new DateTimePoint(new DateTime(2021, 1, 1, 1, 0, 0), 3.3),
-            new DateTimePoint(new DateTime(2021, 1, 1, 2, 0, 0), 13.4),
-            new DateTimePoint(new DateTime(2021, 1, 1, 3, 0, 0), 6.6),
-            new DateTimePoint(new DateTime(2021, 1, 1, 4, 0, 0), 8.1),
-            new DateTimePoint(new DateTime(2021, 1, 1, 6, 0, 0), 3.9),
-            new DateTimePoint(new DateTime(2021, 1, 1, 8, 0, 0), 10.7),
-            new DateTimePoint(new DateTime(2021, 1, 1, 9, 0, 0), 15.3),
-            new DateTimePoint(new DateTime(2021, 1, 1, 10, 0, 0), 9.2),
+
         };
         boiler1 = new ObservableCollection<DateTimePoint>
         {
-            new DateTimePoint(new DateTime(2021, 1, 1, 1, 0, 0), 4.1),
-            new DateTimePoint(new DateTime(2021, 1, 1, 2, 0, 0), 8.1),
-            new DateTimePoint(new DateTime(2021, 1, 1, 3, 0, 0), 2.2),
-            new DateTimePoint(new DateTime(2021, 1, 1, 4, 0, 0), 8.2),
-            new DateTimePoint(new DateTime(2021, 1, 1, 6, 0, 0), 9.2),
-            new DateTimePoint(new DateTime(2021, 1, 1, 8, 0, 0), 5.2),
-            new DateTimePoint(new DateTime(2021, 1, 1, 9, 0, 0), 1.2)
+
         };
         boiler2 = new ObservableCollection<DateTimePoint>
         {
-            new DateTimePoint(new DateTime(2021, 1, 1, 3, 0, 0), 2.2),
-            new DateTimePoint(new DateTime(2021, 1, 1, 4, 0, 0), 2.2),
-            new DateTimePoint(new DateTime(2021, 1, 1, 9, 0, 0), 1.2)
+
         };
         boiler3 = new ObservableCollection<DateTimePoint>
         {
-            new DateTimePoint(new DateTime(2021, 1, 1, 9, 0, 0), 1.2)
+
         };
         boiler4 = new ObservableCollection<DateTimePoint>
         {
-            new DateTimePoint(new DateTime(2021, 1, 1, 9, 0, 0), 1.2)
+
         };
         Series = new ObservableCollection<ISeries>
         {
-            
+
             new StackedColumnSeries<DateTimePoint>
             {
                 Name = "Boiler 1",
@@ -112,11 +100,13 @@ public partial class graphViewModel : ViewModelBase
             },
             new LineSeries<DateTimePoint>
             {
-                Name = "Total heat producet",
+                Name = "Total heat demand",
                 Values = allBoilers,
                 //Fill = null
             },
         };
+
+        loadDataMainGraph();
     }
     /*private int x = 13;
     public void AddItemCommand()
@@ -129,18 +119,39 @@ public partial class graphViewModel : ViewModelBase
     {
         SourceDataManager sourceDataManager = new SourceDataManager();
         List<IBoiler> activeBoilers = new();
-        
-        for(int i = 0; i<IBoilersList.Count; i++)
+
+        for (int i = 0; i < IBoilersList.Count; i++)
         {
-            if(BoilersList[i].IsActive)
+            if (BoilersList[i].IsActive)
             {
                 IBoilersList[i].MaxHeat = BoilersList[i].HeatProduction;
                 activeBoilers.Add(IBoilersList[i]);
             }
         }
-        Optimizer optimizer = new Optimizer(activeBoilers,sourceDataManager.LoadSourceData(SourceDataPath));
+        Optimizer optimizer = new Optimizer(activeBoilers, sourceDataManager.LoadSourceData(SourceDataPath));
         optimizer.CalculateOptimalHeatProduction(IsEmissions);
 
         OptimizedDataForGraph = optimizer.OptimizedData;
+
+        allBoilers.Clear();
+        boiler1.Clear();
+        boiler2.Clear();
+        boiler3.Clear();
+        boiler4.Clear();
+        loadDataMainGraph();
     }
+
+    public void loadDataMainGraph()
+    {
+        foreach (OptimizedData data in OptimizedDataForGraph)
+        {
+            double totalHeatPerHour = 0.0;
+            foreach (BoilerProduction boiler in data.BoilerProductions)
+            {
+                totalHeatPerHour += boiler.HeatProduced;
+            }
+            allBoilers.Add(new(data.StartTime, data.HeatDemand));
+        }
+    }
+
 }

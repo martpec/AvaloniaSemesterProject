@@ -54,7 +54,7 @@ public partial class ViewModelBase : ObservableObject
 
 public class Boiler(IBoiler boiler) : INotifyPropertyChanged
 {
-    private bool _isActive;
+    private bool _isActive = true;
 
     public bool IsActive
     {

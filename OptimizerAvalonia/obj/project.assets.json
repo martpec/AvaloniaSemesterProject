@@ -1888,23 +1888,39 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\jakub\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\fifof\\.nuget\\packages\\": {},
+>>>>>>> 5e4b0cbafc77e18c1aa4a377eee6127d9aaed55e
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
       "projectName": "OptimizerAvalonia",
       "projectPath": "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
       "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\jakub\\Desktop\\AvaloniaSemesterProject\\OptimizerAvalonia\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
+      "projectName": "OptimizerAvalonia",
+      "projectPath": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
+      "packagesPath": "C:\\Users\\fifof\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\obj\\",
+>>>>>>> 5e4b0cbafc77e18c1aa4a377eee6127d9aaed55e
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\jakub\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\fifof\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 5e4b0cbafc77e18c1aa4a377eee6127d9aaed55e
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1925,11 +1941,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {

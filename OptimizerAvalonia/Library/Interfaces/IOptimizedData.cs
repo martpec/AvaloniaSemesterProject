@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using HeatProductionOptimization.Models;
 
 namespace HeatProductionOptimization.Interfaces
 {
@@ -18,6 +19,6 @@ namespace HeatProductionOptimization.Interfaces
         double Emissions { get; set; } 
 
         // List of boilers we are using
-        List<IBoiler>? ActivatedBoilers { get; set; }
+        List<BoilerProduction>? BoilerProductions { get; set; }
     }
 }

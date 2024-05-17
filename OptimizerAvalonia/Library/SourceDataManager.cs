@@ -15,7 +15,7 @@ namespace HeatProductionOptimization
             string currentDirectory = Environment.CurrentDirectory;
             string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
 
-            string appDataPath = Path.Combine(projectDirectory, "Models\\AppData", filePath);
+            string appDataPath = Path.Combine(projectDirectory, "Library\\AppData", filePath);
             
             try
             {

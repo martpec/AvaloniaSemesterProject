@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
-        "projectName": "OptimizerAvalonia",
-        "projectPath": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
-        "packagesPath": "C:\\Users\\fifof\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\obj\\",
-=======
     "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {}
   },
   "projects": {
@@ -25,15 +12,9 @@
         "projectPath": "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
         "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\obj\\",
->>>>>>> main
         "projectStyle": "PackageReference",
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\fifof\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
           "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> main
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

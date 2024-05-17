@@ -12,7 +12,10 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using HeatProductionOptimization;
+using HeatProductionOptimization.Interfaces;
+
 namespace OptimizerAvalonia.ViewModels;
+
 
 public partial class graphViewModel : ViewModelBase
 {
@@ -124,9 +127,20 @@ public partial class graphViewModel : ViewModelBase
     [RelayCommand]
     private void Optimize()
     {
-        SourceDataManager SDM = new SourceDataManager();
-        // TO DO: change IBoilersList
-        Optimizer O = new Optimizer(IBoilersList, SDM.LoadSourceData(SourceDataPath));
-        O.CalculateOptimalHeatProduction(IsEmissions);
+        SourceDataManager sourceDataManager = new SourceDataManager();
+        List<IBoiler> activeBoilers = new();
+        
+        for(int i = 0; i<IBoilersList.Count; i++)
+        {
+            if(BoilersList[i].IsActive)
+            {
+                IBoilersList[i].MaxHeat = BoilersList[i].HeatProduction;
+                activeBoilers.Add(IBoilersList[i]);
+            }
+        }
+        Optimizer optimizer = new Optimizer(activeBoilers,sourceDataManager.LoadSourceData(SourceDataPath));
+        optimizer.CalculateOptimalHeatProduction(IsEmissions);
+
+        OptimizedDataForGraph = optimizer.OptimizedData;
     }
 }

@@ -46,6 +46,10 @@ public partial class ViewModelBase : ObservableObject
     /*---------------Bool to optimize for Emissions/Cost ----------------------*/
     [ObservableProperty] 
     private static bool _isEmissions;
+    
+    /*-------------------OptimizedData To read by graph---------------------------*/
+    [ObservableProperty] 
+    private static List<OptimizedData> _optimizedDataForGraph = new();
 }
 
 public class Boiler(IBoiler boiler) : INotifyPropertyChanged

@@ -10,7 +10,7 @@ namespace HeatProductionOptimization
     {
         private readonly List<IBoiler> Boilers;
         private readonly List<SourceData> DemandData;
-        private readonly List<OptimizedData> OptimizedData = new List<OptimizedData>();
+        public readonly List<OptimizedData> OptimizedData = new();
 
         public Optimizer(List<IBoiler> boilers, List<SourceData> demandData)
         {

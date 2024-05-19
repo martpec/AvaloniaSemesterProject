@@ -38,7 +38,8 @@ public class CostsViewModel : ViewModelBase
             new LineSeries<DateTimePoint>
             {
                 Values = ObservablePoints2,
-                Fill = null
+                LineSmoothness = 0 // 0/1 change if line is smooth or not (UUUUUUUUU or VVVVVV) xd
+                //Fill = null
             }
         };
     }

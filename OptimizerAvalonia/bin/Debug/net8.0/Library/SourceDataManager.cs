@@ -12,9 +12,6 @@ namespace HeatProductionOptimization
         {
             List<SourceData> sourceDataList = new List<SourceData>();
             
-            //string currentDirectory = Environment.CurrentDirectory;
-            // string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
-
             string appDataPath = Path.Combine(@"Library\AppData", filePath);
             
             try
@@ -29,7 +26,7 @@ namespace HeatProductionOptimization
                 string? line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    var parts = line.Split(',');
+                    var parts = line.Split('|');
 
                     DateTime startTime = ParseDateTime(parts[0]);
                     DateTime endTime = ParseDateTime(parts[1]);

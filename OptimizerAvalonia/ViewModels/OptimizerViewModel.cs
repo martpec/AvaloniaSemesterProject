@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
+using System.Linq;
 using Avalonia.Media;
 using CommunityToolkit.Mvvm.Input;
 using HeatProductionOptimization;
@@ -12,6 +13,7 @@ using HeatProductionOptimization.Interfaces;
 using HeatProductionOptimization.Models;
 using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
+using Color = Avalonia.Media.Color;
 
 namespace OptimizerAvalonia.ViewModels;
 
@@ -53,7 +55,7 @@ public partial class OptimizerViewModel : ViewModelBase
 
         allBoilers = new ObservableCollection<DateTimePoint>
         {   // year, month, day, hour, minute, second
-
+            
         };
         boiler1 = new ObservableCollection<DateTimePoint>
         {
@@ -77,7 +79,6 @@ public partial class OptimizerViewModel : ViewModelBase
         };
         Series = new ObservableCollection<ISeries>
         {
-
             new StackedColumnSeries<DateTimePoint>
             {
                 Name = "Boiler 1",
@@ -109,6 +110,8 @@ public partial class OptimizerViewModel : ViewModelBase
             {
                 Name = "Total heat demand",
                 Values = allBoilers,
+                LineSmoothness = 0 // 0/1 change if line is smooth or not (UUUUUUUUU or VVVVVV) xd
+
                 //Fill = null
             },
         };

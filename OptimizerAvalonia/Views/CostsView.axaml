@@ -1,0 +1,30 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="OptimizerAvalonia.Views.CostsView"
+             x:DataType="vm:CostsViewModel"
+             xmlns:vm="clr-namespace:OptimizerAvalonia.ViewModels"
+             xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia">
+        
+
+    <Grid RowDefinitions="*, Auto, *, *, *" Margin="20">
+        <TextBlock Grid.Row="0" Margin="0 20" FontSize="20" FontWeight="Bold">Expenses</TextBlock>
+        <Border Grid.Row="1">
+            <Border.Effect><DropShadowEffect BlurRadius="10" Color="Black"></DropShadowEffect></Border.Effect>
+        <lvc:CartesianChart
+                            Height="700"
+                            Margin="5"
+                            CornerRadius="7"
+                            Background="#3e3e3e"
+                            Series="{Binding Series2}"
+                            XAxes="{Binding XAxes2}"
+                            YAxes="{Binding YAxes}"
+                            ZoomMode="X">
+        </lvc:CartesianChart>
+        </Border>
+    </Grid>
+            
+
+</UserControl>

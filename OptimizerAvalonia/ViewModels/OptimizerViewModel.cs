@@ -2,24 +2,33 @@
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.Defaults;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
 using Avalonia.Media;
+using CommunityToolkit.Mvvm.Input;
+using HeatProductionOptimization;
+using HeatProductionOptimization.Interfaces;
+using HeatProductionOptimization.Models;
 using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
 
 namespace OptimizerAvalonia.ViewModels;
 
-public class OptimizerViewModel : ViewModelBase
+public partial class OptimizerViewModel : ViewModelBase
 {
-    // Graph 1-> money
-    public ObservableCollection<ISeries> Series1 { get; set; }
-
-    public Axis[] XAxes1 { get; set; } =
+    private readonly ObservableCollection<DateTimePoint> allBoilers;
+    private readonly ObservableCollection<DateTimePoint> boiler1;
+    private readonly ObservableCollection<DateTimePoint> boiler2;
+    private readonly ObservableCollection<DateTimePoint> boiler3;
+    private readonly ObservableCollection<DateTimePoint> boiler4;
+    private readonly ObservableCollection<DateTimePoint> notEnough;
+    public ObservableCollection<ISeries> Series { get; set; }
+    public Axis[] XAxes { get; set; } =
     {
         new DateTimeAxis(TimeSpan.FromHours(1), date => date.ToString("H:mm d/M")) //output format
         {
-            LabelsRotation = 0, // Rotate the labels by 45 degrees
+            LabelsRotation = 45, // Rotate the labels by 45 degrees
             LabelsPaint = new SolidColorPaint(SKColors.White)
         }
     };
@@ -27,40 +36,150 @@ public class OptimizerViewModel : ViewModelBase
     public Axis[] YAxes { get; set; } =
     {
         new Axis
-        {
-            LabelsPaint = new SolidColorPaint(SKColors.White)
-        }
+            {
+                LabelsPaint = new SolidColorPaint(SKColors.White)
+            }
     };
 
-    public ObservableCollection<ISeries> Series2 { get; set; }
-
-    public Axis[] XAxes2 { get; set; } =
-    {
-        new DateTimeAxis(TimeSpan.FromHours(1), date => date.ToString("H:mm d/M yyyy")) //output format
+    public SolidColorPaint LegendColor { get; set; } =
+        new SolidColorPaint
         {
-            LabelsPaint = new SolidColorPaint(SKColors.White)
-        }
-    };
-
+            Color = new SKColor(255, 255, 255),
+            //SKTypeface = SKTypeface.FromFamilyName("Courier New") 
+        };
     public OptimizerViewModel()
     {
-        
-        Series1 = new ObservableCollection<ISeries>
+
+
+        allBoilers = new ObservableCollection<DateTimePoint>
+        {   // year, month, day, hour, minute, second
+
+        };
+        boiler1 = new ObservableCollection<DateTimePoint>
         {
+
+        };
+        boiler2 = new ObservableCollection<DateTimePoint>
+        {
+
+        };
+        boiler3 = new ObservableCollection<DateTimePoint>
+        {
+
+        };
+        boiler4 = new ObservableCollection<DateTimePoint>
+        {
+
+        };
+        notEnough = new ObservableCollection<DateTimePoint>
+        {
+
+        };
+        Series = new ObservableCollection<ISeries>
+        {
+
+            new StackedColumnSeries<DateTimePoint>
+            {
+                Name = "Boiler 1",
+                Values = boiler1,
+                //Fill = new SolidColorBrush(Color.FromRgb(255, 0, 0)) // Red color
+                //Color = new SKColor(50, 50, 50),
+            },
+            new StackedColumnSeries<DateTimePoint>
+            {
+                Name = "Boiler 2",
+                Values = boiler2
+            },
+            new StackedColumnSeries<DateTimePoint>
+            {
+                Name = "Boiler 3",
+                Values = boiler3
+            },
+            new StackedColumnSeries<DateTimePoint>
+            {
+                Name = "Boiler 4",
+                Values = boiler4
+            },
+            new StackedColumnSeries<DateTimePoint>
+            {
+                Name = "Missing heat",
+                Values = notEnough
+            },
             new LineSeries<DateTimePoint>
             {
-                Values = ObservablePoints3,
+                Name = "Total heat demand",
+                Values = allBoilers,
                 //Fill = null
             },
         };
-        
-        Series2 = new ObservableCollection<ISeries>
+
+        loadDataMainGraph();
+    }
+    /*private int x = 13;
+    public void AddItemCommand()
+    {
+        allBoilers.Add(new(++x,1));
+    } */
+
+    [RelayCommand]
+    private void Optimize()
+    {
+        SourceDataManager sourceDataManager = new SourceDataManager();
+        List<IBoiler> activeBoilers = new();
+
+        for (int i = 0; i < IBoilersList.Count; i++)
         {
-            new LineSeries<DateTimePoint>
+            if (BoilersList[i].IsActive)
             {
-                Values = ObservablePoints2,
-                Fill = null
+                IBoilersList[i].MaxHeat = BoilersList[i].HeatProduction;
+                activeBoilers.Add(IBoilersList[i]);
             }
-        };
+        }
+        Optimizer optimizer = new Optimizer(activeBoilers, sourceDataManager.LoadSourceData(SourceDataPath));
+        optimizer.CalculateOptimalHeatProduction(IsEmissions);
+
+        OptimizedDataForGraph = optimizer.OptimizedData;
+
+        allBoilers.Clear();
+        boiler1.Clear();
+        boiler2.Clear();
+        boiler3.Clear();
+        boiler4.Clear();
+        loadDataMainGraph();
+    }
+
+    public void loadDataMainGraph()
+    {
+        ObservablePoints2.Clear();
+        ObservablePoints3.Clear();
+        foreach (OptimizedData data in OptimizedDataForGraph)
+        {
+            double totalHeatPerHour = 0.0;
+            double totalDifference = data.HeatDemand;
+            foreach (BoilerProduction boiler in data.BoilerProductions)
+            {
+                totalHeatPerHour += boiler.HeatProduced;
+                totalDifference -= boiler.HeatProduced;
+                
+                if(boiler.BoilerName == "GB")
+                    boiler1.Add(new(data.StartTime, boiler.HeatProduced));
+                
+                if(boiler.BoilerName == "OB")
+                    boiler2.Add(new(data.StartTime, boiler.HeatProduced));
+
+                if(boiler.BoilerName == "GM")
+                    boiler3.Add(new(data.StartTime, boiler.HeatProduced));
+                    
+                if(boiler.BoilerName == "EK")
+                    boiler4.Add(new(data.StartTime, boiler.HeatProduced));
+                
+            }
+            if(totalDifference > 0)
+                notEnough.Add(new(data.StartTime, totalDifference));
+
+            allBoilers.Add(new(data.StartTime, data.HeatDemand));
+            ObservablePoints2.Add(new (data.StartTime, data.TotalProductionCost));
+            ObservablePoints3.Add(new (data.StartTime, data.Emissions));
+        }
     }
 }

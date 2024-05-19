@@ -76,7 +76,8 @@ public class Boiler(IBoiler boiler) : INotifyPropertyChanged
             }
         }
     }
-    public double HeatProduction { get; set; }
+
+    public double HeatProduction { get; set; } = boiler.MaxHeat;
     public string? Name { get; set; } = boiler.Name;
     public double MaxHeat { get; set; } = boiler.MaxHeat;
 

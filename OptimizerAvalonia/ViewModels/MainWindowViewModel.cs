@@ -53,18 +53,20 @@ public partial class MainWindowViewModel : ViewModelBase
 
     public ObservableCollection<ListItemTemplate> Items { get; } = new()
     {
-        new ListItemTemplate(typeof(HomePageViewModel),"HomeRegular"),
-        new ListItemTemplate(typeof(OptimizerViewModel), "DataHistogram"),
-        new ListItemTemplate(typeof(SettingsViewModel), "BoilerSettings")
+        new ListItemTemplate(typeof(HomePageViewModel),"HomeRegular", "Home"),
+        new ListItemTemplate(typeof(OptimizerViewModel), "DataHistogram", "Optimizer"),
+        new ListItemTemplate(typeof(CostsViewModel), "MoneyRegular", "Costs"),
+        new ListItemTemplate(typeof(EmissionsViewModel), "DataPie", "Emissions"),
+        new ListItemTemplate(typeof(SettingsViewModel), "BoilerSettings", "Settings")
     };
 }
 public class ListItemTemplate
 {
-    public ListItemTemplate(Type type, string iconKey)
+    public ListItemTemplate(Type type, string iconKey, string label)
     {
         ModelType = type;
         //var createLabel = SplitByCapitalLetters(type.Name.Replace("ViewModel", ""));
-        Label = type.Name.Replace("ViewModel", "");
+        Label = label;
         
         Application.Current!.TryFindResource(iconKey, out var res);
         ListItemIcon = (StreamGeometry)res!;
@@ -73,14 +75,5 @@ public class ListItemTemplate
     public string Label { get; }
     public Type ModelType { get; }
     public StreamGeometry ListItemIcon { get; }
-    
-    private static string SplitByCapitalLetters(string input)
-    {
-        if (string.IsNullOrEmpty(input))
-            return input;
-
-        // Use regular expression to split words by capital letters
-        return Regex.Replace(input, "(\\B[A-Z])", " $1");
-    }
     
 }

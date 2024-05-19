@@ -1,15 +1,15 @@
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using OptimizerAvalonia.ViewModels;
 
 namespace OptimizerAvalonia.Views;
 
-public partial class graphView : UserControl
+public partial class CostsView : UserControl
 {
-    public graphView()
+    public CostsView()
     {
         InitializeComponent();
-        DataContext = new graphViewModel();
+        DataContext = new CostsViewModel();
     }
 }

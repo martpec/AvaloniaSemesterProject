@@ -7,7 +7,7 @@
              x:Class="OptimizerAvalonia.Views.HomePageView">
     <ScrollViewer>
         <StackPanel Margin="20">
-            <TextBlock Margin="0 20" FontSize="20" FontWeight="Bold">HomePage</TextBlock>
+            <TextBlock Margin="0 20" FontSize="20" FontWeight="Bold">Home</TextBlock>
             <TextBlock Margin="0 20" FontSize="17" FontWeight="Bold">Case Description</TextBlock>
             
             <templates:ContentTemplate>

@@ -36,8 +36,10 @@ public class EmissionsViewModel : ViewModelBase
             new LineSeries<DateTimePoint>
             {
                 Values = ObservablePoints3,
-                LineSmoothness = 0 // 0/1 change if line is smooth or not (UUUUUUUUU or VVVVVV) xd
-                //Fill = null
+                LineSmoothness = 0, // 0/1 change if line is smooth or not (UUUUUUUUU or VVVVVV) xd
+                //Fill = new SolidColorPaint(SKColors.Red),
+                //Stroke = new SolidColorPaint(SKColors.Red),
+
             }
         };
     }

@@ -7,10 +7,12 @@ using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Linq;
 using Avalonia.Media;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using HeatProductionOptimization;
 using HeatProductionOptimization.Interfaces;
 using HeatProductionOptimization.Models;
+using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
 using Color = Avalonia.Media.Color;
@@ -19,6 +21,7 @@ namespace OptimizerAvalonia.ViewModels;
 
 public partial class OptimizerViewModel : ViewModelBase
 {
+    [ObservableProperty] private bool _errorMessage = false;
     private readonly ObservableCollection<DateTimePoint> allBoilers;
     private readonly ObservableCollection<DateTimePoint> boiler1;
     private readonly ObservableCollection<DateTimePoint> boiler2;
@@ -52,7 +55,6 @@ public partial class OptimizerViewModel : ViewModelBase
     public OptimizerViewModel()
     {
 
-
         allBoilers = new ObservableCollection<DateTimePoint>
         {   // year, month, day, hour, minute, second
             
@@ -79,6 +81,7 @@ public partial class OptimizerViewModel : ViewModelBase
         };
         Series = new ObservableCollection<ISeries>
         {
+            
             new StackedColumnSeries<DateTimePoint>
             {
                 Name = "Boiler 1",
@@ -110,9 +113,8 @@ public partial class OptimizerViewModel : ViewModelBase
             {
                 Name = "Total heat demand",
                 Values = allBoilers,
-                LineSmoothness = 0 // 0/1 change if line is smooth or not (UUUUUUUUU or VVVVVV) xd
-
-                //Fill = null
+                LineSmoothness = 0, // 0/1 change if line is smooth or not (UUUUUUUUU or VVVVVV) xd
+                Fill = null
             },
         };
 
@@ -153,6 +155,7 @@ public partial class OptimizerViewModel : ViewModelBase
 
     public void loadDataMainGraph()
     {
+        ErrorMessage = false;
         ObservablePoints2.Clear();
         ObservablePoints3.Clear();
         foreach (OptimizedData data in OptimizedDataForGraph)
@@ -178,8 +181,11 @@ public partial class OptimizerViewModel : ViewModelBase
                 
             }
             if(totalDifference > 0)
+            {
                 notEnough.Add(new(data.StartTime, totalDifference));
-
+                ErrorMessage = true;
+            }
+            
             allBoilers.Add(new(data.StartTime, data.HeatDemand));
             ObservablePoints2.Add(new (data.StartTime, data.TotalProductionCost));
             ObservablePoints3.Add(new (data.StartTime, data.Emissions));

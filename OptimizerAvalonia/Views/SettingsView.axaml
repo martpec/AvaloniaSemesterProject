@@ -17,7 +17,7 @@
                 <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Optimization period</TextBlock>
                 <Border>
                     <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}"/>
-                    <ToolTip.Tip>Info about optimization period</ToolTip.Tip>
+                    <ToolTip.Tip>Note: Turn the switch on and off to change periods.</ToolTip.Tip>
                 </Border>
             </StackPanel>
            
@@ -39,7 +39,7 @@
                 <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Optimization preference</TextBlock>
                 <Border>
                     <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}"/>
-                    <ToolTip.Tip>Info about optimization preferences</ToolTip.Tip>
+                    <ToolTip.Tip>Note: Turn the switch on and off to optimize for cost or emissions.</ToolTip.Tip>
                 </Border>
             </StackPanel>
             <templates:ContentTemplate>
@@ -56,7 +56,7 @@
                 <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Available Boilers</TextBlock>
                 <Border>
                     <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}"/>
-                    <ToolTip.Tip>Info about available boilers</ToolTip.Tip>
+                    <ToolTip.Tip>Note: Turn the switches of each boiler on and off, and or adjust their maximal heat production.</ToolTip.Tip>
                 </Border>
             </StackPanel>
             <templates:ContentTemplate>

@@ -22,6 +22,7 @@ namespace OptimizerAvalonia.ViewModels;
 public partial class OptimizerViewModel : ViewModelBase
 {
     [ObservableProperty] private bool _errorMessage = false;
+    
     private readonly ObservableCollection<DateTimePoint> allBoilers;
     private readonly ObservableCollection<DateTimePoint> boiler1;
     private readonly ObservableCollection<DateTimePoint> boiler2;
@@ -158,10 +159,12 @@ public partial class OptimizerViewModel : ViewModelBase
         ErrorMessage = false;
         ObservablePoints2.Clear();
         ObservablePoints3.Clear();
+        notEnough.Clear();
+        double totalDifference = 0;
         foreach (OptimizedData data in OptimizedDataForGraph)
         {
             double totalHeatPerHour = 0.0;
-            double totalDifference = data.HeatDemand;
+            totalDifference = data.HeatDemand;
             foreach (BoilerProduction boiler in data.BoilerProductions)
             {
                 totalHeatPerHour += boiler.HeatProduced;
@@ -183,12 +186,15 @@ public partial class OptimizerViewModel : ViewModelBase
             if(totalDifference > 0)
             {
                 notEnough.Add(new(data.StartTime, totalDifference));
-                ErrorMessage = true;
             }
             
             allBoilers.Add(new(data.StartTime, data.HeatDemand));
             ObservablePoints2.Add(new (data.StartTime, data.TotalProductionCost));
             ObservablePoints3.Add(new (data.StartTime, data.Emissions));
+        }
+        if(totalDifference > 0)
+        {   
+            ErrorMessage = true;
         }
     }
 }

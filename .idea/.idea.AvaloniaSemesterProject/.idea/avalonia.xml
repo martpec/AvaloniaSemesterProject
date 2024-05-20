@@ -8,6 +8,7 @@
         <entry key="OptimizerAvalonia/SplashScreen/DemoComplexSplashScreen.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Templates/ContentTemplate.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/CostsAndEmissionsView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
+        <entry key="OptimizerAvalonia/Views/CostsView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/EmissionsView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/EmissonsView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />
         <entry key="OptimizerAvalonia/Views/HomePageView.axaml" value="OptimizerAvalonia/OptimizerAvalonia.csproj" />

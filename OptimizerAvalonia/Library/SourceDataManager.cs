@@ -26,7 +26,7 @@ namespace HeatProductionOptimization
                 string? line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    var parts = line.Split('|');
+                    var parts = line.Split(',');
 
                     DateTime startTime = ParseDateTime(parts[0]);
                     DateTime endTime = ParseDateTime(parts[1]);

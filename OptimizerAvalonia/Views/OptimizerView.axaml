@@ -10,14 +10,18 @@
              xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia"
              xmlns:controls="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia">
     
+     
+     
      <Grid Margin="7">
          <Grid.RowDefinitions>
              <RowDefinition Height="Auto"/>
              <RowDefinition Height="*"/>
              <RowDefinition Height="50"/>
          </Grid.RowDefinitions>
+    
          <controls:InfoBar Grid.Row="0" Title="WARNING!" IsOpen="{Binding ErrorMessage}" Severity="Error" 
                            Message="It appears that some of your time slices are not meeting the required heat demand. Please adjust the boilers accordingly." />
+    
          <lvc:CartesianChart
              Grid.Row="1"
              LegendTextPaint="{Binding LegendColor}"
@@ -29,9 +33,25 @@
              XAxes="{Binding XAxes}"
              YAxes="{Binding YAxes}">
          </lvc:CartesianChart>
+    
+         <Grid Grid.Row="2">
+             <Grid.ColumnDefinitions>
+                 <ColumnDefinition Width="*"/>
+                 <ColumnDefinition Width="Auto"/>
+             </Grid.ColumnDefinitions>
         
-         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" >
-             <Button Margin="6" Width="150" Command="{Binding OptimizeCommand}">Optimize</Button>
-         </StackPanel>
+             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                 <Button Margin="6" Width="150" Command="{Binding OptimizeCommand}" Cursor="Hand">Optimize</Button>
+             </StackPanel>
+        
+             <Button Grid.Column="1" Margin="6" Width="150" HorizontalAlignment="Right" Cursor="Hand" Command="{Binding SaveOptimizedDataToFileCommand}">
+                 <StackPanel Orientation="Horizontal">
+                     <PathIcon Height="14" Data="{StaticResource ShareRegular}" />
+                     <TextBlock Margin="5,0,0,0" FontSize="15">Export</TextBlock>
+                 </StackPanel>
+                 <ToolTip.Tip>Export optimized data to csv file.</ToolTip.Tip>
+             </Button>
+         </Grid>
      </Grid>
+     
 </UserControl>

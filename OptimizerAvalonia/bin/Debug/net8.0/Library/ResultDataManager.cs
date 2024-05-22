@@ -10,7 +10,7 @@ namespace HeatProductionOptimization
     {
         public static void SaveOptimizedData(List<OptimizedData> optimizedData, string filePath)
         {
-            string appDataPath = Path.Combine(Environment.CurrentDirectory, "AppData", filePath);
+            string appDataPath = Path.Combine(@"C:\Users\fifof\OneDrive\Počítač\AvaloniaUI\SemesterProject2\OptimizerAvalonia\Library\AppData\Results", filePath);
 
             using (var writer = new StreamWriter(appDataPath))
             {
@@ -18,7 +18,9 @@ namespace HeatProductionOptimization
 
                 foreach (var data in optimizedData)
                 {
-                    string activatedBoilers = data.BoilerProductions != null ? string.Join(";", data.BoilerProductions.Select(b => b.BoilerName)) : string.Empty;
+                    string activatedBoilers = data.BoilerProductions != null 
+                        ? string.Join(";", data.BoilerProductions.Select(b => $"{b.BoilerName}:{b.HeatProduced}")) 
+                        : string.Empty;
                     writer.WriteLine($"{data.StartTime},{data.EndTime},{data.TotalProductionCost},{data.Emissions},{activatedBoilers}");
                 }
             }

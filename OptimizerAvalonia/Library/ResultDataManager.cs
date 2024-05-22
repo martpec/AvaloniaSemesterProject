@@ -8,9 +8,9 @@ namespace HeatProductionOptimization
 {
     public class ResultDataManager
     {
-        private static void SaveOptimizedData(List<OptimizedData> optimizedData, string filePath)
+        public static void SaveOptimizedData(List<OptimizedData> optimizedData, string filePath)
         {
-            string appDataPath = Path.Combine(Environment.CurrentDirectory, "AppData", filePath);
+            string appDataPath = Path.Combine(@"C:\Users\fifof\OneDrive\Počítač\AvaloniaUI\SemesterProject2\OptimizerAvalonia\Library\AppData\Results", filePath);
 
             using (var writer = new StreamWriter(appDataPath))
             {

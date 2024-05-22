@@ -43,4 +43,9 @@
   <ItemGroup>
     <Compile Remove="Views\choosePeriodView.axaml.cs" />
   </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Library\AppData\Results\" />
+  </ItemGroup>
 </Project>

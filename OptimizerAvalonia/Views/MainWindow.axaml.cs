@@ -24,7 +24,7 @@ public partial class MainWindow : AppWindow
         TitleBar.ExtendsContentIntoTitleBar = true;
         TitleBar.TitleBarHitTestType = TitleBarHitTestType.Complex;
         
-        SplashScreen = new ComplexSplashScreen();
+        //SplashScreen = new ComplexSplashScreen();
         
     }
 }

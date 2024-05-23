@@ -56,7 +56,7 @@
                 <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Available Boilers</TextBlock>
                 <Border>
                     <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}"/>
-                    <ToolTip.Tip>Note: Turn the switches of each boiler on and off, and or adjust their maximal heat production.</ToolTip.Tip>
+                    <ToolTip.Tip>Note: Turn the switches of each boiler on and off, or adjust their maximal heat production.</ToolTip.Tip>
                 </Border>
             </StackPanel>
             <templates:ContentTemplate>

@@ -57,6 +57,7 @@ public partial class MainWindowViewModel : ViewModelBase
         new ListItemTemplate(typeof(OptimizerViewModel), "DataHistogram", "Optimizer"),
         new ListItemTemplate(typeof(CostsViewModel), "MoneyRegular", "Costs"),
         new ListItemTemplate(typeof(EmissionsViewModel), "DataPie", "Emissions"),
+        new ListItemTemplate(typeof(ElectricityViewModel),"DataWaterfall", "Electricity Price"),
         new ListItemTemplate(typeof(SettingsViewModel), "BoilerSettings", "Settings")
     };
 }

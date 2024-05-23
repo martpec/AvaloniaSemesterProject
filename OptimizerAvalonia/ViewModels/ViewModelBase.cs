@@ -58,6 +58,9 @@ public partial class ViewModelBase : ObservableObject
     /*--------------------Emissions Graph------------------*/
     [ObservableProperty]
     protected static ObservableCollection<DateTimePoint> _observablePoints3 = new();
+    /*--------------------Electricity Graph------------------*/
+    [ObservableProperty]
+    protected static ObservableCollection<DateTimePoint> _electricityPoints = new();
 }
 
 public class Boiler(IBoiler boiler) : INotifyPropertyChanged

@@ -98,7 +98,8 @@ namespace HeatProductionOptimization
                     TotalProductionCost = Math.Round(totalProductionCost, 2),
                     Emissions = Math.Round(totalEmissions, 2),
                     HeatDemand = totalHeatDemand,
-                    BoilerProductions = boilerProductions
+                    BoilerProductions = boilerProductions,
+                    ElectricityPrice = demand.ElectricityPrice
                 });
             }
         }

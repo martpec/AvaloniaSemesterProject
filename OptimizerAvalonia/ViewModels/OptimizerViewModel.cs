@@ -29,6 +29,7 @@ public partial class OptimizerViewModel : ViewModelBase
     private readonly ObservableCollection<DateTimePoint> boiler3;
     private readonly ObservableCollection<DateTimePoint> boiler4;
     private readonly ObservableCollection<DateTimePoint> notEnough;
+    private readonly ObservableCollection<DateTimePoint> electricityPrice;
     public ObservableCollection<ISeries> Series { get; set; }
     public Axis[] XAxes { get; set; } =
     {
@@ -80,6 +81,10 @@ public partial class OptimizerViewModel : ViewModelBase
         {
 
         };
+        electricityPrice = new ObservableCollection<DateTimePoint>
+        {
+
+        };
         Series = new ObservableCollection<ISeries>
         {
             
@@ -109,6 +114,13 @@ public partial class OptimizerViewModel : ViewModelBase
             {
                 Name = "Missing heat",
                 Values = notEnough
+            },
+            new LineSeries<DateTimePoint>
+            {
+                Name = "Electricity price",
+                Values = electricityPrice,
+                LineSmoothness = 0, // 0/1 change if line is smooth or not (UUUUUUUUU or VVVVVV) xd
+                Fill = null
             },
             new LineSeries<DateTimePoint>
             {
@@ -188,6 +200,7 @@ public partial class OptimizerViewModel : ViewModelBase
                 notEnough.Add(new(data.StartTime, totalDifference));
             }
             
+            electricityPrice.Add(new(data.StartTime, data.ElectricityPrice));
             allBoilers.Add(new(data.StartTime, data.HeatDemand));
             ObservablePoints2.Add(new (data.StartTime, data.TotalProductionCost));
             ObservablePoints3.Add(new (data.StartTime, data.Emissions));

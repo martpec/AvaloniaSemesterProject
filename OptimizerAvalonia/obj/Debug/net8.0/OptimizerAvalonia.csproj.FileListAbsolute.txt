@@ -408,3 +408,8 @@ C:\Users\jakub\Desktop\2ndSemesterProject\AvaloniaSemesterProject\OptimizerAvalo
 C:\Users\jakub\Desktop\2ndSemesterProject\AvaloniaSemesterProject\OptimizerAvalonia\obj\Debug\net8.0\Optimize.D63847C6.Up2Date
 C:\Users\jakub\Desktop\2ndSemesterProject\AvaloniaSemesterProject\OptimizerAvalonia\obj\Debug\net8.0\OptimizerAvalonia.genruntimeconfig.cache
 C:\Users\jakub\Desktop\2ndSemesterProject\AvaloniaSemesterProject\OptimizerAvalonia\obj\Debug\net8.0\ref\OptimizerAvalonia.dll
+C:\Users\fifof\OneDrive\Počítač\AvaloniaUI\SemesterProject2\OptimizerAvalonia\bin\Debug\net8.0\ColorTextBlock.Avalonia.dll
+C:\Users\fifof\OneDrive\Počítač\AvaloniaUI\SemesterProject2\OptimizerAvalonia\bin\Debug\net8.0\DialogHost.Avalonia.dll
+C:\Users\fifof\OneDrive\Počítač\AvaloniaUI\SemesterProject2\OptimizerAvalonia\bin\Debug\net8.0\Markdown.Avalonia.dll
+C:\Users\fifof\OneDrive\Počítač\AvaloniaUI\SemesterProject2\OptimizerAvalonia\bin\Debug\net8.0\MsBox.Avalonia.dll
+C:\Users\fifof\OneDrive\Počítač\AvaloniaUI\SemesterProject2\OptimizerAvalonia\bin\Debug\net8.0\Library\AppData\Results\OptimizedData_Cost_20230708_20230715.csv

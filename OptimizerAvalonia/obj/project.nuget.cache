@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vJM7o/URmRw8mYiEQBYPLQCxVOXUzLMkUn+HYWdtftmLXc53Z+tgJh82OPJhxBypFB0s7/5vMEmLLtflxZn5UA==",
+  "dgSpecHash": "e1ZClLjVaHAfO7Fx6VuTVIcb1EyS2wnOBqwUVJfu3876bKsAsanXvf3surWYrgbP2DsGk2MxenwF5yIXhIwOBw==",
   "success": true,
   "projectFilePath": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\OptimizerAvalonia.csproj",
   "expectedPackageFiles": [
@@ -20,7 +20,9 @@
     "C:\\Users\\fifof\\.nuget\\packages\\avalonia.themes.simple\\11.1.0-beta2\\avalonia.themes.simple.11.1.0-beta2.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\avalonia.win32\\11.1.0-beta2\\avalonia.win32.11.1.0-beta2.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\avalonia.x11\\11.1.0-beta2\\avalonia.x11.11.1.0-beta2.nupkg.sha512",
+    "C:\\Users\\fifof\\.nuget\\packages\\colortextblock.avalonia\\11.0.2\\colortextblock.avalonia.11.0.2.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
+    "C:\\Users\\fifof\\.nuget\\packages\\dialoghost.avalonia\\0.7.7\\dialoghost.avalonia.0.7.7.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\dynamicdata\\7.9.5\\dynamicdata.7.9.5.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\fluentavaloniaui\\2.1.0-preview4\\fluentavaloniaui.2.1.0-preview4.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\harfbuzzsharp\\7.3.0.2\\harfbuzzsharp.7.3.0.2.nupkg.sha512",
@@ -31,6 +33,8 @@
     "C:\\Users\\fifof\\.nuget\\packages\\livechartscore\\2.0.0-rc2\\livechartscore.2.0.0-rc2.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\livechartscore.skiasharpview\\2.0.0-rc2\\livechartscore.skiasharpview.2.0.0-rc2.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\livechartscore.skiasharpview.avalonia\\2.0.0-rc2\\livechartscore.skiasharpview.avalonia.2.0.0-rc2.nupkg.sha512",
+    "C:\\Users\\fifof\\.nuget\\packages\\markdown.avalonia.tight\\11.0.2\\markdown.avalonia.tight.11.0.2.nupkg.sha512",
+    "C:\\Users\\fifof\\.nuget\\packages\\messagebox.avalonia\\3.1.5.1\\messagebox.avalonia.3.1.5.1.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\microcom.runtime\\0.11.0\\microcom.runtime.0.11.0.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\reactiveui\\18.3.1\\reactiveui.18.3.1.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\skiasharp\\2.88.8\\skiasharp.2.88.8.nupkg.sha512",
@@ -42,7 +46,7 @@
     "C:\\Users\\fifof\\.nuget\\packages\\splat\\14.4.1\\splat.14.4.1.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\system.io.pipelines\\6.0.0\\system.io.pipelines.6.0.0.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\fifof\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
+    "C:\\Users\\fifof\\.nuget\\packages\\system.reactive\\6.0.0\\system.reactive.6.0.0.nupkg.sha512",
     "C:\\Users\\fifof\\.nuget\\packages\\tmds.dbus.protocol\\0.16.0\\tmds.dbus.protocol.0.16.0.nupkg.sha512"
   ],
   "logs": []

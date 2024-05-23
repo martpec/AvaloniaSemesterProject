@@ -4,13 +4,21 @@ using LiveChartsCore.Defaults;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using Avalonia.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using HeatProductionOptimization;
 using HeatProductionOptimization.Interfaces;
 using HeatProductionOptimization.Models;
 using LiveChartsCore.SkiaSharpView.Painting;
+using MsBox.Avalonia;
+using MsBox.Avalonia.Dto;
+using MsBox.Avalonia.Enums;
+using MsBox.Avalonia.Models;
 using SkiaSharp;
 
 namespace OptimizerAvalonia.ViewModels;
@@ -220,7 +228,7 @@ public partial class OptimizerViewModel : ViewModelBase
     private List<OptimizedData> _optimizedData { get; set;  }
     
     [RelayCommand]
-    private void SaveOptimizedDataToFile()
+    private async Task SaveOptimizedDataToFile()
     {   
         // Check if _optimizedData is null or empty
         if (_optimizedData == null || !_optimizedData.Any())
@@ -240,6 +248,15 @@ public partial class OptimizerViewModel : ViewModelBase
         {
             ResultDataManager.SaveOptimizedData(_optimizedData, fileName);
             Console.WriteLine("Optimized data saved successfully.");
+            
+            var box = MessageBoxManager
+                .GetMessageBoxStandard("Optimized Data Extracted", "Data has been saved to AppData/Results.",
+                    ButtonEnum.Ok,
+                    Icon.Folder
+                    );
+            
+            var result = await box.ShowWindowAsync();
+           
         }
         catch (Exception ex)
         {

@@ -1,54 +1,48 @@
-using System;
 using System.Globalization;
 using System.IO;
 using HeatProductionOptimization.Interfaces;
 
 
-namespace HeatProductionOptimization
+namespace HeatProductionOptimization;
+
+public class AssetManager
 {
-    public class AssetManager
+    // Method to load data into boiler model from CSV file
+    public T LoadBoilerData<T>(string filePath) where T : IBoiler, new()
     {
-        // Method to load data into boiler model from CSV file
-        public T LoadBoilerData<T>(string filePath) where T : IBoiler, new()
+        T boiler = new T();
+
+        string appDataPath = Path.Combine(@"Library\AppData", filePath);
+
+        using (var reader = new StreamReader(appDataPath))
         {
-            T boiler = new T();
+            // Skip the first line
+            reader.ReadLine();
 
-            //string currentDirectory = Environment.CurrentDirectory;
-            //string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
-
-            string appDataPath = Path.Combine(@"Library\AppData", filePath);
-
-            using (var reader = new StreamReader(appDataPath))
-            {
-                // Skip the first line
-                reader.ReadLine();
-
-                var line = reader.ReadLine();
+            var line = reader.ReadLine();
 
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
 
-                var values = line.Split(',');
+            var values = line.Split(',');
 
-                boiler.Name = values[0].Trim();
-                boiler.MaxHeat = ExtractNumber(values[1]);
-                boiler.ProductionCost = ExtractNumber(values[2]);
+            boiler.Name = values[0].Trim();
+            boiler.MaxHeat = ExtractNumber(values[1]);
+            boiler.ProductionCost = ExtractNumber(values[2]);
 
-                boiler.SetAdditionalProperties(values);
-
-            }
-
-            return boiler;
+            boiler.SetAdditionalProperties(values);
         }
 
-        /// <summary>
-        /// Helper method to remove any non-numeric characters from a string and parse it to a double using regex
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns>double</returns>
-        public static double ExtractNumber(string input)
-        {
-            string numberStr = System.Text.RegularExpressions.Regex.Match(input, @"-?\d+(\.\d+)?").Value;
-            return double.Parse(numberStr, CultureInfo.InvariantCulture);
-        }
+        return boiler;
+    }
+
+    /// <summary>
+    /// Helper method to remove any non-numeric characters from a string and parse it to a double using regex
+    /// </summary>
+    /// <param name="input"></param>
+    /// <returns>double</returns>
+    public static double ExtractNumber(string input)
+    {
+        string numberStr = System.Text.RegularExpressions.Regex.Match(input, @"-?\d+(\.\d+)?").Value;
+        return double.Parse(numberStr, CultureInfo.InvariantCulture);
     }
 }

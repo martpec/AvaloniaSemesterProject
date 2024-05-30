@@ -1,30 +1,26 @@
 using HeatProductionOptimization.Interfaces;
 using static HeatProductionOptimization.AssetManager;
-using System;
-using System.Collections.Generic;
 
-namespace HeatProductionOptimization.Models
+namespace HeatProductionOptimization.Models;
+
+// Gas motor model class
+public class GasMotor : IGasMotor
 {
-    // Gas motor model class
-    public class GasMotor : IGasMotor
+    public string? Name { get; set; }
+    public double MaxHeat { get; set; }
+    public double ElectricityProduced { get; set; }
+    public double ProductionCost { get; set; }
+    public double Emissions { get; set; }
+    public double GasConsumption { get; set; }
+
+    public void SetAdditionalProperties(string[] values)
     {
-        public string? Name { get; set; }
-        public double MaxHeat { get; set; }
-        public double ElectricityProduced { get; set; }
-        public double ProductionCost { get; set; }
-        public double Emissions { get; set; }
-        public double GasConsumption { get; set; }
-        
-        public void SetAdditionalProperties(string[] values)
-        {
-            Emissions = ExtractNumber(values[3]);
-            GasConsumption = ExtractNumber(values[4]);
-            ElectricityProduced = ExtractNumber(values[5]);
-            //System.Console.WriteLine($"Name: {Name}\nMaxHeat: {MaxHeat}\nProductionCost: {ProductionCost}\nEmissions: {Emissions}\nGasConsumption: {GasConsumption}\nElectricityProduced: {ElectricityProduced}\n");
-        }
+        Emissions = ExtractNumber(values[3]);
+        GasConsumption = ExtractNumber(values[4]);
+        ElectricityProduced = ExtractNumber(values[5]);
+        //System.Console.WriteLine($"Name: {Name}\nMaxHeat: {MaxHeat}\nProductionCost: {ProductionCost}\nEmissions: {Emissions}\nGasConsumption: {GasConsumption}\nElectricityProduced: {ElectricityProduced}\n");
     }
 }
-
 
 
 // Name: GM

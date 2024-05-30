@@ -1,8 +1,7 @@
-namespace HeatProductionOptimization.Interfaces
+namespace HeatProductionOptimization.Interfaces;
+
+public interface IElectricBoiler : IBoiler
 {
-    public interface IElectricBoiler : IBoiler
-    {   
-        // Electric consumption in MWh
-         double ElectricityConsumption { get; set; }
-    }
+    // Electric consumption in MWh
+    double ElectricityConsumption { get; set; }
 }

@@ -1,8 +1,7 @@
-namespace HeatProductionOptimization.Interfaces
+namespace HeatProductionOptimization.Interfaces;
+
+public interface IGasBoiler : IBoiler, IEmissionProducer
 {
-    public interface IGasBoiler : IBoiler, IEmissionProducer
-    {   
-        // Gas consumption in MWh
-         double GasConsumption { get; set; }
-    }
+    // Gas consumption in MWh
+    double GasConsumption { get; set; }
 }

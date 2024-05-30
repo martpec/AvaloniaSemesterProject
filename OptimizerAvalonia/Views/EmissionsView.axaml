@@ -18,7 +18,7 @@
             Margin="5"
             CornerRadius="7"
             Background="#3e3e3e"
-            Series="{Binding Series1}"
+            Series="{Binding EmissionsSeries}"
             XAxes="{Binding XAxes1}"
             YAxes="{Binding YAxes}"
             ZoomMode="Both">

@@ -1,36 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text.RegularExpressions;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using DynamicData.Binding;
 
 namespace OptimizerAvalonia.ViewModels;
-using System.Reactive;
-using ReactiveUI;
+
 public partial class MainWindowViewModel : ViewModelBase
 {
     //========================================= Pane open/close
-    [ObservableProperty] 
-    private bool _isPaneOpen = true;
-    
+    [ObservableProperty] private bool _isPaneOpen = true;
+
     [RelayCommand]
     private void TriggerPane()
     {
         IsPaneOpen = !IsPaneOpen;
     }
     //=========================================
-    
-    [ObservableProperty]
-    private ViewModelBase _currentPage = new HomePageViewModel();
 
-    [ObservableProperty] 
-    private ListItemTemplate _selectedListItem;
-    
+    [ObservableProperty] private ViewModelBase _currentPage = new HomePageViewModel();
+
+    [ObservableProperty] private ListItemTemplate? _selectedListItem;
+
     private readonly Dictionary<Type, ViewModelBase> _viewModelCache = new();
 
     partial void OnSelectedListItemChanged(ListItemTemplate? value)
@@ -51,16 +45,17 @@ public partial class MainWindowViewModel : ViewModelBase
         CurrentPage = viewModel;
     }
 
-    public ObservableCollection<ListItemTemplate> Items { get; } = new()
-    {
-        new ListItemTemplate(typeof(HomePageViewModel),"HomeRegular", "Home"),
+    public ObservableCollection<ListItemTemplate> Items { get; } =
+    [
+        new ListItemTemplate(typeof(HomePageViewModel), "HomeRegular", "Home"),
         new ListItemTemplate(typeof(OptimizerViewModel), "DataHistogram", "Optimizer"),
         new ListItemTemplate(typeof(CostsViewModel), "MoneyRegular", "Costs"),
         new ListItemTemplate(typeof(EmissionsViewModel), "DataPie", "Emissions"),
-        new ListItemTemplate(typeof(ElectricityViewModel),"DataWaterfall", "Electricity Price"),
+        new ListItemTemplate(typeof(ElectricityViewModel), "DataWaterfall", "Electricity Price"),
         new ListItemTemplate(typeof(SettingsViewModel), "BoilerSettings", "Settings")
-    };
+    ];
 }
+
 public class ListItemTemplate
 {
     public ListItemTemplate(Type type, string iconKey, string label)
@@ -68,13 +63,12 @@ public class ListItemTemplate
         ModelType = type;
         //var createLabel = SplitByCapitalLetters(type.Name.Replace("ViewModel", ""));
         Label = label;
-        
+
         Application.Current!.TryFindResource(iconKey, out var res);
         ListItemIcon = (StreamGeometry)res!;
     }
-        
+
     public string Label { get; }
     public Type ModelType { get; }
     public StreamGeometry ListItemIcon { get; }
-    
 }

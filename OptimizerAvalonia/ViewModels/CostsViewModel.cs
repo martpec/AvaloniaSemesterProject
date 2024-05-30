@@ -13,32 +13,31 @@ public class CostsViewModel : ViewModelBase
     // Graph 1-> money
 
     public Axis[] YAxes { get; set; } =
-    {
+    [
         new Axis
         {
             LabelsPaint = new SolidColorPaint(SKColors.White)
         }
-    };
+    ];
 
-    public ObservableCollection<ISeries> Series2 { get; set; }
+    public ObservableCollection<ISeries> CostsSeries { get; set; }
 
     public Axis[] XAxes2 { get; set; } =
-    {
+    [
         new DateTimeAxis(TimeSpan.FromHours(1), date => date.ToString("H:mm d/M yyyy")) //output format
         {
             LabelsPaint = new SolidColorPaint(SKColors.White)
         }
-    };
+    ];
 
     public CostsViewModel()
     {
-        
-        Series2 = new ObservableCollection<ISeries>
+        CostsSeries = new ObservableCollection<ISeries>
         {
             new LineSeries<DateTimePoint>
             {
-                Values = ObservablePoints2,
-                LineSmoothness = 0 // 0/1 change if line is smooth or not (UUUUUUUUU or VVVVVV) xd
+                Values = CostsPoints,
+                LineSmoothness = 0 // 0/1 change if line is smooth or not (UUUUUUUUU or VVVVVV) 
                 //Fill = null
             }
         };

@@ -17,7 +17,7 @@
                             Margin="5"
                             CornerRadius="7"
                             Background="#3e3e3e"
-                            Series="{Binding Series2}"
+                            Series="{Binding CostsSeries}"
                             XAxes="{Binding XAxes2}"
                             YAxes="{Binding YAxes}"
                             ZoomMode="Both">

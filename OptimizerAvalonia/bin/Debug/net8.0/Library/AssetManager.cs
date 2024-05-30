@@ -2,7 +2,6 @@ using System.Globalization;
 using System.IO;
 using HeatProductionOptimization.Interfaces;
 
-
 namespace HeatProductionOptimization;
 
 public class AssetManager

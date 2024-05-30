@@ -28,7 +28,7 @@
              LegendPosition="Top" 
              CornerRadius="7"
              Background="#3e3e3e"
-             Series="{Binding Series}"
+             Series="{Binding MainGraphSeries}"
              ZoomMode="Both"
              XAxes="{Binding XAxes}"
              YAxes="{Binding YAxes}">

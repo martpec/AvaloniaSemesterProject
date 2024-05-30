@@ -10,7 +10,7 @@ namespace HeatProductionOptimization
     {
         private readonly List<IBoiler> Boilers;
         private readonly List<SourceData> DemandData;
-        public readonly List<OptimizedData> OptimizedData = new();
+        public List<OptimizedData> OptimizedData = new();
 
         public Optimizer(List<IBoiler> boilers, List<SourceData> demandData)
         {
@@ -18,7 +18,7 @@ namespace HeatProductionOptimization
             DemandData = demandData;
         }
 
-        public void CalculateOptimalHeatProduction(bool OptimizeEmissions)
+        public void CalculateOptimalHeatProduction(bool optimizeEmissions)
         {
             foreach (var demand in DemandData)
             {
@@ -33,7 +33,7 @@ namespace HeatProductionOptimization
                 
                 
                 // Sort the boilers based on the OptimizeEmissions
-                var sortedBoilers = OptimizeEmissions 
+                var sortedBoilers = optimizeEmissions 
                     // If OptimizeEmissions sort the boilers by the Emissions 
                     ? Boilers.OrderBy(b => b.Emissions) 
                     // Else sort the boilers by the ProductionCost

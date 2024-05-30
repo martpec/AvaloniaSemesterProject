@@ -4,18 +4,22 @@ using LiveChartsCore.Defaults;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Drawing;
+using System.Diagnostics;
 using System.Linq;
-using Avalonia.Media;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using Avalonia.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using HeatProductionOptimization;
 using HeatProductionOptimization.Interfaces;
 using HeatProductionOptimization.Models;
-using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView.Painting;
+using MsBox.Avalonia;
+using MsBox.Avalonia.Dto;
+using MsBox.Avalonia.Enums;
+using MsBox.Avalonia.Models;
 using SkiaSharp;
-using Color = Avalonia.Media.Color;
 
 namespace OptimizerAvalonia.ViewModels;
 
@@ -29,6 +33,8 @@ public partial class OptimizerViewModel : ViewModelBase
     private readonly ObservableCollection<DateTimePoint> boiler3;
     private readonly ObservableCollection<DateTimePoint> boiler4;
     private readonly ObservableCollection<DateTimePoint> notEnough;
+    
+    
     public ObservableCollection<ISeries> Series { get; set; }
     public Axis[] XAxes { get; set; } =
     {
@@ -129,10 +135,25 @@ public partial class OptimizerViewModel : ViewModelBase
 
     [RelayCommand]
     private void Optimize()
-    {
+    {   
+        fileName = string.Empty;
+        _optimizedData = new List<OptimizedData>();
+        
         SourceDataManager sourceDataManager = new SourceDataManager();
         List<IBoiler> activeBoilers = new();
-
+        
+        // loads the source data for optimization
+        var dataForOptimization = sourceDataManager.LoadSourceData(SourceDataPath);
+        
+        // dates for the name of the exported file
+        DateTime firstDate = dataForOptimization.Min(data => data.StartTime);
+        DateTime lastDate = dataForOptimization.Max(data => data.EndTime);
+        
+        // change the exported file name according to emissons or cost
+        fileName = IsEmissions ? $"OptimizedData_Emissions_{firstDate:yyyyMMdd}_{lastDate:yyyyMMdd}.csv" 
+                                : $"OptimizedData_Cost_{firstDate:yyyyMMdd}_{lastDate:yyyyMMdd}.csv";
+        
+        
         for (int i = 0; i < IBoilersList.Count; i++)
         {
             if (BoilersList[i].IsActive)
@@ -141,9 +162,11 @@ public partial class OptimizerViewModel : ViewModelBase
                 activeBoilers.Add(IBoilersList[i]);
             }
         }
-        Optimizer optimizer = new Optimizer(activeBoilers, sourceDataManager.LoadSourceData(SourceDataPath));
+        
+        Optimizer optimizer = new Optimizer(activeBoilers, dataForOptimization);
         optimizer.CalculateOptimalHeatProduction(IsEmissions);
-
+        
+        _optimizedData =  optimizer.OptimizedData;
         OptimizedDataForGraph = optimizer.OptimizedData;
 
         allBoilers.Clear();
@@ -196,6 +219,49 @@ public partial class OptimizerViewModel : ViewModelBase
         if(totalDifference > 0)
         {   
             ErrorMessage = true;
+        }
+    }
+
+    // exported file name
+    private string fileName; 
+    
+    // list that holds optimized data in OptimizerViewModel 
+    private List<OptimizedData> _optimizedData { get; set;  }
+    
+    [RelayCommand]
+    private async Task SaveOptimizedDataToFile()
+    {   
+        // Check if _optimizedData is null or empty
+        if (_optimizedData == null || !_optimizedData.Any())
+        {
+            Console.WriteLine("No optimized data to save.");
+            return;
+        }
+
+        // Check if fileName is null or empty
+        if (string.IsNullOrEmpty(fileName))
+        {
+            Console.WriteLine("File name is not set.");
+            return;
+        }
+
+        try
+        {
+            ResultDataManager.SaveOptimizedData(_optimizedData, fileName);
+            Console.WriteLine("Optimized data saved successfully.");
+            
+            var box = MessageBoxManager
+                .GetMessageBoxStandard("Optimized Data Extracted", "Data has been saved to AppData/Results.",
+                    ButtonEnum.Ok,
+                    Icon.Folder
+                    );
+            
+            var result = await box.ShowWindowAsync();
+           
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while saving optimized data: {ex.Message}");
         }
     }
 }

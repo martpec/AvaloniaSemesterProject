@@ -416,4 +416,3 @@ C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs
 C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\DialogHost.Avalonia.dll
 C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Markdown.Avalonia.dll
 C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\MsBox.Avalonia.dll
-C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia\bin\Debug\net8.0\Library\AppData\Results\OptimizedData_Cost_20230708_20230715.csv

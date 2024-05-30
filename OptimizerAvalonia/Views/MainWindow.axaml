@@ -1,8 +1,6 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:OptimizerAvalonia.ViewModels"
-        xmlns:models="using:HeatProductionOptimization"
-        xmlns:views="using:OptimizerAvalonia.Views"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
@@ -14,62 +12,62 @@
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
+        <vm:MainWindowViewModel />
     </Design.DataContext>
 
-   <Grid RowDefinitions="Auto, *">
-       <Border Grid.Row="0" Height="32">
-           <TextBlock Text="{Binding Title, RelativeSource = {RelativeSource FindAncestor, AncestorType=Window}}" 
-                      VerticalAlignment="Center" Margin="10 0"/>
-       </Border>
-       <SplitView Grid.Row="1" 
-                  IsPaneOpen="{Binding IsPaneOpen}"
-                  DisplayMode="CompactInline"
-                  OpenPaneLength="180"
-                  CompactPaneLength="46"
-                  Background="#1e1e1e"
-                  PaneBackground="#1e1e1e">
-           <SplitView.Pane>
-               <StackPanel Orientation="Vertical"
-                           HorizontalAlignment="Stretch"
-                           VerticalAlignment="Top"
-                           Spacing="1"
-                           Margin="2">
-                   <Button HorizontalAlignment="Left"
-                           Width="32"
-                           Height="32"
-                           Margin="4 10"
-                           Command="{Binding TriggerPaneCommand}">
-                       <PathIcon Height="11" Data="{StaticResource LineHorizontal3Regular}" />
-                   </Button>
-                   <ListBox Margin="0 0 -100 0" Padding="0" ItemsSource="{Binding Items}"
-                            SelectedItem="{Binding SelectedListItem}">
-                       <ListBox.Styles>
-                           <Style Selector="ListBoxItem">
-                               <Setter Property="Padding" Value="12 8"></Setter>
-                           </Style>
-                       </ListBox.Styles>
-                       <ListBox.ItemTemplate>
-                           <DataTemplate DataType="{x:Type vm:ListItemTemplate}">
-                               <StackPanel Spacing="17" Orientation="Horizontal">
-                                   <PathIcon Data="{Binding ListItemIcon}" Width="14" />
-                                   <TextBlock Text="{Binding Label}" />
-                               </StackPanel>
-                           </DataTemplate> 
-                       </ListBox.ItemTemplate>
-                   </ListBox>
-                   
-               </StackPanel>
-           </SplitView.Pane>
-               <SplitView.Content>
-                   <Border CornerRadius="12 0 0 12"
-                           Background="#2d2d2d">
-                       <TransitioningContentControl Content="{Binding CurrentPage}" />
-                   </Border>
-               </SplitView.Content>
-            
-         </SplitView>
-   </Grid>
-    
+    <Grid RowDefinitions="Auto, *">
+        <Border Grid.Row="0" Height="32">
+            <TextBlock Text="{Binding Title, RelativeSource = {RelativeSource FindAncestor, AncestorType=Window}}"
+                       VerticalAlignment="Center" Margin="10 0" />
+        </Border>
+        <SplitView Grid.Row="1"
+                   IsPaneOpen="{Binding IsPaneOpen}"
+                   DisplayMode="CompactInline"
+                   OpenPaneLength="180"
+                   CompactPaneLength="46"
+                   Background="#1e1e1e"
+                   PaneBackground="#1e1e1e">
+            <SplitView.Pane>
+                <StackPanel Orientation="Vertical"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Top"
+                            Spacing="1"
+                            Margin="2">
+                    <Button HorizontalAlignment="Left"
+                            Width="32"
+                            Height="32"
+                            Margin="4 10"
+                            Command="{Binding TriggerPaneCommand}">
+                        <PathIcon Height="11" Data="{StaticResource LineHorizontal3Regular}" />
+                    </Button>
+                    <ListBox Margin="0 0 -100 0" Padding="0" ItemsSource="{Binding Items}"
+                             SelectedItem="{Binding SelectedListItem}">
+                        <ListBox.Styles>
+                            <Style Selector="ListBoxItem">
+                                <Setter Property="Padding" Value="12 8"></Setter>
+                            </Style>
+                        </ListBox.Styles>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate DataType="{x:Type vm:ListItemTemplate}">
+                                <StackPanel Spacing="17" Orientation="Horizontal">
+                                    <PathIcon Data="{Binding ListItemIcon}" Width="14" />
+                                    <TextBlock Text="{Binding Label}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Border CornerRadius="12 0 0 12"
+                        Background="#2d2d2d">
+                    <TransitioningContentControl Content="{Binding CurrentPage}" />
+                </Border>
+            </SplitView.Content>
+
+        </SplitView>
+    </Grid>
+
 
 </Window>

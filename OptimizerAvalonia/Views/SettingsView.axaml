@@ -2,96 +2,99 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:views="using:OptimizerAvalonia.Views"
              xmlns:templates="clr-namespace:OptimizerAvalonia.Templates"
              xmlns:vm="clr-namespace:OptimizerAvalonia.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="OptimizerAvalonia.Views.SettingsView"
              x:DataType="vm:SettingsViewModel">
-    
+
     <ScrollViewer>
         <StackPanel Margin="20">
             <TextBlock Margin="0 20" FontSize="20" FontWeight="Bold">Optimization Settings</TextBlock>
             <StackPanel Orientation="Horizontal">
                 <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource CalendarRegular}" />
-                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Optimization period</TextBlock>
+                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold">Optimization period</TextBlock>
                 <Border>
-                    <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}"/>
+                    <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}" />
                     <ToolTip.Tip>Note: Turn the switch on and off to change periods.</ToolTip.Tip>
                 </Border>
             </StackPanel>
-           
+
             <templates:ContentTemplate>
                 <!-- Space for content of optimization period (summer/winter)-->
                 <StackPanel Orientation="Horizontal" Margin="5">
-                    <StackPanel.Effect> <DropShadowEffect Color="Black" BlurRadius="20"></DropShadowEffect></StackPanel.Effect> 
-                    <TextBlock VerticalAlignment="Center" Margin="0,0,10,0" Text="Summer"/>
+                    <StackPanel.Effect>
+                        <DropShadowEffect Color="Black" BlurRadius="20"></DropShadowEffect>
+                    </StackPanel.Effect>
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,10,0" Text="Summer" />
                     <ToggleSwitch OnContent="{x:Null}" OffContent="{x:Null}"
-                      IsChecked="{Binding IsWinter}" 
-                      Command="{Binding TriggerButtonCommand}" />
-                     <TextBlock VerticalAlignment="Center" Text="Winter"/>
+                                  IsChecked="{Binding IsWinter}"
+                                  Command="{Binding TriggerButtonCommand}" />
+                    <TextBlock VerticalAlignment="Center" Text="Winter" />
                 </StackPanel>
                 <!-- <views:chosePeriodView/> -->
             </templates:ContentTemplate>
-            
+
             <StackPanel Orientation="Horizontal">
                 <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource PreferenceFilter}" />
-                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Optimization preference</TextBlock>
+                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold">Optimization preference</TextBlock>
                 <Border>
-                    <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}"/>
+                    <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}" />
                     <ToolTip.Tip>Note: Turn the switch on and off to optimize for cost or emissions.</ToolTip.Tip>
                 </Border>
             </StackPanel>
             <templates:ContentTemplate>
                 <!-- Space for content of optimization preference (cost/emissions)-->
-                    <StackPanel Orientation="Horizontal" Margin="5">
-                        <StackPanel.Effect> <DropShadowEffect Color="Black" BlurRadius="20"></DropShadowEffect></StackPanel.Effect> 
-                        <TextBlock VerticalAlignment="Center" Margin="0,0,10,0" Text="Cost"/>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <StackPanel.Effect>
+                        <DropShadowEffect Color="Black" BlurRadius="20"></DropShadowEffect>
+                    </StackPanel.Effect>
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,10,0" Text="Cost" />
                     <ToggleSwitch OnContent="{x:Null}" OffContent="{x:Null}" IsChecked="{Binding IsEmissions}" />
-                    <TextBlock VerticalAlignment="Center" Text="Emissions"/>
+                    <TextBlock VerticalAlignment="Center" Text="Emissions" />
                 </StackPanel>
             </templates:ContentTemplate>
             <StackPanel Orientation="Horizontal">
                 <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource AvailableBoilers}" />
-                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold" >Available Boilers</TextBlock>
+                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold">Available Boilers</TextBlock>
                 <Border>
-                    <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}"/>
+                    <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}" />
                     <ToolTip.Tip>Note: Turn the switches of each boiler on and off, or adjust their maximal heat production.</ToolTip.Tip>
                 </Border>
             </StackPanel>
             <templates:ContentTemplate>
                 <!-- Available Boilers -->
-                    <ItemsControl ItemsSource="{Binding BoilersList}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Height="100">
+                <ItemsControl ItemsSource="{Binding BoilersList}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Height="100">
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel.Effect>
+                                        <DropShadowEffect Color="Black" BlurRadius="20"></DropShadowEffect>
+                                    </StackPanel.Effect>
                                     <StackPanel Orientation="Horizontal">
-                                        <StackPanel.Effect>
-                                            <DropShadowEffect Color="Black" BlurRadius="20"></DropShadowEffect>
-                                        </StackPanel.Effect>
+                                        <ToggleSwitch Content="{Binding Name}"
+                                                      IsChecked="{Binding IsActive}"
+                                                      OnContent="On"
+                                                      OffContent="Off"
+                                                      Margin="10" />
+                                    </StackPanel>
+                                    <StackPanel Margin="20" IsVisible="{Binding IsActive}">
+                                        <TextBlock Text="{Binding #Slider0.Value, StringFormat={}{0:F1}}"
+                                                   HorizontalAlignment="Center" />
                                         <StackPanel Orientation="Horizontal">
-                                            <ToggleSwitch Content="{Binding Name}"
-                                                          IsChecked="{Binding IsActive}"
-                                                          OnContent="On"
-                                                          OffContent="Off"
-                                                          Margin="10" />
-                                        </StackPanel>
-                                        <StackPanel Margin="20" IsVisible="{Binding IsActive}">
-                                            <TextBlock Text="{Binding #Slider0.Value, StringFormat={}{0:F1}}"
-                                                       HorizontalAlignment="Center" />
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{Binding #Slider0.Minimum}" />
-                                                <Slider x:Name="Slider0" Width="200" Value="{Binding HeatProduction}"
-                                                        Minimum="1.0" Maximum="{Binding MaxHeat}" TickFrequency="0.1"
-                                                        TickPlacement="BottomRight" IsSnapToTickEnabled="True" />
-                                                <TextBlock Text="{Binding #Slider0.Maximum}" />
-                                            </StackPanel>
+                                            <TextBlock Text="{Binding #Slider0.Minimum}" />
+                                            <Slider x:Name="Slider0" Width="200" Value="{Binding HeatProduction}"
+                                                    Minimum="1.0" Maximum="{Binding MaxHeat}" TickFrequency="0.1"
+                                                    TickPlacement="BottomRight" IsSnapToTickEnabled="True" />
+                                            <TextBlock Text="{Binding #Slider0.Maximum}" />
                                         </StackPanel>
                                     </StackPanel>
-                                </Grid>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
 
             </templates:ContentTemplate>
         </StackPanel>

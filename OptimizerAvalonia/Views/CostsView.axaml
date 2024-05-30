@@ -7,23 +7,25 @@
              x:DataType="vm:CostsViewModel"
              xmlns:vm="clr-namespace:OptimizerAvalonia.ViewModels"
              xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia">
-        
+
 
     <Grid RowDefinitions="Auto, *" Margin="20">
         <TextBlock Grid.Row="0" Margin="0 20" FontSize="20" FontWeight="Bold">Expenses</TextBlock>
         <Border Grid.Row="1">
-            <Border.Effect><DropShadowEffect BlurRadius="10" Color="Black"></DropShadowEffect></Border.Effect>
-        <lvc:CartesianChart
-                            Margin="5"
-                            CornerRadius="7"
-                            Background="#3e3e3e"
-                            Series="{Binding CostsSeries}"
-                            XAxes="{Binding XAxes2}"
-                            YAxes="{Binding YAxes}"
-                            ZoomMode="Both">
-        </lvc:CartesianChart>
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" Color="Black"></DropShadowEffect>
+            </Border.Effect>
+            <lvc:CartesianChart
+                Margin="5"
+                CornerRadius="7"
+                Background="#3e3e3e"
+                Series="{Binding CostsSeries}"
+                XAxes="{Binding XAxes2}"
+                YAxes="{Binding YAxes}"
+                ZoomMode="Both">
+            </lvc:CartesianChart>
         </Border>
     </Grid>
-            
+
 
 </UserControl>

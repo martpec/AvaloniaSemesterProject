@@ -5,13 +5,15 @@
         <controls:ContentTemplate />
     </Design.PreviewWith>
 
+    <!-- Define a style for the ContentTemplate control -->
     <Style Selector="controls|ContentTemplate">
         <Setter Property="Template">
             <ControlTemplate>
                 <Border Background="#393939"
                         CornerRadius="12"
                         Padding="15">
-                    <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding Template}" />
+                    <!-- Use Content="{TemplateBinding Content}" to bind the content -->
+                    <ContentPresenter Content="{TemplateBinding Content}" />
                 </Border>
             </ControlTemplate>
         </Setter>

@@ -91,24 +91,24 @@ public partial class OptimizerViewModel : ViewModelBase
             
             new StackedColumnSeries<DateTimePoint>
             {
-                Name = "Boiler 1",
+                Name = "GB",
                 Values = boiler1,
                 //Fill = new SolidColorBrush(Color.FromRgb(255, 0, 0)) // Red color
                 //Color = new SKColor(50, 50, 50),
             },
             new StackedColumnSeries<DateTimePoint>
             {
-                Name = "Boiler 2",
+                Name = "OB",
                 Values = boiler2
             },
             new StackedColumnSeries<DateTimePoint>
             {
-                Name = "Boiler 3",
+                Name = "GM",
                 Values = boiler3
             },
             new StackedColumnSeries<DateTimePoint>
             {
-                Name = "Boiler 4",
+                Name = "EK",
                 Values = boiler4
             },
             new StackedColumnSeries<DateTimePoint>

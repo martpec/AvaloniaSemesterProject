@@ -12,32 +12,11 @@ namespace OptimizerAvalonia.ViewModels;
 public partial class ViewModelBase : ObservableObject
 {
     /*------------------Boilers-------------------------*/
+
+    // Dummy Boilers representing data in UI
     public static ObservableCollection<Boiler> BoilersList { get; set; } = new();
+    // Boilers Data representing Asset Data
     protected static List<IBoiler> ListOfIBoilers { get; private set; } = new();
-
-    protected ViewModelBase()
-    {
-        if (ListOfIBoilers.Count == 0 && BoilersList.Count == 0)
-        {
-            ListOfIBoilers = new List<IBoiler>();
-
-            var assetManager = new AssetManager();
-            IBoiler gasBoiler = assetManager.LoadBoilerData<GasBoiler>("GasBoiler.csv");
-            IBoiler oilBoiler = assetManager.LoadBoilerData<OilBoiler>("OilBoiler.csv");
-            IBoiler gasMotor = assetManager.LoadBoilerData<GasMotor>("GasMotor.csv");
-            IBoiler electricBoiler = assetManager.LoadBoilerData<ElectricBoiler>("ElectricBoiler.csv");
-
-            ListOfIBoilers.Add(gasBoiler);
-            ListOfIBoilers.Add(oilBoiler);
-            ListOfIBoilers.Add(gasMotor);
-            ListOfIBoilers.Add(electricBoiler);
-
-            foreach (var boiler in ListOfIBoilers)
-            {
-                BoilersList.Add(new Boiler(boiler));
-            }
-        }
-    }
 
     /*----------------------------SourceData----------------------------------------*/
     [ObservableProperty] private static string _sourceDataPath = "SummerData.csv";
@@ -57,8 +36,37 @@ public partial class ViewModelBase : ObservableObject
 
     /*--------------------Electricity Graph------------------*/
     [ObservableProperty] private static ObservableCollection<DateTimePoint> _electricityPoints = new();
+    
+    protected ViewModelBase()
+    {
+        if (ListOfIBoilers.Count == 0 && BoilersList.Count == 0)
+        {
+            ListOfIBoilers = new List<IBoiler>();
+
+            // Load Asset Data
+            var assetManager = new AssetManager();
+            IBoiler gasBoiler = assetManager.LoadBoilerData<GasBoiler>("GasBoiler.csv");
+            IBoiler oilBoiler = assetManager.LoadBoilerData<OilBoiler>("OilBoiler.csv");
+            IBoiler gasMotor = assetManager.LoadBoilerData<GasMotor>("GasMotor.csv");
+            IBoiler electricBoiler = assetManager.LoadBoilerData<ElectricBoiler>("ElectricBoiler.csv");
+
+            // Adds all Boilers to common list
+            ListOfIBoilers.Add(gasBoiler);
+            ListOfIBoilers.Add(oilBoiler);
+            ListOfIBoilers.Add(gasMotor);
+            ListOfIBoilers.Add(electricBoiler);
+
+            // add all boilers to BoilersList
+            foreach (var boiler in ListOfIBoilers)
+            {
+                BoilersList.Add(new Boiler(boiler));
+            }
+        }
+    }
+    
 }
 
+// class for representing data in the UI
 public sealed class Boiler(IBoiler boiler) : INotifyPropertyChanged
 {
     private bool _isActive = true;

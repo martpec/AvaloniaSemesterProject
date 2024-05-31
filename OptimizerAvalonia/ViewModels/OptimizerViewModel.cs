@@ -49,12 +49,19 @@ public partial class OptimizerViewModel : ViewModelBase
         }
     ];
 
+    // Color font for the legend
     public SolidColorPaint LegendColor { get; set; } =
         new SolidColorPaint
         {
             Color = new SKColor(255, 255, 255),
             //SKTypeface = SKTypeface.FromFamilyName("Courier New") 
         };
+
+    // exported file name
+    private string? _fileName;
+
+    // list that holds optimized data in OptimizerViewModel 
+    private List<OptimizedData>? OptimizedData { get; set; }
 
     public OptimizerViewModel()
     {
@@ -70,8 +77,6 @@ public partial class OptimizerViewModel : ViewModelBase
             {
                 Name = "GB",
                 Values = _gasBoiler,
-                //Fill = new SolidColorBrush(Color.FromRgb(255, 0, 0)) // Red color
-                //Color = new SKColor(50, 50, 50),
             },
 
             new StackedColumnSeries<DateTimePoint>
@@ -102,7 +107,7 @@ public partial class OptimizerViewModel : ViewModelBase
             {
                 Name = "Total heat demand",
                 Values = _allBoilers,
-                LineSmoothness = 0, // 0/1 change if line is smooth or not (UUUUUUUUU or VVVVVV) 
+                LineSmoothness = 0,
                 Fill = null
             }
 
@@ -110,11 +115,6 @@ public partial class OptimizerViewModel : ViewModelBase
 
         LoadDataMainGraph();
     }
-    /*private int x = 13;
-    public void AddItemCommand()
-    {
-        _allBoilers.Add(new(++x,1));
-    } */
 
     [RelayCommand]
     private void Optimize()
@@ -137,7 +137,7 @@ public partial class OptimizerViewModel : ViewModelBase
             ? $"OptimizedData_Emissions_{firstDate:yyyyMMdd}_{lastDate:yyyyMMdd}.csv"
             : $"OptimizedData_Cost_{firstDate:yyyyMMdd}_{lastDate:yyyyMMdd}.csv";
 
-
+        // Loading the data of the boilers
         for (int i = 0; i < ListOfIBoilers.Count; i++)
         {
             if (BoilersList[i].IsActive)
@@ -146,32 +146,37 @@ public partial class OptimizerViewModel : ViewModelBase
                 activeBoilers.Add(ListOfIBoilers[i]);
             }
         }
-
+        // Calling constructor of optimizer & optimize data
         Optimizer optimizer = new Optimizer(activeBoilers, sourceDataForOptimization);
         optimizer.CalculateOptimalHeatProduction(IsEmissions);
 
         OptimizedData = optimizer.OptimizedData;
         OptimizedDataForGraph = optimizer.OptimizedData;
-
+        
+        // Clear every graph before filling them in
         _allBoilers.Clear();
         _gasBoiler.Clear();
         _oilBoiler.Clear();
         _gasMotor.Clear();
         _electricBoiler.Clear();
+
+        // Fill the graphs with data
         LoadDataMainGraph();
     }
 
     private void LoadDataMainGraph()
     {
-        ErrorMessage = false;
+        ErrorMessage = false; // Resets error message showing
         CostsPoints.Clear();
         EmissionsPoints.Clear();
+        ElectricityPoints.Clear();
         _notEnough.Clear();
         double totalDifference = 0;
         foreach (OptimizedData data in OptimizedDataForGraph)
         {
             totalDifference = data.HeatDemand;
             if (data.BoilerProductions != null)
+                // Adds data about each boiler to the graph
                 foreach (BoilerProduction boiler in data.BoilerProductions)
                 {
                     totalDifference -= boiler.HeatProduced;
@@ -188,29 +193,25 @@ public partial class OptimizerViewModel : ViewModelBase
                     if (boiler.BoilerName == "EK")
                         _electricBoiler.Add(new(data.StartTime, boiler.HeatProduced));
                 }
-
+            // If there was not enough heat produced, this will display on the graph how much heat was missing
             if (totalDifference > 0)
             {
                 _notEnough.Add(new(data.StartTime, totalDifference));
             }
 
+            // Fill in other graphs
             ElectricityPoints.Add(new(data.StartTime, data.ElectricityPrice));
             _allBoilers.Add(new(data.StartTime, data.HeatDemand));
             CostsPoints.Add(new(data.StartTime, data.TotalProductionCost));
             EmissionsPoints.Add(new(data.StartTime, data.Emissions));
         }
-
+        // Show error message if there was not enough heat produced
         if (totalDifference > 0)
         {
             ErrorMessage = true;
         }
     }
 
-    // exported file name
-    private string? _fileName;
-
-    // list that holds optimized data in OptimizerViewModel 
-    private List<OptimizedData>? OptimizedData { get; set; }
 
     [RelayCommand]
     private async Task SaveOptimizedDataToFile()
@@ -231,9 +232,10 @@ public partial class OptimizerViewModel : ViewModelBase
 
         try
         {
+            // Saves the optimized data to a file
             ResultDataManager.SaveOptimizedData(OptimizedData, _fileName);
             Console.WriteLine("Optimized data saved successfully.");
-
+            // Lets user know it saved the data correctly and successfully
             var box = MessageBoxManager
                 .GetMessageBoxStandard("Optimized Data Extracted", "Data has been saved to AppData/Results.",
                     ButtonEnum.Ok,
@@ -242,7 +244,7 @@ public partial class OptimizerViewModel : ViewModelBase
 
             await box.ShowWindowAsync();
         }
-        catch (Exception ex)
+        catch (Exception ex) // Catches any errors
         {
             Console.WriteLine($"An error occurred while saving optimized data: {ex.Message}");
         }

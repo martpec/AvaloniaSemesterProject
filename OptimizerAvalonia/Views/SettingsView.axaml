@@ -20,8 +20,8 @@
                 </Border>
             </StackPanel>
 
+            <!-- optimization period summer/winter-->
             <templates:ContentTemplate>
-                <!-- Space for content of optimization period (summer/winter)-->
                 <StackPanel Orientation="Horizontal" Margin="5">
                     <StackPanel.Effect>
                         <DropShadowEffect Color="Black" BlurRadius="20"></DropShadowEffect>
@@ -32,7 +32,6 @@
                                   Command="{Binding TriggerButtonCommand}" />
                     <TextBlock VerticalAlignment="Center" Text="Winter" />
                 </StackPanel>
-                <!-- <views:chosePeriodView/> -->
             </templates:ContentTemplate>
 
             <StackPanel Orientation="Horizontal">
@@ -43,8 +42,9 @@
                     <ToolTip.Tip>Note: Turn the switch on and off to optimize for cost or emissions.</ToolTip.Tip>
                 </Border>
             </StackPanel>
+            
+            <!-- optimization preference cost/emissions-->
             <templates:ContentTemplate>
-                <!-- Space for content of optimization preference (cost/emissions)-->
                 <StackPanel Orientation="Horizontal" Margin="5">
                     <StackPanel.Effect>
                         <DropShadowEffect Color="Black" BlurRadius="20"></DropShadowEffect>
@@ -62,8 +62,9 @@
                     <ToolTip.Tip>Note: Turn the switches of each boiler on and off, or adjust their maximal heat production.</ToolTip.Tip>
                 </Border>
             </StackPanel>
+            
+            <!-- Boilers Settings -->
             <templates:ContentTemplate>
-                <!-- Available Boilers -->
                 <ItemsControl ItemsSource="{Binding BoilersList}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>

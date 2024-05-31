@@ -44,7 +44,7 @@ public partial class MainWindowViewModel : ViewModelBase
         // Set the current page to the cached instance
         CurrentPage = viewModel;
     }
-
+    // Adds Views to the list
     public ObservableCollection<ListItemTemplate> Items { get; } =
     [
         new ListItemTemplate(typeof(HomePageViewModel), "HomeRegular", "Home"),
@@ -58,6 +58,7 @@ public partial class MainWindowViewModel : ViewModelBase
 
 public class ListItemTemplate
 {
+    // Creates template for every Item in Pane
     public ListItemTemplate(Type type, string iconKey, string label)
     {
         ModelType = type;

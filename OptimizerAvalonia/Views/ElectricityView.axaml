@@ -8,19 +8,20 @@
              x:DataType="vm:ElectricityViewModel"
              xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia">
     <Grid RowDefinitions="Auto, *" Margin="20">
-
+        <!-- Text Block describing graph -->
         <TextBlock Grid.Row="0" Margin="0 20" FontSize="20" FontWeight="Bold">Electricity Prices (in dkk)</TextBlock>
         <Border Grid.Row="1">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="10" Color="Black"></DropShadowEffect>
             </Border.Effect>
+            <!-- Graph -->
             <lvc:CartesianChart
 
                 Margin="5"
                 CornerRadius="7"
                 Background="#3e3e3e"
                 Series="{Binding ElectricitySeries}"
-                XAxes="{Binding XAxes1}"
+                XAxes="{Binding XAxes}"
                 YAxes="{Binding YAxes}"
                 ZoomMode="Both">
             </lvc:CartesianChart>

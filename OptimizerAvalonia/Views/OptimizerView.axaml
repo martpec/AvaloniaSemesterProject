@@ -11,15 +11,17 @@
 
 
     <Grid Margin="7">
-        <Grid.RowDefinitions>
+        <Grid.RowDefinitions> <!-- Settings for the main grid, deviding the screen -->
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
-
+        
+        <!-- Error message -->
         <controls:InfoBar Grid.Row="0" Title="WARNING!" IsOpen="{Binding ErrorMessage}" Severity="Error"
                           Message="It appears that some of your time slices are not meeting the required heat demand. Please adjust the boilers accordingly." />
-
+        
+        <!-- main chart -->
         <lvc:CartesianChart
             Grid.Row="1"
             LegendTextPaint="{Binding LegendColor}"
@@ -32,16 +34,19 @@
             YAxes="{Binding YAxes}">
         </lvc:CartesianChart>
 
+        <!-- 2nd grid, storing buttons -->
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-
+            
+            <!-- Optimize button -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Margin="6" Width="150" Command="{Binding OptimizeCommand}" Cursor="Hand">Optimize</Button>
             </StackPanel>
 
+            <!-- Export button -->
             <Button Grid.Column="1" Margin="6" Width="150" HorizontalAlignment="Right" Cursor="Hand"
                     Command="{Binding SaveOptimizedDataToFileCommand}">
                 <StackPanel Orientation="Horizontal">

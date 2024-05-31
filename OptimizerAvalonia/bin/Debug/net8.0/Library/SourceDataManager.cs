@@ -14,6 +14,8 @@ public class SourceDataManager
 
         string appDataPath = Path.Combine(@"Library\AppData", filePath);
 
+
+        // Loading the data
         try
         {
             using var reader = new StreamReader(appDataPath);
@@ -42,6 +44,7 @@ public class SourceDataManager
                 });
             }
 
+            // Printing to Console for Check
             foreach (var sourceData in sourceDataList)
             {
                 Console.WriteLine(

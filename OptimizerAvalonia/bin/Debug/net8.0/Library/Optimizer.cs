@@ -8,8 +8,12 @@ namespace HeatProductionOptimization;
 
 public class Optimizer
 {
+    // Activated Boilers
     private readonly List<IBoiler> Boilers;
+    // Stores data used for optimization
     private readonly List<SourceData> DemandData;
+
+    // Stores final calculated data
     public List<OptimizedData> OptimizedData = new();
 
     public Optimizer(List<IBoiler> boilers, List<SourceData> demandData)
@@ -20,6 +24,7 @@ public class Optimizer
 
     public void CalculateOptimalHeatProduction(bool optimizeEmissions)
     {
+        // Goes through each time slice
         foreach (var demand in DemandData)
         {
             Console.WriteLine(
@@ -42,10 +47,15 @@ public class Optimizer
 
             foreach (var boiler in sortedBoilers)
             {
+                // Checks if boiler can produce enough heat for the demand
                 if (demand.HeatDemand <= boiler.MaxHeat)
                 {
+                    // Checks if the demand is less than 1 (Boiler cannot produce less than 1 MW)
                     if (demand.HeatDemand <= 1)
                     {
+                        //int decreaseFromPreviousBoiler = 1 - demand.HeatDemand; // This can be inovation in the future
+
+                        // Calculate all attributes accordingly 
                         totalProductionCost += boiler.ProductionCost;
                         totalEmissions += boiler.Emissions;
                         demand.HeatDemand = 0;
@@ -59,6 +69,7 @@ public class Optimizer
                         break;
                     }
 
+                    // Calculate all attributes accordingly
                     totalProductionCost += demand.HeatDemand * boiler.ProductionCost;
                     totalEmissions += demand.HeatDemand * boiler.Emissions;
                     demand.HeatDemand = Math.Round(demand.HeatDemand, 2);
@@ -73,6 +84,7 @@ public class Optimizer
                     break;
                 }
 
+                // Calculate all attributes accordingly
                 totalProductionCost += boiler.ProductionCost * boiler.MaxHeat;
                 totalEmissions += boiler.Emissions * boiler.MaxHeat;
                 demand.HeatDemand -= boiler.MaxHeat;
@@ -98,6 +110,7 @@ public class Optimizer
 
             ResetProductionCosts(demand); // Reset production costs for next iteration
 
+            // Final calculated Time slice added to OptimizedData List
             OptimizedData.Add(new OptimizedData
             {
                 StartTime = demand.StartTime,
@@ -110,7 +123,8 @@ public class Optimizer
             });
         }
     }
-
+    
+    // Calculates production cost for the EK and GM (price of electricity is always changing)
     private void CalculateProductionCosts(SourceData demand)
     {
         foreach (var boiler in Boilers)
@@ -129,6 +143,7 @@ public class Optimizer
         }
     }
 
+    // Resets production cost for the EK and GM 
     private void ResetProductionCosts(SourceData demand)
     {
         foreach (var boiler in Boilers)

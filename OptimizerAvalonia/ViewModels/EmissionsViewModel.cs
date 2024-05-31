@@ -10,9 +10,10 @@ namespace OptimizerAvalonia.ViewModels;
 
 public class EmissionsViewModel : ViewModelBase
 {
+    // SAME AS CostsViewModel.cs JUST FOR EMISSIONS
     public ObservableCollection<ISeries> EmissionsSeries { get; set; }
 
-    public Axis[] XAxes1 { get; set; } =
+    public Axis[] XAxes { get; set; } =
     [
         new DateTimeAxis(TimeSpan.FromHours(1), date => date.ToString("H:mm d/M")) //output format
         {

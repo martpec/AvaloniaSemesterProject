@@ -51,6 +51,10 @@ public class SourceDataManager
                     $"Start time: {sourceData.StartTime}, End time: {sourceData.EndTime}, Heat demand: {sourceData.HeatDemand}, Electricity price: {sourceData.ElectricityPrice}");
             }
         }
+        catch (FileNotFoundException)
+        {
+            throw; // Rethrow the FileNotFoundException
+        }
         catch (Exception ex)
         {
             Console.WriteLine(

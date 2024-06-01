@@ -1,9 +1,7 @@
-﻿using HeatProductionOptimization.Interfaces;
-
-namespace HeatProductionOptimization.Models;
+﻿namespace HeatProductionOptimization.Models;
 
 public class BoilerProduction
-{ 
-    public string? BoilerName { get; set; } 
-    public double HeatProduced { get; set; }
+{
+    public string? BoilerName { get; init; }
+    public double HeatProduced { get; init; }
 }

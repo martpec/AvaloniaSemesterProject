@@ -210,7 +210,7 @@
         "dependencies": {
           "Avalonia": "11.1.0-beta2",
           "ReactiveUI": "18.3.1",
-          "System.Reactive": "5.0.0"
+          "System.Reactive": "6.0.0"
         },
         "runtime": {
           "lib/net8.0/Avalonia.ReactiveUI.dll": {
@@ -292,6 +292,17 @@
           }
         }
       },
+      "ColorTextBlock.Avalonia/11.0.2": {
+        "dependencies": {
+          "Avalonia": "11.1.0-beta2"
+        },
+        "runtime": {
+          "lib/net6.0/ColorTextBlock.Avalonia.dll": {
+            "assemblyVersion": "11.0.2.0",
+            "fileVersion": "11.0.2.0"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.2": {
         "runtime": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -301,9 +312,21 @@
         }
       },
       "coverlet.collector/6.0.0": {},
+      "DialogHost.Avalonia/0.7.7": {
+        "dependencies": {
+          "Avalonia": "11.1.0-beta2",
+          "System.Reactive": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DialogHost.Avalonia.dll": {
+            "assemblyVersion": "0.7.7.0",
+            "fileVersion": "0.7.7.0"
+          }
+        }
+      },
       "DynamicData/7.9.5": {
         "dependencies": {
-          "System.Reactive": "5.0.0"
+          "System.Reactive": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/DynamicData.dll": {
@@ -426,6 +449,31 @@
           "lib/net6.0/LiveChartsCore.SkiaSharpView.Avalonia.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Markdown.Avalonia.Tight/11.0.2": {
+        "dependencies": {
+          "Avalonia": "11.1.0-beta2",
+          "ColorTextBlock.Avalonia": "11.0.2"
+        },
+        "runtime": {
+          "lib/net6.0/Markdown.Avalonia.dll": {
+            "assemblyVersion": "11.0.2.0",
+            "fileVersion": "11.0.2.0"
+          }
+        }
+      },
+      "MessageBox.Avalonia/3.1.5.1": {
+        "dependencies": {
+          "Avalonia": "11.1.0-beta2",
+          "DialogHost.Avalonia": "0.7.7",
+          "Markdown.Avalonia.Tight": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MsBox.Avalonia.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -1172,11 +1220,11 @@
           "System.Threading": "4.3.0"
         }
       },
-      "System.Reactive/5.0.0": {
+      "System.Reactive/6.0.0": {
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.0.1"
+          "lib/net6.0/System.Reactive.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.1"
           }
         }
       },
@@ -1576,7 +1624,8 @@
           "Avalonia.ReactiveUI": "11.1.0-beta2",
           "CommunityToolkit.Mvvm": "8.2.2",
           "FluentAvaloniaUI": "2.1.0-preview4",
-          "LiveChartsCore.SkiaSharpView.Avalonia": "2.0.0-rc2"
+          "LiveChartsCore.SkiaSharpView.Avalonia": "2.0.0-rc2",
+          "MessageBox.Avalonia": "3.1.5.1"
         },
         "runtime": {
           "OptimizerAvalonia.dll": {}
@@ -1723,6 +1772,13 @@
       "path": "avalonia.x11/11.1.0-beta2",
       "hashPath": "avalonia.x11.11.1.0-beta2.nupkg.sha512"
     },
+    "ColorTextBlock.Avalonia/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MsWu5aAbDpstAmJ+TTSgC6Q7YdjKB7Na912GMr3oWl9ag8TH2HNpglzgo+kIAuB4C4wswKfrzhso4UcpvgMuHg==",
+      "path": "colortextblock.avalonia/11.0.2",
+      "hashPath": "colortextblock.avalonia.11.0.2.nupkg.sha512"
+    },
     "CommunityToolkit.Mvvm/8.2.2": {
       "type": "package",
       "serviceable": true,
@@ -1736,6 +1792,13 @@
       "sha512": "sha512-tW3lsNS+dAEII6YGUX/VMoJjBS1QvsxqJeqLaJXub08y1FSjasFPtQ4UBUsudE9PNrzLjooClMsPtY2cZLdXpQ==",
       "path": "coverlet.collector/6.0.0",
       "hashPath": "coverlet.collector.6.0.0.nupkg.sha512"
+    },
+    "DialogHost.Avalonia/0.7.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V5zq0e6dBeK1A8xDsyNouzfSx3d+aOhxPgjguaFyaDexgDF8WiSQDsawkv0fRGKbDnaPIqMk9m7P/2G5c7HPzw==",
+      "path": "dialoghost.avalonia/0.7.7",
+      "hashPath": "dialoghost.avalonia.0.7.7.nupkg.sha512"
     },
     "DynamicData/7.9.5": {
       "type": "package",
@@ -1806,6 +1869,20 @@
       "sha512": "sha512-1ykqsUd8qKP2Iste0cnRa+mpnC49IHElE5saz8y+eeYynfTLo15YhnPJGWGit4mdvrWIQgT/1QCcE26tfdKvDw==",
       "path": "livechartscore.skiasharpview.avalonia/2.0.0-rc2",
       "hashPath": "livechartscore.skiasharpview.avalonia.2.0.0-rc2.nupkg.sha512"
+    },
+    "Markdown.Avalonia.Tight/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ylg0EkSUId42dVUFQvU7UJGWcKiJ+g7TesRe/KCzUYzlypWf1lTiVveT2j60QSldCtuAw3o/aEOEjIahMdRGig==",
+      "path": "markdown.avalonia.tight/11.0.2",
+      "hashPath": "markdown.avalonia.tight.11.0.2.nupkg.sha512"
+    },
+    "MessageBox.Avalonia/3.1.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iE6AzefOgcNHwdmQoUIeuii09UsFzMJoo027dZ/oKXmIaX9C8isTejODlGsuRmWgvvgMNULXsQTaH0VknMSEnw==",
+      "path": "messagebox.avalonia/3.1.5.1",
+      "hashPath": "messagebox.avalonia.3.1.5.1.nupkg.sha512"
     },
     "MicroCom.Runtime/0.11.0": {
       "type": "package",
@@ -2227,12 +2304,12 @@
       "path": "system.objectmodel/4.3.0",
       "hashPath": "system.objectmodel.4.3.0.nupkg.sha512"
     },
-    "System.Reactive/5.0.0": {
+    "System.Reactive/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
-      "path": "system.reactive/5.0.0",
-      "hashPath": "system.reactive.5.0.0.nupkg.sha512"
+      "sha512": "sha512-31kfaW4ZupZzPsI5PVe77VhnvFF55qgma7KZr/E0iFTs6fmdhhG8j0mgEx620iLTey1EynOkEfnyTjtNEpJzGw==",
+      "path": "system.reactive/6.0.0",
+      "hashPath": "system.reactive.6.0.0.nupkg.sha512"
     },
     "System.Reflection/4.3.0": {
       "type": "package",

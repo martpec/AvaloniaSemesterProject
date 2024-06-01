@@ -191,3 +191,7 @@ C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs
 C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia.Tests\obj\Debug\net8.0\OptimizerAvalonia.Tests.pdb
 C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia.Tests\obj\Debug\net8.0\OptimizerAvalonia.Tests.genruntimeconfig.cache
 C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia.Tests\obj\Debug\net8.0\ref\OptimizerAvalonia.Tests.dll
+C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia.Tests\bin\Debug\net8.0\ColorTextBlock.Avalonia.dll
+C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia.Tests\bin\Debug\net8.0\DialogHost.Avalonia.dll
+C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia.Tests\bin\Debug\net8.0\Markdown.Avalonia.dll
+C:\Users\marti\OneDrive\Počítač\Advanced_Object_Oriented_Programming\aoop1.cs\AvaloniaSemesterProject\OptimizerAvalonia.Tests\bin\Debug\net8.0\MsBox.Avalonia.dll

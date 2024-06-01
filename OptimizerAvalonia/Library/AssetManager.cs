@@ -41,6 +41,9 @@ public class AssetManager
     /// <returns>double</returns>
     public static double ExtractNumber(string input)
     {
+        if (string.IsNullOrWhiteSpace(input))
+            return 0.0;
+        
         string numberStr = System.Text.RegularExpressions.Regex.Match(input, @"-?\d+(\.\d+)?").Value;
         return double.Parse(numberStr, CultureInfo.InvariantCulture);
     }

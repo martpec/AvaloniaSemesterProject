@@ -38,11 +38,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -124,11 +119,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -166,6 +156,10 @@
             "LiveChartsCore.SkiaSharpView.Avalonia": {
               "target": "Package",
               "version": "[2.0.0-rc2, )"
+            },
+            "MessageBox.Avalonia": {
+              "target": "Package",
+              "version": "[3.1.5.1, )"
             }
           },
           "imports": [

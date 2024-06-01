@@ -383,6 +383,18 @@
           }
         }
       },
+      "ColorTextBlock.Avalonia/11.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.0.0"
+        },
+        "compile": {
+          "lib/net6.0/ColorTextBlock.Avalonia.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/ColorTextBlock.Avalonia.dll": {}
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
@@ -403,6 +415,23 @@
         "type": "package",
         "build": {
           "build/netstandard1.0/coverlet.collector.targets": {}
+        }
+      },
+      "DialogHost.Avalonia/0.7.7": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.0.0",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/DialogHost.Avalonia.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/DialogHost.Avalonia.dll": {
+            "related": ".xml"
+          }
         }
       },
       "DynamicData/7.9.5": {
@@ -586,6 +615,33 @@
           "lib/net6.0/LiveChartsCore.SkiaSharpView.Avalonia.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Markdown.Avalonia.Tight/11.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.0.0",
+          "ColorTextBlock.Avalonia": "11.0.2"
+        },
+        "compile": {
+          "lib/net6.0/Markdown.Avalonia.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Markdown.Avalonia.dll": {}
+        }
+      },
+      "MessageBox.Avalonia/3.1.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.0.5",
+          "DialogHost.Avalonia": "0.7.7",
+          "Markdown.Avalonia.Tight": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/MsBox.Avalonia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MsBox.Avalonia.dll": {}
         }
       },
       "MicroCom.Runtime/0.11.0": {
@@ -1762,20 +1818,20 @@
           "lib/netstandard1.3/System.ObjectModel.dll": {}
         }
       },
-      "System.Reactive/5.0.0": {
+      "System.Reactive/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net5.0/_._": {}
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Reflection/4.3.0": {
@@ -2507,7 +2563,8 @@
           "Avalonia.ReactiveUI": "11.1.0-beta2",
           "CommunityToolkit.Mvvm": "8.2.2",
           "FluentAvaloniaUI": "2.1.0-preview4",
-          "LiveChartsCore.SkiaSharpView.Avalonia": "2.0.0-rc2"
+          "LiveChartsCore.SkiaSharpView.Avalonia": "2.0.0-rc2",
+          "MessageBox.Avalonia": "3.1.5.1"
         },
         "compile": {
           "bin/placeholder/OptimizerAvalonia.dll": {}
@@ -2991,6 +3048,21 @@
         "lib/netstandard2.0/Avalonia.X11.xml"
       ]
     },
+    "ColorTextBlock.Avalonia/11.0.2": {
+      "sha512": "MsWu5aAbDpstAmJ+TTSgC6Q7YdjKB7Na912GMr3oWl9ag8TH2HNpglzgo+kIAuB4C4wswKfrzhso4UcpvgMuHg==",
+      "type": "package",
+      "path": "colortextblock.avalonia/11.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "colortextblock.avalonia.11.0.2.nupkg.sha512",
+        "colortextblock.avalonia.nuspec",
+        "lib/net461/ColorTextBlock.Avalonia.dll",
+        "lib/net6.0/ColorTextBlock.Avalonia.dll",
+        "lib/netcoreapp2.0/ColorTextBlock.Avalonia.dll",
+        "lib/netstandard2.0/ColorTextBlock.Avalonia.dll"
+      ]
+    },
     "CommunityToolkit.Mvvm/8.2.2": {
       "sha512": "r0g0k9tGYdrnz8R7T3x5UiokDffeevzK/2P/9SBL6fqLgN8B157MIi/bVUWI1KAz6ZorZrK9AdABCWUeXZZsvA==",
       "type": "package",
@@ -3073,6 +3145,21 @@
         "coverlet-icon.png",
         "coverlet.collector.6.0.0.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "DialogHost.Avalonia/0.7.7": {
+      "sha512": "V5zq0e6dBeK1A8xDsyNouzfSx3d+aOhxPgjguaFyaDexgDF8WiSQDsawkv0fRGKbDnaPIqMk9m7P/2G5c7HPzw==",
+      "type": "package",
+      "path": "dialoghost.avalonia/0.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "dialoghost.avalonia.0.7.7.nupkg.sha512",
+        "dialoghost.avalonia.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/DialogHost.Avalonia.dll",
+        "lib/netstandard2.0/DialogHost.Avalonia.xml"
       ]
     },
     "DynamicData/7.9.5": {
@@ -3354,6 +3441,35 @@
         "lib/netstandard2.0/LiveChartsCore.SkiaSharpView.Avalonia.xml",
         "livechartscore.skiasharpview.avalonia.2.0.0-rc2.nupkg.sha512",
         "livechartscore.skiasharpview.avalonia.nuspec"
+      ]
+    },
+    "Markdown.Avalonia.Tight/11.0.2": {
+      "sha512": "Ylg0EkSUId42dVUFQvU7UJGWcKiJ+g7TesRe/KCzUYzlypWf1lTiVveT2j60QSldCtuAw3o/aEOEjIahMdRGig==",
+      "type": "package",
+      "path": "markdown.avalonia.tight/11.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Markdown.Avalonia.Tight.md",
+        "lib/net461/Markdown.Avalonia.dll",
+        "lib/net6.0/Markdown.Avalonia.dll",
+        "lib/netcoreapp2.0/Markdown.Avalonia.dll",
+        "lib/netstandard2.0/Markdown.Avalonia.dll",
+        "markdown.avalonia.tight.11.0.2.nupkg.sha512",
+        "markdown.avalonia.tight.nuspec"
+      ]
+    },
+    "MessageBox.Avalonia/3.1.5.1": {
+      "sha512": "iE6AzefOgcNHwdmQoUIeuii09UsFzMJoo027dZ/oKXmIaX9C8isTejODlGsuRmWgvvgMNULXsQTaH0VknMSEnw==",
+      "type": "package",
+      "path": "messagebox.avalonia/3.1.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.jpg",
+        "lib/netstandard2.0/MsBox.Avalonia.dll",
+        "messagebox.avalonia.3.1.5.1.nupkg.sha512",
+        "messagebox.avalonia.nuspec"
       ]
     },
     "MicroCom.Runtime/0.11.0": {
@@ -5635,32 +5751,31 @@
         "system.objectmodel.nuspec"
       ]
     },
-    "System.Reactive/5.0.0": {
-      "sha512": "erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
+    "System.Reactive/6.0.0": {
+      "sha512": "31kfaW4ZupZzPsI5PVe77VhnvFF55qgma7KZr/E0iFTs6fmdhhG8j0mgEx620iLTey1EynOkEfnyTjtNEpJzGw==",
       "type": "package",
-      "path": "system.reactive/5.0.0",
+      "path": "system.reactive/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "build/net5.0/_._",
-        "build/netcoreapp3.1/System.Reactive.dll",
-        "build/netcoreapp3.1/System.Reactive.targets",
-        "build/netcoreapp3.1/System.Reactive.xml",
-        "buildTransitive/net5.0/_._",
-        "buildTransitive/netcoreapp3.1/System.Reactive.targets",
+        "build/net6.0-windows10.0.19041/_._",
+        "build/net6.0/_._",
+        "buildTransitive/net6.0-windows10.0.19041/_._",
+        "buildTransitive/net6.0/_._",
+        "icon.png",
         "lib/net472/System.Reactive.dll",
         "lib/net472/System.Reactive.xml",
-        "lib/net5.0-windows10.0.19041/System.Reactive.dll",
-        "lib/net5.0-windows10.0.19041/System.Reactive.xml",
-        "lib/net5.0/System.Reactive.dll",
-        "lib/net5.0/System.Reactive.xml",
-        "lib/netcoreapp3.1/_._",
+        "lib/net6.0-windows10.0.19041/System.Reactive.dll",
+        "lib/net6.0-windows10.0.19041/System.Reactive.xml",
+        "lib/net6.0/System.Reactive.dll",
+        "lib/net6.0/System.Reactive.xml",
         "lib/netstandard2.0/System.Reactive.dll",
         "lib/netstandard2.0/System.Reactive.xml",
-        "lib/uap10.0.16299/System.Reactive.dll",
-        "lib/uap10.0.16299/System.Reactive.pri",
-        "lib/uap10.0.16299/System.Reactive.xml",
-        "system.reactive.5.0.0.nupkg.sha512",
+        "lib/uap10.0.18362/System.Reactive.dll",
+        "lib/uap10.0.18362/System.Reactive.pri",
+        "lib/uap10.0.18362/System.Reactive.xml",
+        "readme.md",
+        "system.reactive.6.0.0.nupkg.sha512",
         "system.reactive.nuspec"
       ]
     },
@@ -7539,11 +7654,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {

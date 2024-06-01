@@ -1,8 +1,7 @@
-namespace HeatProductionOptimization.Interfaces
+namespace HeatProductionOptimization.Interfaces;
+
+public interface IOilBoiler : IBoiler, IEmissionProducer
 {
-    public interface IOilBoiler : IBoiler, IEmissionProducer
-    {   
-        // Oil consumption in MWh
-        double OilConsumption { get; set; }
-    }
+    // Oil consumption in MWh
+    double OilConsumption { get; set; }
 }

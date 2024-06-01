@@ -1,28 +1,26 @@
 using HeatProductionOptimization.Interfaces;
-using System.Globalization;
 using static HeatProductionOptimization.AssetManager;
 
-namespace HeatProductionOptimization.Models
+namespace HeatProductionOptimization.Models;
+
+// Gas boiler model class
+public class GasBoiler : IGasBoiler
 {
-    // Gas boiler model class
-    public class GasBoiler : IGasBoiler
+    public string? Name { get; set; }
+    public double MaxHeat { get; set; }
+    public double ProductionCost { get; set; }
+    public double Emissions { get; set; }
+    public double GasConsumption { get; set; }
+
+    public void SetAdditionalProperties(string[] values)
     {
-        public string? Name { get; set; }
-        public double MaxHeat { get; set; }
-        public double ProductionCost { get; set; }
-        public double Emissions { get; set; }
-        public double GasConsumption { get; set; }
+        Emissions = ExtractNumber(values[3]);
+        GasConsumption = ExtractNumber(values[4]);
 
-        public void SetAdditionalProperties(string[] values)
-        {
-            Emissions = ExtractNumber(values[3]);
-            GasConsumption = ExtractNumber(values[4]);
-
-            //System.Console.WriteLine($"Name: {Name}\nMaxHeat: {MaxHeat}\nProductionCost: {ProductionCost}\nEmissions: {Emissions}\nGasConsumption: {GasConsumption}\n");
-        }
-
+        //System.Console.WriteLine($"Name: {Name}\nMaxHeat: {MaxHeat}\nProductionCost: {ProductionCost}\nEmissions: {Emissions}\nGasConsumption: {GasConsumption}\n");
     }
 }
+
 
 // Name: GB 
 

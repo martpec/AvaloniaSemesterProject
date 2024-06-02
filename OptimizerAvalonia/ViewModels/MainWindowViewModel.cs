@@ -44,6 +44,7 @@ public partial class MainWindowViewModel : ViewModelBase
         // Set the current page to the cached instance
         CurrentPage = viewModel;
     }
+
     // Adds Views to the list
     public ObservableCollection<ListItemTemplate> Items { get; } =
     [
@@ -62,7 +63,6 @@ public class ListItemTemplate
     public ListItemTemplate(Type type, string iconKey, string label)
     {
         ModelType = type;
-        //var createLabel = SplitByCapitalLetters(type.Name.Replace("ViewModel", ""));
         Label = label;
 
         Application.Current!.TryFindResource(iconKey, out var res);

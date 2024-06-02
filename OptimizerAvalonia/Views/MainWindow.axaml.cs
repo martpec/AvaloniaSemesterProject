@@ -15,19 +15,24 @@ public partial class MainWindow : AppWindow
         TitleBar.ExtendsContentIntoTitleBar = true;
         TitleBar.TitleBarHitTestType = TitleBarHitTestType.Complex;
 
-        //SplashScreen = new ComplexSplashScreen();
+        SplashScreen = new ComplexSplashScreen();
     }
 }
 
-internal class ComplexSplashScreen(string? appName, IImage? appIcon, int minimumShowTime) : IApplicationSplashScreen
+internal class ComplexSplashScreen : IApplicationSplashScreen
 {
-    public string? AppName { get; } = appName;
-    public IImage? AppIcon { get; } = appIcon;
-    public object SplashScreenContent { get; } = new DemoComplexSplashScreen();
+    public ComplexSplashScreen()
+    {
+        SplashScreenContent = new DemoComplexSplashScreen();
+    }
+
+    public string? AppName { get; }
+    public IImage? AppIcon { get; }
+    public object SplashScreenContent { get; }
 
     // To avoid too quickly transitioning away from the splash screen, you can set a minimum
     // time to hold before loading the content, value is in Milliseconds
-    public int MinimumShowTime { get; set; } = minimumShowTime;
+    public int MinimumShowTime { get; set; }
 
 
     // Place your loading tasks here. NOTE, this is already called on a background thread, so

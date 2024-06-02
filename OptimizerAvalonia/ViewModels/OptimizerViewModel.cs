@@ -118,7 +118,20 @@ public partial class OptimizerViewModel : ViewModelBase
 
     [RelayCommand]
     private void Optimize()
-    {
+    {   
+        
+        // Reset dates on the graph 
+        foreach (var axis in XAxes)
+        {
+            axis.MinLimit = null;
+            axis.MaxLimit = null;
+        }
+        foreach (var axis in YAxes)
+        {
+            axis.MinLimit = null;
+            axis.MaxLimit = null;
+        }
+        
         _fileName = string.Empty;
         OptimizedData = [];
 
@@ -162,6 +175,7 @@ public partial class OptimizerViewModel : ViewModelBase
 
         // Fill the graphs with data
         LoadDataMainGraph();
+        
     }
 
     private void LoadDataMainGraph()

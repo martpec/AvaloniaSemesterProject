@@ -22,17 +22,23 @@
                           Message="It appears that some of your time slices are not meeting the required heat demand. Please adjust the boilers accordingly." />
         
         <!-- main chart -->
-        <lvc:CartesianChart
-            Grid.Row="1"
-            LegendTextPaint="{Binding LegendColor}"
-            LegendPosition="Top"
-            CornerRadius="7"
-            Background="#3e3e3e"
-            Series="{Binding MainGraphSeries}"
-            ZoomMode="Both"
-            XAxes="{Binding XAxes}"
-            YAxes="{Binding YAxes}">
-        </lvc:CartesianChart>
+        <Border Grid.Row="1">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" Color="Black"></DropShadowEffect>
+            </Border.Effect>
+            <!-- Graph -->
+            <lvc:CartesianChart
+               
+                LegendTextPaint="{Binding LegendColor}"
+                LegendPosition="Top"
+                CornerRadius="7"
+                Background="#3e3e3e"
+                Series="{Binding MainGraphSeries}"
+                ZoomMode="Both"
+                XAxes="{Binding XAxes}"
+                YAxes="{Binding YAxes}">
+            </lvc:CartesianChart>
+        </Border>
 
         <!-- 2nd grid, storing buttons -->
         <Grid Grid.Row="2">

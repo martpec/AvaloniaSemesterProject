@@ -7,7 +7,11 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="OptimizerAvalonia.Views.SettingsView"
              x:DataType="vm:SettingsViewModel">
-
+    
+    <UserControl.Resources>
+        <vm:BoilerTypeConverter x:Key="BoilerTypeConverter"/>
+    </UserControl.Resources>
+    
     <ScrollViewer>
         <StackPanel Margin="20">
             <TextBlock Margin="0 20" FontSize="20" FontWeight="Bold">Optimization Settings</TextBlock>
@@ -56,7 +60,7 @@
             </templates:ContentTemplate>
             <StackPanel Orientation="Horizontal">
                 <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource AvailableBoilers}" />
-                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold">Available _boilers</TextBlock>
+                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold">Available boilers</TextBlock>
                 <Border>
                     <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}" />
                     <ToolTip.Tip>Note: Turn the switches of each boiler on and off, or adjust their maximal heat production.</ToolTip.Tip>
@@ -98,6 +102,32 @@
                 </ItemsControl>
 
             </templates:ContentTemplate>
+            <StackPanel Orientation="Horizontal">
+                <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource TableColumnRegular}" />
+                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold">Boiler Data</TextBlock>
+                <Border>
+                    <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}" />
+                    <ToolTip.Tip>Note: To update the boiler data, changes must be made in the database.</ToolTip.Tip>
+                </Border>
+            </StackPanel>
+            <!-- Add the DataGrid here -->
+            <DataGrid ItemsSource="{Binding DataGridBoilers}" 
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      GridLinesVisibility="All"
+                      BorderBrush="Gray"
+                      BorderThickness="1">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Max Heat" Binding="{Binding MaxHeat}" />
+                    <DataGridTextColumn Header="Production Cost" Binding="{Binding ProductionCost}" />
+                    <DataGridTextColumn Header="Emissions" Binding="{Binding Emissions}" />
+                    <DataGridTextColumn Header="Gas Consumption" Binding="{Binding ., Converter={StaticResource BoilerTypeConverter}, ConverterParameter='GasConsumption'}" />
+                    <DataGridTextColumn Header="Electricity Consumption" Binding="{Binding ., Converter={StaticResource BoilerTypeConverter}, ConverterParameter='ElectricityConsumption'}" />
+                    <DataGridTextColumn Header="Oil Consumption" Binding="{Binding ., Converter={StaticResource BoilerTypeConverter}, ConverterParameter='OilConsumption'}" />
+                    <DataGridTextColumn Header="Electricity Produced" Binding="{Binding ., Converter={StaticResource BoilerTypeConverter}, ConverterParameter='ElectricityProduced'}" />
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

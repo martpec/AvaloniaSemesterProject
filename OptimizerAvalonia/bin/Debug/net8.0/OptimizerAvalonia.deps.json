@@ -9,6 +9,7 @@
       "OptimizerAvalonia/1.0.0": {
         "dependencies": {
           "Avalonia": "11.1.0-beta2",
+          "Avalonia.Controls.DataGrid": "11.1.0-beta2",
           "Avalonia.Desktop": "11.1.0-beta2",
           "Avalonia.Diagnostics": "11.1.0-beta2",
           "Avalonia.Fonts.Inter": "11.1.0-beta2",

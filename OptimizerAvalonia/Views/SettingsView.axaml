@@ -56,7 +56,7 @@
             </templates:ContentTemplate>
             <StackPanel Orientation="Horizontal">
                 <PathIcon Height="15" Margin="0,0,5,0" Data="{StaticResource AvailableBoilers}" />
-                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold">Available Boilers</TextBlock>
+                <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold">Available _boilers</TextBlock>
                 <Border>
                     <PathIcon Height="15" Margin="6,3,5,0" Data="{StaticResource InfoRegular}" />
                     <ToolTip.Tip>Note: Turn the switches of each boiler on and off, or adjust their maximal heat production.</ToolTip.Tip>

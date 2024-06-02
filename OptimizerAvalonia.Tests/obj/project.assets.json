@@ -7619,24 +7619,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fifof\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\marti\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia.Tests\\OptimizerAvalonia.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia.Tests\\OptimizerAvalonia.Tests.csproj",
       "projectName": "OptimizerAvalonia.Tests",
-      "projectPath": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia.Tests\\OptimizerAvalonia.Tests.csproj",
-      "packagesPath": "C:\\Users\\fifof\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia.Tests\\obj\\",
+      "projectPath": "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia.Tests\\OptimizerAvalonia.Tests.csproj",
+      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia.Tests\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\fifof\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7650,8 +7645,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {
-              "projectPath": "C:\\Users\\fifof\\OneDrive\\Počítač\\AvaloniaUI\\SemesterProject2\\OptimizerAvalonia\\OptimizerAvalonia.csproj"
+            "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj": {
+              "projectPath": "C:\\Users\\marti\\OneDrive\\Počítač\\Advanced_Object_Oriented_Programming\\aoop1.cs\\AvaloniaSemesterProject\\OptimizerAvalonia\\OptimizerAvalonia.csproj"
             }
           }
         }
@@ -7660,11 +7655,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {

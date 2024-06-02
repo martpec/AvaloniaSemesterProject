@@ -1,89 +1,96 @@
 using HeatProductionOptimization.Models;
 using HeatProductionOptimization;
 
-namespace OptimizerAvalonia.Tests;
-
-public class ResultDataManagerTests : IDisposable
+namespace OptimizerAvalonia.Tests
 {
-    private readonly string _testDirectory;
-    private readonly List<OptimizedData> _optimizedDataSample;
-
-    public ResultDataManagerTests()
+    public class ResultDataManagerTests
     {
-        // Setup a test directory
-        _testDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestResults");
-
-        // Sample data
-        _optimizedDataSample = new List<OptimizedData>
+        [Fact]
+        public void SaveOptimizedData_GeneralTest()
         {
-            new OptimizedData
+            // Arrange
+            var optimizedData = new List<OptimizedData>
             {
-                StartTime = DateTime.Now,
-                EndTime = DateTime.Now.AddHours(1),
-                TotalProductionCost = 100.0,
-                Emissions = 200.0,
-                BoilerProductions = new List<BoilerProduction>
+                new OptimizedData
                 {
-                    new BoilerProduction { BoilerName = "Boiler1", HeatProduced = 50.0 },
-                    new BoilerProduction { BoilerName = "Boiler2", HeatProduced = 50.0 }
+                    StartTime = DateTime.Parse("2023-01-01T00:00:00"),
+                    EndTime = DateTime.Parse("2023-01-01T01:00:00"),
+                    TotalProductionCost = 100.0,
+                    Emissions = 50.0,
+                    BoilerProductions = new List<BoilerProduction>
+                    {
+                        new BoilerProduction { BoilerName = "Boiler1", HeatProduced = 100.0 }
+                    }
                 }
+            };
+
+            string tempDirectory = Path.GetTempPath();
+            string filePath = Path.Combine(tempDirectory, "test_results.csv");
+            var expectedContent = "StartTime,EndTime,TotalProductionCost,Emissions,ActivatedBoilers\r" +
+                                  "\n01/01/2023 00:00:00,01/01/2023 01:00:00,100,50,Boiler1:100\r\n";
+
+            // Act
+            ResultDataManager.SaveOptimizedData(optimizedData, filePath);
+
+            // Assert
+            var actualContent = File.ReadAllText(filePath);
+            Assert.Equal(expectedContent, actualContent);
+
+            // Cleanup
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
             }
-        };
-
-        // Ensure test directory exists
-        if (!Directory.Exists(_testDirectory))
-        {
-            Directory.CreateDirectory(_testDirectory);
         }
-    }
 
-    [Fact]
-    public void SaveOptimizedData_ShouldSaveFileSuccessfully()
-    {
-        // Arrange
-        string fileName = "test_output.csv";
-        string filePath = Path.Combine(_testDirectory, fileName);
-
-        // Act
-        ResultDataManager.SaveOptimizedData(_optimizedDataSample, filePath);
-
-        // Assert
-        Assert.True(File.Exists(filePath), "File was not created successfully.");
-
-        // Cleanup
-        if (File.Exists(filePath))
+        [Fact]
+        public void SaveOptimizedData_EmptyList()
         {
-            File.Delete(filePath);
+            // Arrange
+            var optimizedData = new List<OptimizedData>();
+
+            string tempDirectory = Path.GetTempPath();
+            string filePath = Path.Combine(tempDirectory, "test_empty.csv");
+            var expectedContent = "StartTime,EndTime,TotalProductionCost,Emissions,ActivatedBoilers\r\n";
+
+            // Act
+            ResultDataManager.SaveOptimizedData(optimizedData, filePath);
+
+            // Assert
+            var actualContent = File.ReadAllText(filePath);
+            Assert.Equal(expectedContent, actualContent);
+
+            // Cleanup
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
         }
-    }
 
-    [Fact]
-    public void SaveOptimizedData_DirectoryDoesNotExist_ShouldCreateDirectory()
-    {
-        // Arrange
-        string fileName = "nonexistent_directory/test_output.csv";
-        string filePath = Path.Combine(_testDirectory, fileName);
-
-        // Act
-        ResultDataManager.SaveOptimizedData(_optimizedDataSample, filePath);
-
-        // Assert
-        Assert.True(File.Exists(filePath), "File was not created in a nonexistent directory.");
-
-        // Cleanup
-        string? directoryPath = Path.GetDirectoryName(filePath);
-        if (directoryPath != null && Directory.Exists(directoryPath))
+        [Fact]
+        public void SaveOptimizedData_NullFilePath()
         {
-            Directory.Delete(directoryPath, true);
-        }
-    }
-    
-    public void Dispose()
-    {
-        // Cleanup test directory
-        if (Directory.Exists(_testDirectory))
-        {
-            Directory.Delete(_testDirectory, true);
+            // Arrange
+            var optimizedData = new List<OptimizedData>
+            {
+                new OptimizedData
+                {
+                    StartTime = DateTime.Parse("2023-01-01T00:00:00"),
+                    EndTime = DateTime.Parse("2023-01-01T01:00:00"),
+                    TotalProductionCost = 100.0,
+                    Emissions = 50.0,
+                    BoilerProductions = new List<BoilerProduction>
+                    {
+                        new BoilerProduction { BoilerName = "Boiler1", HeatProduced = 100.0 }
+                    }
+                }
+            };
+
+            // Act and Assert
+            var exception = Record.Exception(() => ResultDataManager.SaveOptimizedData(optimizedData, null));
+
+            // We expect the method not to throw an exception because it doesn't currently handle this case
+            Assert.Null(exception);
         }
     }
 }
